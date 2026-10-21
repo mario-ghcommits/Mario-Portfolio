@@ -4,13 +4,13 @@ import * as THREE from 'three';
 // not a measurement. +Y points toward the three satellite modules in IMG_1315.
 export const AUQUARA_DESIGN = {
   name: 'Auquara — photo reconstruction',
-  version: 5,
+  version: 6,
   units: 'millimeters',
   nominalBase: {width:190,length:380,thickness:4,supportHeight:20},
   provenance: 'Reconstructed by visual interpretation of IMG_1345, IMG_1316, IMG_1315, and IMG_1296. Hidden geometry and dimensions are estimated. Original photos are not distributed.',
   completion: 'Unfinished brown tower roofs, the quartered satellite roof, and outlined satellite volumes are inferred as a finished design. Intentional circular and courtyard openings are preserved.',
-  finish: 'Uniform white architecture on a rectangular white display board, with continuous grass ground, planted roofs, paved circular routes, and trees. Landscaping is an authored design addition.',
-  palette: {base:'#e3e6e0',paving:'#92ad82',road:'#7d8d8c',roadFill:'#edf0eb',blue:'#749bab',lightBlue:'#749bab',white:'#e8e8df',gray:'#e8e8df',brown:'#e8e8df',darkBrown:'#8b9c9a',tan:'#e8e8df',green:'#92ad82',foliage:'#50765e',trunk:'#8b9c9a'},
+  finish: 'Light-blue offices, white housing and gray factories on a predominantly paved rectangular site with pocket lawns, planted roofs, and trees. Outer buildings are offices or factories. Program assignments and landscaping are authored design choices.',
+  palette: {base:'#e3e6e0',paving:'#d8ddd7',road:'#7d8d8c',roadFill:'#edf0eb',blue:'#a5c9de',lightBlue:'#a5c9de',white:'#e8e8df',gray:'#90989e',brown:'#e8e8df',darkBrown:'#8b9c9a',tan:'#e8e8df',green:'#92ad82',foliage:'#50765e',trunk:'#8b9c9a'},
   parts: [],
 };
 const parts=AUQUARA_DESIGN.parts;
@@ -24,7 +24,6 @@ const sector=(inner,outer,start,end)=>({kind:'sector',inner,outer,start,end});
 
 add('board','Painted blue rectangular display board','base','base',rect(190,380),4,0,0,20);
 for(const [i,x,y] of [[1,-82,-177],[2,82,-177],[3,-82,177],[4,82,177]])add('support-'+i,'Blue platform support '+i,'base','white',rect(9,11),20,x,y,0);
-add('grass-ground','Continuous grass ground plane','network','green',rect(184,374),.12,0,0,24);
 add('city-disc','Rectangular central city platform','network','paving',rect(184,190),1.2,0,0,24);
 for(const radius of [27,48,85])add('paved-ring-'+radius,'Paved circular pedestrian route','network','roadFill',ring(radius-1.7,radius+1.7),.1,0,0,25.21);
 for(const radius of [27,48,85])add('ring-route-'+radius,'Concentric route marking','network','road',ring(radius-.42,radius+.42),.18,0,0,25.22);
@@ -135,7 +134,7 @@ function tree(id,x,y,z=24.8,height=15,radius=3.5,layer='network'){
   add(id+'-crown','Landscape tree canopy',layer,'foliage',{kind:'ellipsoid',radius},height*.74,x,y,z+height*.26);
 }
 for(const [i,x,y] of [[1,-70,103],[2,70,103],[3,-70,-103],[4,70,-103]]){
-  add('park-'+i,'Planted satellite pocket park '+i,'network','green',rect(28,18,5),.8,x,y,24);
+  add('park-'+i,'Planted satellite pocket park '+i,'network','green',rect(48,24,5),.8,x*.9,y,24);
   for(let j=0;j<3;j++)tree('park-tree-'+i+'-'+j,x-8+j*8,y+(j%2?2:-2),24.8,14+j*2,3.2);
 }
 for(const [i,start,end] of [[1,9,44],[2,57,82],[3,118,145],[4,187,222],[5,279,309]]){
@@ -148,8 +147,21 @@ for(const [i,angle,height] of [[1,45,55],[2,207,45],[3,263,52],[4,320,49]]){
   tree('roof-tree-'+i,x,y,z+.55,8,2.3,'buildings');
 }
 
-// One architectural finish; vegetation keeps its own landscape materials.
-for(const part of parts)if(part.layer==='buildings'&&!['green','foliage','trunk'].includes(part.material))part.material='white';
+// Landscape beds sit within a predominantly paved site.
+for(const [i,x,y] of [[1,-74,73],[2,74,73],[3,-74,-73],[4,74,-73]])add('corner-lawn-'+i,'Corner lawn','network','green',rect(22,25,4),.22,x,y,25.22);
+for(const angle of [10,100,190,280])add('city-pocket-lawn-'+angle,'Inner planted pocket','network','green',sector(29,41,angle-6,angle+6),.18,0,0,25.22);
+// Program colors are consistent across each building's walls, floors and roof.
+for(const part of parts){
+ if(part.layer!=='buildings'||['green','foliage','trunk'].includes(part.material))continue;
+ const id=part.id;
+ let use='housing';
+ if(/^(blue-|brown-)/.test(id))use='office';
+ if(/^(gray-court-|perimeter-wall-)/.test(id))use='factory';
+ if(/^satellite-d/.test(id)||/^satellite-quarter-/.test(id)||/^inferred-parcel-/.test(id))use='factory';
+ if(id==='satellite-u'||/^(open-satellite-|completed-quarter-roof-)/.test(id))use='office';
+ part.use=use;part.zone=Math.abs(part.position[1])>110?'outer':'city';
+ part.material={office:'lightBlue',housing:'white',factory:'gray'}[use];
+}
 
 export function outline(shape,segments=64) {
   const arc=(radius,start=0,end=360)=>{const count=Math.max(2,Math.ceil((end-start)/360*segments));return Array.from({length:count+1},(_,i)=>polar(radius,start+(end-start)*i/count));};
@@ -192,7 +204,7 @@ export function createAuquaraModel({supports=true}={}){
     const mesh=new THREE.Mesh(geometry,materials[part.material]);mesh.name=part.id;
     mesh.position.set(part.position[0]*WORLD_UNITS_PER_MM,part.position[2]*WORLD_UNITS_PER_MM,-part.position[1]*WORLD_UNITS_PER_MM);
     mesh.rotation.y=part.rotation*Math.PI/180;mesh.castShadow=true;mesh.receiveShadow=true;
-    mesh.userData={label:part.name,layer:part.layer};layers[part.layer].add(mesh);
+    mesh.userData={label:part.name,layer:part.layer,use:part.use,zone:part.zone};layers[part.layer].add(mesh);
   }
   return {root,layers,dispose(){geometries.forEach(geometry=>geometry.dispose());Object.values(materials).forEach(material=>material.dispose());}};
 }

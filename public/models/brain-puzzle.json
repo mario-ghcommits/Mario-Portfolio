@@ -2,11 +2,13 @@
   "source": "rishith-c/pegasus",
   "sourceCommit": "52ba71e3b4bb53063eff035a6e2223388889ca1c",
   "asset": "fsaverage5.glb",
-  "baseSurfaceFraction": 0.6500093522458823,
-  "cutHeight": 0.18961901466051737,
-  "puzzlePieces": 44,
-  "edgeRadius": 0.022,
+  "assembly": "distributed three-dimensional cells",
+  "baseVolumeFraction": 0.6522365391227285,
+  "puzzlePieces": 37,
+  "fixedCells": 102,
+  "totalCells": 139,
+  "edgeRadius": 0.018,
   "solid": true,
-  "baseVolume": 2.823349681050941,
-  "topVolume": 1.3245460222996868
+  "baseVolume": 2.6781632530952186,
+  "animatedVolume": 1.4279594377577092
 }

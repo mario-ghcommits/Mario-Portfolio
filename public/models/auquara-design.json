@@ -1,6 +1,6 @@
 {
   "name": "Auquara — photo reconstruction",
-  "version": 5,
+  "version": 6,
   "units": "millimeters",
   "nominalBase": {
     "width": 190,
@@ -10,16 +10,16 @@
   },
   "provenance": "Reconstructed by visual interpretation of IMG_1345, IMG_1316, IMG_1315, and IMG_1296. Hidden geometry and dimensions are estimated. Original photos are not distributed.",
   "completion": "Unfinished brown tower roofs, the quartered satellite roof, and outlined satellite volumes are inferred as a finished design. Intentional circular and courtyard openings are preserved.",
-  "finish": "Uniform white architecture on a rectangular white display board, with continuous grass ground, planted roofs, paved circular routes, and trees. Landscaping is an authored design addition.",
+  "finish": "Light-blue offices, white housing and gray factories on a predominantly paved rectangular site with pocket lawns, planted roofs, and trees. Outer buildings are offices or factories. Program assignments and landscaping are authored design choices.",
   "palette": {
     "base": "#e3e6e0",
-    "paving": "#92ad82",
+    "paving": "#d8ddd7",
     "road": "#7d8d8c",
     "roadFill": "#edf0eb",
-    "blue": "#749bab",
-    "lightBlue": "#749bab",
+    "blue": "#a5c9de",
+    "lightBlue": "#a5c9de",
     "white": "#e8e8df",
-    "gray": "#e8e8df",
+    "gray": "#90989e",
     "brown": "#e8e8df",
     "darkBrown": "#8b9c9a",
     "tan": "#e8e8df",
@@ -120,25 +120,6 @@
         82,
         177,
         0
-      ],
-      "rotation": 0
-    },
-    {
-      "id": "grass-ground",
-      "name": "Continuous grass ground plane",
-      "layer": "network",
-      "material": "green",
-      "shape": {
-        "kind": "rectangle",
-        "width": 184,
-        "depth": 374,
-        "chamfer": 0
-      },
-      "height": 0.12,
-      "position": [
-        0,
-        0,
-        24
       ],
       "rotation": 0
     },
@@ -807,7 +788,7 @@
       "id": "blue-tower-1",
       "name": "Curved blue tower 1",
       "layer": "buildings",
-      "material": "white",
+      "material": "lightBlue",
       "shape": {
         "kind": "sector",
         "inner": 62,
@@ -821,13 +802,15 @@
         0,
         25.3
       ],
-      "rotation": 0
+      "rotation": 0,
+      "use": "office",
+      "zone": "city"
     },
     {
       "id": "blue-roof-1",
       "name": "Pale blue roof 1",
       "layer": "buildings",
-      "material": "white",
+      "material": "lightBlue",
       "shape": {
         "kind": "sector",
         "inner": 62,
@@ -841,13 +824,15 @@
         0,
         75.3
       ],
-      "rotation": 0
+      "rotation": 0,
+      "use": "office",
+      "zone": "city"
     },
     {
       "id": "blue-tower-2",
       "name": "Curved blue tower 2",
       "layer": "buildings",
-      "material": "white",
+      "material": "lightBlue",
       "shape": {
         "kind": "sector",
         "inner": 62,
@@ -861,13 +846,15 @@
         0,
         25.3
       ],
-      "rotation": 0
+      "rotation": 0,
+      "use": "office",
+      "zone": "city"
     },
     {
       "id": "blue-roof-2",
       "name": "Pale blue roof 2",
       "layer": "buildings",
-      "material": "white",
+      "material": "lightBlue",
       "shape": {
         "kind": "sector",
         "inner": 62,
@@ -881,13 +868,15 @@
         0,
         78.3
       ],
-      "rotation": 0
+      "rotation": 0,
+      "use": "office",
+      "zone": "city"
     },
     {
       "id": "blue-tower-3",
       "name": "Curved blue tower 3",
       "layer": "buildings",
-      "material": "white",
+      "material": "lightBlue",
       "shape": {
         "kind": "sector",
         "inner": 62,
@@ -901,13 +890,15 @@
         0,
         25.3
       ],
-      "rotation": 0
+      "rotation": 0,
+      "use": "office",
+      "zone": "city"
     },
     {
       "id": "blue-roof-3",
       "name": "Pale blue roof 3",
       "layer": "buildings",
-      "material": "white",
+      "material": "lightBlue",
       "shape": {
         "kind": "sector",
         "inner": 62,
@@ -921,13 +912,15 @@
         0,
         73.3
       ],
-      "rotation": 0
+      "rotation": 0,
+      "use": "office",
+      "zone": "city"
     },
     {
       "id": "brown-floor-1",
       "name": "Open tower floor 1",
       "layer": "buildings",
-      "material": "white",
+      "material": "lightBlue",
       "shape": {
         "kind": "rectangle",
         "width": 23,
@@ -940,13 +933,15 @@
         49.49747468305832,
         25.3
       ],
-      "rotation": -45
+      "rotation": -45,
+      "use": "office",
+      "zone": "city"
     },
     {
       "id": "brown-tower-1",
       "name": "Open brown tower 1",
       "layer": "buildings",
-      "material": "white",
+      "material": "lightBlue",
       "shape": {
         "kind": "courtyard",
         "width": 23,
@@ -960,13 +955,15 @@
         49.49747468305832,
         26.6
       ],
-      "rotation": -45
+      "rotation": -45,
+      "use": "office",
+      "zone": "city"
     },
     {
       "id": "brown-roof-1",
       "name": "Inferred finished tower roof 1",
       "layer": "buildings",
-      "material": "white",
+      "material": "lightBlue",
       "shape": {
         "kind": "rectangle",
         "width": 23,
@@ -980,13 +977,15 @@
         81.6
       ],
       "rotation": -45,
-      "inferred": true
+      "inferred": true,
+      "use": "office",
+      "zone": "city"
     },
     {
       "id": "brown-floor-2",
       "name": "Open tower floor 2",
       "layer": "buildings",
-      "material": "white",
+      "material": "lightBlue",
       "shape": {
         "kind": "rectangle",
         "width": 23,
@@ -999,13 +998,15 @@
         -31.779334981768237,
         25.3
       ],
-      "rotation": 117
+      "rotation": 117,
+      "use": "office",
+      "zone": "city"
     },
     {
       "id": "brown-tower-2",
       "name": "Open brown tower 2",
       "layer": "buildings",
-      "material": "white",
+      "material": "lightBlue",
       "shape": {
         "kind": "courtyard",
         "width": 23,
@@ -1019,13 +1020,15 @@
         -31.779334981768237,
         26.6
       ],
-      "rotation": 117
+      "rotation": 117,
+      "use": "office",
+      "zone": "city"
     },
     {
       "id": "brown-roof-2",
       "name": "Inferred finished tower roof 2",
       "layer": "buildings",
-      "material": "white",
+      "material": "lightBlue",
       "shape": {
         "kind": "rectangle",
         "width": 23,
@@ -1039,13 +1042,15 @@
         71.6
       ],
       "rotation": 117,
-      "inferred": true
+      "inferred": true,
+      "use": "office",
+      "zone": "city"
     },
     {
       "id": "brown-floor-3",
       "name": "Open tower floor 3",
       "layer": "buildings",
-      "material": "white",
+      "material": "lightBlue",
       "shape": {
         "kind": "rectangle",
         "width": 23,
@@ -1058,13 +1063,15 @@
         -69.47823061489255,
         25.3
       ],
-      "rotation": 173
+      "rotation": 173,
+      "use": "office",
+      "zone": "city"
     },
     {
       "id": "brown-tower-3",
       "name": "Open brown tower 3",
       "layer": "buildings",
-      "material": "white",
+      "material": "lightBlue",
       "shape": {
         "kind": "courtyard",
         "width": 23,
@@ -1078,13 +1085,15 @@
         -69.47823061489255,
         26.6
       ],
-      "rotation": 173
+      "rotation": 173,
+      "use": "office",
+      "zone": "city"
     },
     {
       "id": "brown-roof-3",
       "name": "Inferred finished tower roof 3",
       "layer": "buildings",
-      "material": "white",
+      "material": "lightBlue",
       "shape": {
         "kind": "rectangle",
         "width": 23,
@@ -1098,13 +1107,15 @@
         78.6
       ],
       "rotation": 173,
-      "inferred": true
+      "inferred": true,
+      "use": "office",
+      "zone": "city"
     },
     {
       "id": "brown-floor-4",
       "name": "Open tower floor 4",
       "layer": "buildings",
-      "material": "white",
+      "material": "lightBlue",
       "shape": {
         "kind": "rectangle",
         "width": 23,
@@ -1117,13 +1128,15 @@
         -44.99513267805777,
         25.3
       ],
-      "rotation": 230
+      "rotation": 230,
+      "use": "office",
+      "zone": "city"
     },
     {
       "id": "brown-tower-4",
       "name": "Open brown tower 4",
       "layer": "buildings",
-      "material": "white",
+      "material": "lightBlue",
       "shape": {
         "kind": "courtyard",
         "width": 23,
@@ -1137,13 +1150,15 @@
         -44.99513267805777,
         26.6
       ],
-      "rotation": 230
+      "rotation": 230,
+      "use": "office",
+      "zone": "city"
     },
     {
       "id": "brown-roof-4",
       "name": "Inferred finished tower roof 4",
       "layer": "buildings",
-      "material": "white",
+      "material": "lightBlue",
       "shape": {
         "kind": "rectangle",
         "width": 23,
@@ -1157,7 +1172,9 @@
         75.6
       ],
       "rotation": 230,
-      "inferred": true
+      "inferred": true,
+      "use": "office",
+      "zone": "city"
     },
     {
       "id": "white-spoke-1",
@@ -1176,7 +1193,9 @@
         31.448209169624334,
         25.3
       ],
-      "rotation": 133
+      "rotation": 133,
+      "use": "housing",
+      "zone": "city"
     },
     {
       "id": "white-spoke-2",
@@ -1195,7 +1214,9 @@
         31.955227495527954,
         25.3
       ],
-      "rotation": 48
+      "rotation": 48,
+      "use": "housing",
+      "zone": "city"
     },
     {
       "id": "white-spoke-3",
@@ -1214,7 +1235,9 @@
         -31.955227495527943,
         25.3
       ],
-      "rotation": 228
+      "rotation": 228,
+      "use": "housing",
+      "zone": "city"
     },
     {
       "id": "white-spoke-4",
@@ -1233,13 +1256,15 @@
         -31.448209169624352,
         25.3
       ],
-      "rotation": 313
+      "rotation": 313,
+      "use": "housing",
+      "zone": "city"
     },
     {
       "id": "gray-court-floor-1",
       "name": "Gray courtyard floor 1",
       "layer": "buildings",
-      "material": "white",
+      "material": "gray",
       "shape": {
         "kind": "rectangle",
         "width": 23,
@@ -1252,13 +1277,15 @@
         -1.1344064184234075,
         25.3
       ],
-      "rotation": 91
+      "rotation": 91,
+      "use": "factory",
+      "zone": "city"
     },
     {
       "id": "gray-court-wall-1",
       "name": "Gray courtyard walls 1",
       "layer": "buildings",
-      "material": "white",
+      "material": "gray",
       "shape": {
         "kind": "courtyard",
         "width": 23,
@@ -1272,13 +1299,15 @@
         -1.1344064184234075,
         26.3
       ],
-      "rotation": 91
+      "rotation": 91,
+      "use": "factory",
+      "zone": "city"
     },
     {
       "id": "gray-court-roof-1",
       "name": "Gray roof with square opening 1",
       "layer": "buildings",
-      "material": "white",
+      "material": "gray",
       "shape": {
         "kind": "roofOpening",
         "width": 23,
@@ -1293,13 +1322,15 @@
         -1.1344064184234075,
         46.3
       ],
-      "rotation": 91
+      "rotation": 91,
+      "use": "factory",
+      "zone": "city"
     },
     {
       "id": "gray-court-floor-2",
       "name": "Gray courtyard floor 2",
       "layer": "buildings",
-      "material": "white",
+      "material": "gray",
       "shape": {
         "kind": "rectangle",
         "width": 23,
@@ -1312,13 +1343,15 @@
         -5.6651232785977905,
         25.3
       ],
-      "rotation": 265
+      "rotation": 265,
+      "use": "factory",
+      "zone": "city"
     },
     {
       "id": "gray-court-wall-2",
       "name": "Gray courtyard walls 2",
       "layer": "buildings",
-      "material": "white",
+      "material": "gray",
       "shape": {
         "kind": "courtyard",
         "width": 23,
@@ -1332,13 +1365,15 @@
         -5.6651232785977905,
         26.3
       ],
-      "rotation": 265
+      "rotation": 265,
+      "use": "factory",
+      "zone": "city"
     },
     {
       "id": "gray-court-roof-2",
       "name": "Gray roof with square opening 2",
       "layer": "buildings",
-      "material": "white",
+      "material": "gray",
       "shape": {
         "kind": "roofOpening",
         "width": 23,
@@ -1353,13 +1388,15 @@
         -5.6651232785977905,
         46.3
       ],
-      "rotation": 265
+      "rotation": 265,
+      "use": "factory",
+      "zone": "city"
     },
     {
       "id": "gray-court-floor-3",
       "name": "Gray courtyard floor 3",
       "layer": "buildings",
-      "material": "white",
+      "material": "gray",
       "shape": {
         "kind": "rectangle",
         "width": 23,
@@ -1372,13 +1409,15 @@
         -64.19974213868396,
         25.3
       ],
-      "rotation": 189
+      "rotation": 189,
+      "use": "factory",
+      "zone": "city"
     },
     {
       "id": "gray-court-wall-3",
       "name": "Gray courtyard walls 3",
       "layer": "buildings",
-      "material": "white",
+      "material": "gray",
       "shape": {
         "kind": "courtyard",
         "width": 23,
@@ -1392,13 +1431,15 @@
         -64.19974213868396,
         26.3
       ],
-      "rotation": 189
+      "rotation": 189,
+      "use": "factory",
+      "zone": "city"
     },
     {
       "id": "gray-court-roof-3",
       "name": "Gray roof with square opening 3",
       "layer": "buildings",
-      "material": "white",
+      "material": "gray",
       "shape": {
         "kind": "roofOpening",
         "width": 23,
@@ -1413,13 +1454,15 @@
         -64.19974213868396,
         46.3
       ],
-      "rotation": 189
+      "rotation": 189,
+      "use": "factory",
+      "zone": "city"
     },
     {
       "id": "perimeter-wall-1",
       "name": "Curved white perimeter building 1",
       "layer": "buildings",
-      "material": "white",
+      "material": "gray",
       "shape": {
         "kind": "sector",
         "inner": 87,
@@ -1433,13 +1476,15 @@
         0,
         25.3
       ],
-      "rotation": 0
+      "rotation": 0,
+      "use": "factory",
+      "zone": "city"
     },
     {
       "id": "perimeter-wall-2",
       "name": "Curved white perimeter building 2",
       "layer": "buildings",
-      "material": "white",
+      "material": "gray",
       "shape": {
         "kind": "sector",
         "inner": 87,
@@ -1453,13 +1498,15 @@
         0,
         25.3
       ],
-      "rotation": 0
+      "rotation": 0,
+      "use": "factory",
+      "zone": "city"
     },
     {
       "id": "perimeter-wall-3",
       "name": "Curved white perimeter building 3",
       "layer": "buildings",
-      "material": "white",
+      "material": "gray",
       "shape": {
         "kind": "sector",
         "inner": 87,
@@ -1473,13 +1520,15 @@
         0,
         25.3
       ],
-      "rotation": 0
+      "rotation": 0,
+      "use": "factory",
+      "zone": "city"
     },
     {
       "id": "perimeter-wall-4",
       "name": "Curved white perimeter building 4",
       "layer": "buildings",
-      "material": "white",
+      "material": "gray",
       "shape": {
         "kind": "sector",
         "inner": 87,
@@ -1493,7 +1542,9 @@
         0,
         25.3
       ],
-      "rotation": 0
+      "rotation": 0,
+      "use": "factory",
+      "zone": "city"
     },
     {
       "id": "central-petal-1",
@@ -1513,7 +1564,9 @@
         2.0336832153790008,
         25.3
       ],
-      "rotation": 0
+      "rotation": 0,
+      "use": "housing",
+      "zone": "city"
     },
     {
       "id": "central-petal-2",
@@ -1533,7 +1586,9 @@
         2.867882181755232,
         25.3
       ],
-      "rotation": 0
+      "rotation": 0,
+      "use": "housing",
+      "zone": "city"
     },
     {
       "id": "central-petal-3",
@@ -1553,7 +1608,9 @@
         -4.993147673772869,
         25.3
       ],
-      "rotation": 0
+      "rotation": 0,
+      "use": "housing",
+      "zone": "city"
     },
     {
       "id": "central-tan-infill",
@@ -1573,13 +1630,15 @@
         0,
         25.3
       ],
-      "rotation": 0
+      "rotation": 0,
+      "use": "housing",
+      "zone": "city"
     },
     {
       "id": "blue-triangle",
       "name": "Blue triangular infill",
       "layer": "buildings",
-      "material": "white",
+      "material": "lightBlue",
       "shape": {
         "kind": "polygon",
         "points": [
@@ -1603,7 +1662,9 @@
         17,
         25.3
       ],
-      "rotation": 12
+      "rotation": 12,
+      "use": "office",
+      "zone": "city"
     },
     {
       "id": "inner-white-block",
@@ -1641,13 +1702,15 @@
         34,
         25.3
       ],
-      "rotation": -12
+      "rotation": -12,
+      "use": "housing",
+      "zone": "city"
     },
     {
       "id": "satellite-d",
       "name": "D-shaped gray satellite with round opening",
       "layer": "buildings",
-      "material": "white",
+      "material": "gray",
       "shape": {
         "kind": "dShape",
         "radius": 24,
@@ -1661,13 +1724,15 @@
         145,
         24
       ],
-      "rotation": 0
+      "rotation": 0,
+      "use": "factory",
+      "zone": "outer"
     },
     {
       "id": "satellite-d-rail-white",
       "name": "White rail beside D-shaped module",
       "layer": "buildings",
-      "material": "white",
+      "material": "gray",
       "shape": {
         "kind": "rectangle",
         "width": 6,
@@ -1680,13 +1745,15 @@
         145,
         24
       ],
-      "rotation": 0
+      "rotation": 0,
+      "use": "factory",
+      "zone": "outer"
     },
     {
       "id": "satellite-d-rail-blue",
       "name": "Blue rail beside D-shaped module",
       "layer": "buildings",
-      "material": "white",
+      "material": "gray",
       "shape": {
         "kind": "rectangle",
         "width": 5,
@@ -1699,13 +1766,15 @@
         145,
         24
       ],
-      "rotation": 0
+      "rotation": 0,
+      "use": "factory",
+      "zone": "outer"
     },
     {
       "id": "satellite-u",
       "name": "White slotted cylindrical satellite",
       "layer": "buildings",
-      "material": "white",
+      "material": "lightBlue",
       "shape": {
         "kind": "uShape",
         "radius": 18,
@@ -1718,13 +1787,15 @@
         148,
         24
       ],
-      "rotation": 0
+      "rotation": 0,
+      "use": "office",
+      "zone": "outer"
     },
     {
       "id": "satellite-quarter-1",
       "name": "Two-tone quartered circular satellite 1",
       "layer": "buildings",
-      "material": "white",
+      "material": "gray",
       "shape": {
         "kind": "sector",
         "inner": 1.2,
@@ -1738,13 +1809,15 @@
         145,
         24
       ],
-      "rotation": 0
+      "rotation": 0,
+      "use": "factory",
+      "zone": "outer"
     },
     {
       "id": "satellite-quarter-2",
       "name": "Two-tone quartered circular satellite 2",
       "layer": "buildings",
-      "material": "white",
+      "material": "gray",
       "shape": {
         "kind": "sector",
         "inner": 1.2,
@@ -1758,13 +1831,15 @@
         145,
         24
       ],
-      "rotation": 0
+      "rotation": 0,
+      "use": "factory",
+      "zone": "outer"
     },
     {
       "id": "satellite-quarter-3",
       "name": "Two-tone quartered circular satellite 3",
       "layer": "buildings",
-      "material": "white",
+      "material": "gray",
       "shape": {
         "kind": "sector",
         "inner": 1.2,
@@ -1778,13 +1853,15 @@
         145,
         24
       ],
-      "rotation": 0
+      "rotation": 0,
+      "use": "factory",
+      "zone": "outer"
     },
     {
       "id": "satellite-quarter-4",
       "name": "Two-tone quartered circular satellite 4",
       "layer": "buildings",
-      "material": "white",
+      "material": "gray",
       "shape": {
         "kind": "sector",
         "inner": 1.2,
@@ -1798,13 +1875,15 @@
         145,
         24
       ],
-      "rotation": 0
+      "rotation": 0,
+      "use": "factory",
+      "zone": "outer"
     },
     {
       "id": "open-satellite-floor",
       "name": "Open quartered satellite floor",
       "layer": "buildings",
-      "material": "white",
+      "material": "lightBlue",
       "shape": {
         "kind": "circle",
         "radius": 33
@@ -1815,13 +1894,15 @@
         -147,
         24
       ],
-      "rotation": 0
+      "rotation": 0,
+      "use": "office",
+      "zone": "outer"
     },
     {
       "id": "open-satellite-ring",
       "name": "Open quartered satellite outer wall",
       "layer": "buildings",
-      "material": "white",
+      "material": "lightBlue",
       "shape": {
         "kind": "ring",
         "inner": 31,
@@ -1833,13 +1914,15 @@
         -147,
         25
       ],
-      "rotation": 0
+      "rotation": 0,
+      "use": "office",
+      "zone": "outer"
     },
     {
       "id": "open-satellite-divider-x",
       "name": "Quartered satellite partition",
       "layer": "buildings",
-      "material": "white",
+      "material": "lightBlue",
       "shape": {
         "kind": "rectangle",
         "width": 64,
@@ -1852,13 +1935,15 @@
         -147,
         25
       ],
-      "rotation": 0
+      "rotation": 0,
+      "use": "office",
+      "zone": "outer"
     },
     {
       "id": "open-satellite-divider-y",
       "name": "Quartered satellite partition",
       "layer": "buildings",
-      "material": "white",
+      "material": "lightBlue",
       "shape": {
         "kind": "rectangle",
         "width": 1.8,
@@ -1871,13 +1956,15 @@
         -147,
         25
       ],
-      "rotation": 0
+      "rotation": 0,
+      "use": "office",
+      "zone": "outer"
     },
     {
       "id": "open-satellite-blue-floor",
       "name": "Blue lower quadrant",
       "layer": "buildings",
-      "material": "white",
+      "material": "lightBlue",
       "shape": {
         "kind": "sector",
         "inner": 1.6,
@@ -1891,13 +1978,15 @@
         -147,
         25.1
       ],
-      "rotation": 0
+      "rotation": 0,
+      "use": "office",
+      "zone": "outer"
     },
     {
       "id": "open-satellite-white-roof",
       "name": "Pale roof over one quadrant",
       "layer": "buildings",
-      "material": "white",
+      "material": "lightBlue",
       "shape": {
         "kind": "sector",
         "inner": 1.4,
@@ -1911,13 +2000,15 @@
         -147,
         47
       ],
-      "rotation": 0
+      "rotation": 0,
+      "use": "office",
+      "zone": "outer"
     },
     {
       "id": "completed-quarter-roof-1",
       "name": "Inferred quartered satellite ceiling 1",
       "layer": "buildings",
-      "material": "white",
+      "material": "lightBlue",
       "shape": {
         "kind": "sector",
         "inner": 1.4,
@@ -1932,13 +2023,15 @@
         47
       ],
       "rotation": 0,
-      "inferred": true
+      "inferred": true,
+      "use": "office",
+      "zone": "outer"
     },
     {
       "id": "completed-quarter-roof-2",
       "name": "Inferred quartered satellite ceiling 2",
       "layer": "buildings",
-      "material": "white",
+      "material": "lightBlue",
       "shape": {
         "kind": "sector",
         "inner": 1.4,
@@ -1953,13 +2046,15 @@
         47
       ],
       "rotation": 0,
-      "inferred": true
+      "inferred": true,
+      "use": "office",
+      "zone": "outer"
     },
     {
       "id": "completed-quarter-roof-3",
       "name": "Inferred quartered satellite ceiling 3",
       "layer": "buildings",
-      "material": "white",
+      "material": "lightBlue",
       "shape": {
         "kind": "sector",
         "inner": 1.4,
@@ -1974,7 +2069,9 @@
         47
       ],
       "rotation": 0,
-      "inferred": true
+      "inferred": true,
+      "use": "office",
+      "zone": "outer"
     },
     {
       "id": "flat-satellite",
@@ -2072,7 +2169,7 @@
       "id": "inferred-parcel-1",
       "name": "Inferred outlined satellite building 1",
       "layer": "buildings",
-      "material": "white",
+      "material": "gray",
       "shape": {
         "kind": "polygon",
         "points": [
@@ -2201,13 +2298,15 @@
         26.4
       ],
       "rotation": 0,
-      "inferred": true
+      "inferred": true,
+      "use": "factory",
+      "zone": "outer"
     },
     {
       "id": "inferred-parcel-2",
       "name": "Inferred outlined satellite building 2",
       "layer": "buildings",
-      "material": "white",
+      "material": "gray",
       "shape": {
         "kind": "polygon",
         "points": [
@@ -2328,13 +2427,15 @@
         26.4
       ],
       "rotation": 0,
-      "inferred": true
+      "inferred": true,
+      "use": "factory",
+      "zone": "outer"
     },
     {
       "id": "inferred-parcel-3",
       "name": "Inferred outlined satellite building 3",
       "layer": "buildings",
-      "material": "white",
+      "material": "gray",
       "shape": {
         "kind": "polygon",
         "points": [
@@ -2387,13 +2488,15 @@
         26.4
       ],
       "rotation": 0,
-      "inferred": true
+      "inferred": true,
+      "use": "factory",
+      "zone": "outer"
     },
     {
       "id": "inferred-parcel-4",
       "name": "Inferred outlined satellite building 4",
       "layer": "buildings",
-      "material": "white",
+      "material": "gray",
       "shape": {
         "kind": "polygon",
         "points": [
@@ -2446,13 +2549,15 @@
         26.4
       ],
       "rotation": 0,
-      "inferred": true
+      "inferred": true,
+      "use": "factory",
+      "zone": "outer"
     },
     {
       "id": "inferred-parcel-5",
       "name": "Inferred outlined satellite building 5",
       "layer": "buildings",
-      "material": "white",
+      "material": "gray",
       "shape": {
         "kind": "polygon",
         "points": [
@@ -2513,13 +2618,15 @@
         26.4
       ],
       "rotation": 0,
-      "inferred": true
+      "inferred": true,
+      "use": "factory",
+      "zone": "outer"
     },
     {
       "id": "inferred-parcel-6",
       "name": "Inferred outlined satellite building 6",
       "layer": "buildings",
-      "material": "white",
+      "material": "gray",
       "shape": {
         "kind": "polygon",
         "points": [
@@ -2588,13 +2695,15 @@
         26.4
       ],
       "rotation": 0,
-      "inferred": true
+      "inferred": true,
+      "use": "factory",
+      "zone": "outer"
     },
     {
       "id": "inferred-parcel-7",
       "name": "Inferred outlined satellite building 7",
       "layer": "buildings",
-      "material": "white",
+      "material": "gray",
       "shape": {
         "kind": "polygon",
         "points": [
@@ -2651,7 +2760,9 @@
         26.4
       ],
       "rotation": 0,
-      "inferred": true
+      "inferred": true,
+      "use": "factory",
+      "zone": "outer"
     },
     {
       "id": "park-1",
@@ -2660,13 +2771,13 @@
       "material": "green",
       "shape": {
         "kind": "rectangle",
-        "width": 28,
-        "depth": 18,
+        "width": 48,
+        "depth": 24,
         "chamfer": 5
       },
       "height": 0.8,
       "position": [
-        -70,
+        -63,
         103,
         24
       ],
@@ -2781,13 +2892,13 @@
       "material": "green",
       "shape": {
         "kind": "rectangle",
-        "width": 28,
-        "depth": 18,
+        "width": 48,
+        "depth": 24,
         "chamfer": 5
       },
       "height": 0.8,
       "position": [
-        70,
+        63,
         103,
         24
       ],
@@ -2902,13 +3013,13 @@
       "material": "green",
       "shape": {
         "kind": "rectangle",
-        "width": 28,
-        "depth": 18,
+        "width": 48,
+        "depth": 24,
         "chamfer": 5
       },
       "height": 0.8,
       "position": [
-        -70,
+        -63,
         -103,
         24
       ],
@@ -3023,13 +3134,13 @@
       "material": "green",
       "shape": {
         "kind": "rectangle",
-        "width": 28,
-        "depth": 18,
+        "width": 48,
+        "depth": 24,
         "chamfer": 5
       },
       "height": 0.8,
       "position": [
-        70,
+        63,
         -103,
         24
       ],
@@ -3616,6 +3727,162 @@
         53.623111018328444,
         -44.99513267805777,
         79.72999999999999
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "corner-lawn-1",
+      "name": "Corner lawn",
+      "layer": "network",
+      "material": "green",
+      "shape": {
+        "kind": "rectangle",
+        "width": 22,
+        "depth": 25,
+        "chamfer": 4
+      },
+      "height": 0.22,
+      "position": [
+        -74,
+        73,
+        25.22
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "corner-lawn-2",
+      "name": "Corner lawn",
+      "layer": "network",
+      "material": "green",
+      "shape": {
+        "kind": "rectangle",
+        "width": 22,
+        "depth": 25,
+        "chamfer": 4
+      },
+      "height": 0.22,
+      "position": [
+        74,
+        73,
+        25.22
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "corner-lawn-3",
+      "name": "Corner lawn",
+      "layer": "network",
+      "material": "green",
+      "shape": {
+        "kind": "rectangle",
+        "width": 22,
+        "depth": 25,
+        "chamfer": 4
+      },
+      "height": 0.22,
+      "position": [
+        -74,
+        -73,
+        25.22
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "corner-lawn-4",
+      "name": "Corner lawn",
+      "layer": "network",
+      "material": "green",
+      "shape": {
+        "kind": "rectangle",
+        "width": 22,
+        "depth": 25,
+        "chamfer": 4
+      },
+      "height": 0.22,
+      "position": [
+        74,
+        -73,
+        25.22
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "city-pocket-lawn-10",
+      "name": "Inner planted pocket",
+      "layer": "network",
+      "material": "green",
+      "shape": {
+        "kind": "sector",
+        "inner": 29,
+        "outer": 41,
+        "start": 4,
+        "end": 16
+      },
+      "height": 0.18,
+      "position": [
+        0,
+        0,
+        25.22
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "city-pocket-lawn-100",
+      "name": "Inner planted pocket",
+      "layer": "network",
+      "material": "green",
+      "shape": {
+        "kind": "sector",
+        "inner": 29,
+        "outer": 41,
+        "start": 94,
+        "end": 106
+      },
+      "height": 0.18,
+      "position": [
+        0,
+        0,
+        25.22
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "city-pocket-lawn-190",
+      "name": "Inner planted pocket",
+      "layer": "network",
+      "material": "green",
+      "shape": {
+        "kind": "sector",
+        "inner": 29,
+        "outer": 41,
+        "start": 184,
+        "end": 196
+      },
+      "height": 0.18,
+      "position": [
+        0,
+        0,
+        25.22
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "city-pocket-lawn-280",
+      "name": "Inner planted pocket",
+      "layer": "network",
+      "material": "green",
+      "shape": {
+        "kind": "sector",
+        "inner": 29,
+        "outer": 41,
+        "start": 274,
+        "end": 286
+      },
+      "height": 0.18,
+      "position": [
+        0,
+        0,
+        25.22
       ],
       "rotation": 0
     }

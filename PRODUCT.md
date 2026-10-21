@@ -43,14 +43,16 @@ Responsive layout, readable contrast, visible keyboard focus, accessible disclos
 
 The finished reconstruction infers ceilings over the brown tower shells, completes the partially covered quartered satellite, and extrudes the drawn parcels on the flat satellite. Inferred components are marked in auquara-design.json. Deliberate circular openings and gray courtyard roof openings remain.
 
-Auquara uses uniform white architecture with continuous grassy ground, sage pocket parks, perimeter plantings, 21 stylized trees, and four roof gardens. Landscaping is an authored addition.
+Auquara uses light-blue offices, white housing, and gray factories with paved ground and separate lawns, sage pocket parks, perimeter plantings, 21 stylized trees, and four roof gardens. Landscaping is an authored addition.
 
 Website presentation: omit photo-reconstruction/source notes and dimension disclaimers from the project UI. Keep provenance and nominal scale in the downloadable model documentation.
 
 Both the outer board and central city platform are rectangular, while circular city routes remain.
 
-The hero loads the Pegasus fsaverage5 cortical model from commit 52ba71e3b4bb53063eff035a6e2223388889ca1c. Its solid fixed base is about 65% of the cortical surface; 44 rounded volumetric top pieces fill the remainder, hold complete for one second, then reset and rebuild. Drag rotates independently, arrow keys rotate, and Home resets. Reduced motion starts at the complete state; pausing retains the current frame.
+The hero loads the Pegasus fsaverage5 cortical model from commit 52ba71e3b4bb53063eff035a6e2223388889ca1c. About 65% of its solid puzzle volume stays assembled in distributed cells; 37 rounded pieces fill scattered gaps across the whole brain, hold complete for one second, then reset and rebuild. Drag rotates independently, arrow keys rotate, and Home resets. Reduced motion starts at the complete state; pausing retains the current frame.
 
 Appearance: the header toggle switches Light/Dark and saves the preference locally. Dark mode uses light primary text, high-contrast secondary text, and dark backgrounds across chrome, controls, project stages, code, stories, and footer. The appearance button text is explicitly light.
 
-Auquara’s default orthographic view aligns with the platform edges so the rectangular footprint is visible as a rectangle. Its building materials are uniformly white; continuous grass fills the ground between the paved paths. The CAD preserves right-angle rectangular boards.
+Auquara’s default orthographic view aligns with the platform edges so the rectangular footprint is visible as a rectangle. Its offices are light blue, housing white, and factories gray; paved ground is broken up by pocket lawns and planting beds. Outer modules are blue offices or gray factories. The CAD preserves right-angle rectangular boards.
+
+Assembly direction: missing brain cells are scattered throughout all four vertical bands and across both hemispheres. Arrival order is shuffled, with varied outward approaches and curved paths; no horizontal cutout plane remains. The one-second fully assembled hold is preserved.

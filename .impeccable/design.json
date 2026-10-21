@@ -276,10 +276,21 @@
     },
     "brain": {
       "source": "rishith-c/pegasus",
-      "pieces": 44,
+      "pieces": 37,
       "baseFraction": 0.65,
       "solid": true,
-      "completeHoldSeconds": 1
+      "completeHoldSeconds": 1,
+      "assembly": "distributed throughout the full brain volume"
+    },
+    "city": {
+      "office": "#a5c9de",
+      "housing": "#e8e8df",
+      "factory": "#90989e",
+      "landscape": "paved ground with separate lawns",
+      "outerUses": [
+        "office",
+        "factory"
+      ]
     }
   },
   "components": [

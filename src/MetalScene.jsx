@@ -26,11 +26,11 @@ export default function BrainAssembly({enabled}){
     assembly.rotation.y=-.1;assembly.rotation.z=-.08;
     let elapsed=0,frame=0,last=performance.now(),visible=true;
     const draw=()=>{
-      if(model)for(const {group,rest,rank} of model.pieces){
+      if(model)for(const {group,rest,rank,approach,bend} of model.pieces){
         const state=topPieceState(elapsed,rank,model.pieces.length);
         group.visible=state.visible;group.material.opacity=state.opacity;
-        group.position.copy(rest).add(new THREE.Vector3(Math.sin(rank*2.4)*.32,.95+rank%3*.12,.18).multiplyScalar(state.travel));
-        group.rotation.set(state.travel*.12,state.travel*Math.sin(rank)*.18,0);
+        group.position.copy(rest).addScaledVector(approach,state.travel).addScaledVector(bend,Math.sin(Math.PI*state.travel));
+        group.rotation.set(state.travel*Math.cos(rank)*.13,state.travel*Math.sin(rank)*.18,state.travel*Math.sin(rank*1.7)*.1);
       }
       assembly.rotation.y=-.1+yaw.value;assembly.rotation.x=pitch.value;
       renderer.render(scene,camera);
