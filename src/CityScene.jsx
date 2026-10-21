@@ -1,23 +1,26 @@
 import React, {useEffect, useRef} from 'react';
 import * as THREE from 'three';
-import {stepSpring, projectVelocity, rubberband, clamp} from './physics.js';
+import {stepSpring, projectVelocity, clamp} from './physics.js';
 
 import {createAuquaraModel} from './auquaraModel.js';
 
 // Shared photo-derived geometry also generates the downloadable GLB and CAD.
-export default function CityScene({separated, motion, resetToken}){
+export default function CityScene({separated, motion, resetToken, topDown, onViewChange}){
   const host = useRef(null);
-  const options = useRef({separated,motion});
-  options.current={separated,motion};
+  const options = useRef({separated,motion,topDown,onViewChange});
+  options.current={separated,motion,topDown,onViewChange};
   const requestFrame=useRef(()=>{});
   useEffect(()=>{requestFrame.current();},[separated,motion]);
   const resetView=useRef(()=>{});
+  const changeView=useRef(()=>{});
+  useEffect(()=>{changeView.current(topDown);},[topDown]);
   useEffect(()=>{resetView.current();},[resetToken]);
   useEffect(()=>{
     const root=host.current;
     const scene=new THREE.Scene();
     const camera=new THREE.OrthographicCamera(-6,6,4.2,-4.2,.1,100);
-    camera.position.set(8,13,15);camera.lookAt(0,.7,0);
+    const defaultElevation=.62, minElevation=.04, maxElevation=Math.PI/2;
+    const orbitRadius=24,orbitCenter=new THREE.Vector3(0,1,0);
     const renderer=new THREE.WebGLRenderer({alpha:true,antialias:true,preserveDrawingBuffer:true});
     renderer.setPixelRatio(Math.min(window.devicePixelRatio,1.75));
     renderer.setClearColor(0x000000,0);
@@ -31,22 +34,30 @@ export default function CityScene({separated, motion, resetToken}){
     const {base:baseGroup,network:greenGroup,buildings:buildingGroup}=model.layers;
     const floorGeo=new THREE.PlaneGeometry(200,200);const floor=new THREE.Mesh(floorGeo,new THREE.ShadowMaterial({opacity:.12}));floor.rotation.x=-Math.PI/2;floor.position.y=-.03;floor.receiveShadow=true;scene.add(floor);
     let frame=0,visible=true,previous=performance.now();
-    let layer={value:0,velocity:0}, yaw={value:0,velocity:0}, pitch={value:0,velocity:0};
-    let yawTarget=0,pitchTarget=0,rotationDamping=1,gesture=null;
-    const bounds={yaw:.9,pitch:.24};
-    const constrain=(value,limit)=>{
-      if(value>limit)return limit+rubberband(value-limit,.4);
-      if(value<-limit)return -limit+rubberband(value+limit,.4);
-      return value;
-    };
+    let layer={value:0,velocity:0}, yaw={value:0,velocity:0}, pitch={value:options.current.topDown?maxElevation:defaultElevation,velocity:0};
+    let yawTarget=0,pitchTarget=pitch.value,rotationDamping=1,gesture=null;
+    let aspect=1,lastExtent=0;
     const draw=()=>{
       buildingGroup.position.y=layer.value*.85;buildingGroup.position.x=layer.value*.25;
       greenGroup.position.y=layer.value*.35;baseGroup.position.y=0;
-      world.rotation.y=yaw.value;world.rotation.x=pitch.value;renderer.render(scene,camera);
+      // Orbit the camera, keeping the island level through any number of turns.
+      const elevation=clamp(pitch.value,minElevation,maxElevation),sinYaw=Math.sin(yaw.value),cosYaw=Math.cos(yaw.value);
+      const sinElevation=Math.sin(elevation),cosElevation=Math.cos(elevation);
+      camera.position.set(orbitRadius*cosElevation*sinYaw,1+orbitRadius*sinElevation,orbitRadius*cosElevation*cosYaw);
+      // This orthogonal up vector stays stable at the exact overhead pole.
+      camera.up.set(-sinElevation*sinYaw,cosElevation,-sinElevation*cosYaw);
+      camera.lookAt(orbitCenter);
+      // Keep the full board visible even when its long edge turns upright overhead.
+      const halfWidth=Math.abs(cosYaw)*4.9+Math.abs(sinYaw)*2.5;
+      const halfHeight=sinElevation*(Math.abs(sinYaw)*4.9+Math.abs(cosYaw)*2.5)+cosElevation*2.2;
+      const extent=Math.max(3.65,(halfWidth+.45)/aspect,halfHeight+.45);
+      if(Math.abs(extent-lastExtent)>.00001){
+        camera.left=-extent*aspect;camera.right=extent*aspect;camera.top=extent;camera.bottom=-extent;camera.updateProjectionMatrix();lastExtent=extent;
+      }
+      renderer.render(scene,camera);
     };
     const resize=()=>{
-      const {width,height}=root.getBoundingClientRect();const aspect=width/Math.max(height,1);const extent=Math.max(3.65,5.5/aspect);
-      camera.left=-extent*aspect;camera.right=extent*aspect;camera.top=extent;camera.bottom=-extent;camera.updateProjectionMatrix();
+      const {width,height}=root.getBoundingClientRect();aspect=width/Math.max(height,1);lastExtent=0;
       renderer.setSize(width,height);draw();
     };
     const moving=(spring,target)=>Math.abs(spring.value-target)>.0001||Math.abs(spring.velocity)>.0001;
@@ -56,14 +67,15 @@ export default function CityScene({separated, motion, resetToken}){
       layer=options.current.motion?stepSpring(layer,target,dt,.4,1):{value:target,velocity:0};
       if(!gesture){
         yaw=options.current.motion?stepSpring(yaw,yawTarget,dt,.4,rotationDamping):{value:yawTarget,velocity:0};
-        pitch=options.current.motion?stepSpring(pitch,pitchTarget,dt,.4,rotationDamping):{value:pitchTarget,velocity:0};
+        pitch=options.current.motion?stepSpring(pitch,pitchTarget,dt,.4,1):{value:pitchTarget,velocity:0};
       }
       draw();
       if(moving(layer,target)||(!gesture&&(moving(yaw,yawTarget)||moving(pitch,pitchTarget))))frame=requestAnimationFrame(render);
     };
     const start=()=>{if(!frame&&visible&&!document.hidden){previous=performance.now();frame=requestAnimationFrame(render);}};
-    const reset=()=>{yawTarget=0;pitchTarget=0;rotationDamping=1;start();};
-    requestFrame.current=start;resetView.current=reset;
+    const reset=()=>{yawTarget=yaw.value-Math.atan2(Math.sin(yaw.value),Math.cos(yaw.value));pitchTarget=defaultElevation;rotationDamping=1;start();};
+    const overhead=()=>{pitchTarget=maxElevation;pitch.velocity=0;rotationDamping=1;start();};
+    requestFrame.current=start;resetView.current=reset;changeView.current=top=>top?overhead():reset();
     const observer=new IntersectionObserver(([entry])=>{visible=entry.isIntersecting;if(visible)start();else if(frame){cancelAnimationFrame(frame);frame=0;}});observer.observe(root);
     const resizer=new ResizeObserver(()=>{resize();start();});resizer.observe(root);
     const down=event=>{
@@ -80,8 +92,8 @@ export default function CityScene({separated, motion, resetToken}){
         if(gesture.touch&&Math.abs(dy)>Math.abs(dx)){cancel(event);return;}
         gesture.committed=true;
       }
-      yaw.value=constrain(gesture.yaw+dx/Math.max(gesture.width,1)*Math.PI,bounds.yaw);
-      pitch.value=gesture.touch?gesture.pitch:constrain(gesture.pitch+dy/Math.max(root.clientHeight,1)*.8,bounds.pitch);
+      yaw.value=gesture.yaw-dx/Math.max(gesture.width,1)*Math.PI*2;
+      pitch.value=gesture.touch?gesture.pitch:clamp(gesture.pitch-dy/Math.max(root.clientHeight,1)*Math.PI,minElevation,maxElevation);
       gesture.history.push({t:event.timeStamp,yaw:yaw.value,pitch:pitch.value});
       gesture.history=gesture.history.filter(sample=>event.timeStamp-sample.t<=90).slice(-8);
       draw();
@@ -93,11 +105,11 @@ export default function CityScene({separated, motion, resetToken}){
         const first=current.history[0],last=current.history.at(-1),dt=Math.max((last.t-first.t)/1000,.008);
         const fresh=event.timeStamp-last.t<100;
         yaw.velocity=fresh?(last.yaw-first.yaw)/dt:0;pitch.velocity=fresh?(last.pitch-first.pitch)/dt:0;
-        yawTarget=clamp(yaw.value+projectVelocity(yaw.velocity),-bounds.yaw,bounds.yaw);
-        pitchTarget=clamp(pitch.value+projectVelocity(pitch.velocity),-bounds.pitch,bounds.pitch);
+        yawTarget=yaw.value+projectVelocity(yaw.velocity);
+        pitchTarget=clamp(pitch.value+projectVelocity(pitch.velocity),minElevation,maxElevation);
         rotationDamping=Math.abs(yaw.velocity)+Math.abs(pitch.velocity)>.1?.8:1;
       }else{
-        yawTarget=clamp(yaw.value,-bounds.yaw,bounds.yaw);pitchTarget=clamp(pitch.value,-bounds.pitch,bounds.pitch);
+        yawTarget=yaw.value;pitchTarget=clamp(pitch.value,minElevation,maxElevation);
         yaw.velocity=0;pitch.velocity=0;rotationDamping=1;
       }
       gesture=null;delete root.dataset.dragging;
@@ -108,23 +120,24 @@ export default function CityScene({separated, motion, resetToken}){
     const up=event=>finish(event);
     const key=event=>{
       const amount=.15;
-      if(!['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','Home'].includes(event.key))return;
+      if(!['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','Home','t','T'].includes(event.key))return;
       event.preventDefault();rotationDamping=1;
-      if(event.key==='Home'){reset();return;}
-      if(event.key==='ArrowLeft')yawTarget=clamp(yawTarget-amount,-bounds.yaw,bounds.yaw);
-      if(event.key==='ArrowRight')yawTarget=clamp(yawTarget+amount,-bounds.yaw,bounds.yaw);
-      if(event.key==='ArrowUp')pitchTarget=clamp(pitchTarget-amount,-bounds.pitch,bounds.pitch);
-      if(event.key==='ArrowDown')pitchTarget=clamp(pitchTarget+amount,-bounds.pitch,bounds.pitch);
+      if(event.key==='Home'){reset();options.current.onViewChange?.(false);return;}
+      if(event.key.toLowerCase()==='t'){overhead();options.current.onViewChange?.(true);return;}
+      if(event.key==='ArrowLeft')yawTarget-=amount;
+      if(event.key==='ArrowRight')yawTarget+=amount;
+      if(event.key==='ArrowUp')pitchTarget=clamp(pitchTarget+amount,minElevation,maxElevation);
+      if(event.key==='ArrowDown')pitchTarget=clamp(pitchTarget-amount,minElevation,maxElevation);
       start();
     };
     const visibility=()=>{if(document.hidden){if(frame)cancelAnimationFrame(frame);frame=0;}else start();};
     root.addEventListener('pointerdown',down);root.addEventListener('pointermove',move);root.addEventListener('pointerup',up);root.addEventListener('pointercancel',cancel);root.addEventListener('lostpointercapture',cancel);root.addEventListener('keydown',key);document.addEventListener('visibilitychange',visibility);
     resize();start();
     return()=>{
-      cancelAnimationFrame(frame);observer.disconnect();resizer.disconnect();requestFrame.current=()=>{};resetView.current=()=>{};
+      cancelAnimationFrame(frame);observer.disconnect();resizer.disconnect();requestFrame.current=()=>{};resetView.current=()=>{};changeView.current=()=>{};
       root.removeEventListener('pointerdown',down);root.removeEventListener('pointermove',move);root.removeEventListener('pointerup',up);root.removeEventListener('pointercancel',cancel);root.removeEventListener('lostpointercapture',cancel);root.removeEventListener('keydown',key);document.removeEventListener('visibilitychange',visibility);
       model.dispose();floorGeo.dispose();floor.material.dispose();renderer.dispose();root.removeChild(renderer.domElement);
     };
   },[]);
-  return <div ref={host} className="city-scene" tabIndex={0} role="img" aria-label="Interactive Auquara city model. Drag to rotate, use arrow keys to adjust, or press Home to reset."/>;
+  return <div ref={host} className="city-scene" tabIndex={0} role="img" aria-label="Interactive Auquara city model. Drag horizontally for full 360-degree rotation and vertically to tilt. Arrow keys rotate, T shows the top view, and Home resets the front view."/>;
 }

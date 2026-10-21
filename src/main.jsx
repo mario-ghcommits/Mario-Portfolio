@@ -21,6 +21,7 @@ function Icon({name='arrow', size=20, ...props}) {
     play: <path d="m9 5 10 7-10 7Z"/>,
     award: <><circle cx="12" cy="9" r="5"/><path d="m8 13-1 8 5-3 5 3-1-8M10 9l1.5 1.5L14 8"/></>,
     layers: <path d="m3 8 9-5 9 5-9 5ZM3 12l9 5 9-5M3 16l9 5 9-5"/>,
+    math: <path d="M19 4H5l7 8-7 8h14M19 4v3M19 17v3"/>,
     code: <path d="m8 6-6 6 6 6M16 6l6 6-6 6M14 3l-4 18"/>,
     robot: <><rect x="4" y="7" width="16" height="13" rx="3"/><path d="M12 3v4M8 12v2M16 12v2M9 17h6M1 12v4M23 12v4"/></>,
     ball: <><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3v18M5.6 5.6c7 2 7 10.8 0 12.8M18.4 5.6c-7 2-7 10.8 0 12.8"/></>,
@@ -51,6 +52,7 @@ function Project({motion}){
   const [separated,setSeparated] = useState(false);
   const [details,setDetails] = useState(false);
   const [resetToken,setResetToken] = useState(0);
+  const [topDown,setTopDown] = useState(false);
   const [loadScene,setLoadScene] = useState(false);
   const stage = useRef(null);
   useEffect(() => {
@@ -65,12 +67,12 @@ function Project({motion}){
       <div className="project-visual" ref={stage}>
         <div className="stage-header"><span>Auquara</span><span>Future City Competition</span></div>
         <div className="city-canvas">
-          {loadScene && <SceneBoundary fallback={fallback}><Suspense fallback={fallback}><CityScene separated={separated} motion={motion} resetToken={resetToken}/></Suspense></SceneBoundary>}
+          {loadScene && <SceneBoundary fallback={fallback}><Suspense fallback={fallback}><CityScene separated={separated} motion={motion} resetToken={resetToken} topDown={topDown} onViewChange={setTopDown}/></Suspense></SceneBoundary>}
         </div>
-        <div className="stage-footer"><div className="segmented" role="group" aria-label="City visualization"><button aria-pressed={!separated} onClick={() => setSeparated(false)}>Together</button><button aria-pressed={separated} onClick={() => setSeparated(true)}>Exploded view</button><SpringIndicator second={separated} motion={motion}/></div><div className="view-tools"><span className="stage-hint">Drag to rotate. Arrow keys work, too.</span><button className="reset-view" onClick={()=>setResetToken(v=>v+1)} aria-label="Reset city view"><Icon name="reset" size={16}/></button></div></div>
+        <div className="stage-footer"><div className="segmented" role="group" aria-label="City visualization"><button aria-pressed={!separated} onClick={() => setSeparated(false)}>Together</button><button aria-pressed={separated} onClick={() => setSeparated(true)}>Exploded view</button><SpringIndicator second={separated} motion={motion}/></div><div className="view-tools"><span className="stage-hint">Drag to rotate. Arrow keys work, too.</span><button className="top-view" onClick={()=>setTopDown(v=>!v)} aria-pressed={topDown} aria-label={topDown?"Show landscape city view":"Show top-down city view"}>{topDown?"Landscape view":"Top view"}</button><button className="reset-view" onClick={()=>{setTopDown(false);setResetToken(v=>v+1);}} aria-label="Reset city view"><Icon name="reset" size={16}/></button></div></div>
       </div>
-      <div className="project-summary"><div><h3>Auquara</h3><p>A floating city. A connected future.</p></div><p className="project-description">A floating-city concept for a future in which Gold Coast, Australia faces flooding. Created for the Future City Competition, with efficiency and connected systems at its core.</p><button className="round-button" aria-label={details?'Hide Auquara project details':'Explore Auquara project details'} aria-expanded={details} aria-controls="project-details" onClick={() => setDetails(v=>!v)}><Icon name="plus" size={22} className={details?'rotated':''}/></button></div>
-      <div className="project-details" id="project-details" hidden={!details}><div><h4>Thinking in systems.</h4><p>The project brought together construction, project management, and systems thinking to imagine a city that could adapt to flooding. Linked districts and floating gardens connect homes, offices, and industry.</p></div><a className="inline-link" href={LINKEDIN} target="_blank" rel="noreferrer">View project on LinkedIn <Icon name="external" size={17}/></a></div>
+      <div className="project-summary"><div><h3>Auquara</h3><p>A floating city. A connected future.</p></div><p className="project-description">A floating-city concept imagining a future in which global warming puts Gold Coast, Australia underwater. Created for the Future City Competition, with efficiency and connected systems at its core.</p><button className="round-button" aria-label={details?'Hide Auquara project details':'Explore Auquara project details'} aria-expanded={details} aria-controls="project-details" onClick={() => setDetails(v=>!v)}><Icon name="plus" size={22} className={details?'rotated':''}/></button></div>
+      <div className="project-details" id="project-details" hidden={!details}><div><h4>Thinking in systems.</h4><p>The project brought together construction, project management, and systems thinking to imagine a floating city for a future in which global warming puts Gold Coast underwater. Linked districts and floating gardens connect homes, offices, and industry.</p></div><a className="inline-link" href={LINKEDIN} target="_blank" rel="noreferrer">View project on LinkedIn <Icon name="external" size={17}/></a></div>
     </article>
     <div className="recognition"><div className="award-medallion"><Icon name="award" size={30}/></div><div><h3>Excellence in Systems Integration</h3></div><span>Future City Competition</span></div>
     <div className="model-downloads"><a href="/models/auquara.glb" download>Download 3D model (.glb)</a><a href="/models/auquara.scad" download>Download editable CAD (.scad)</a></div>
@@ -80,7 +82,7 @@ function Interests(){
   const [active,setActive] = useState('robotics');
   const items = {
     robotics:{name:'Robotics',title:'Learning, one build at a time.',description:'Exploring engineering and hardware with FRC Robotics 604 at Leland High School. A place to connect ideas, work with a team, and keep learning.',detail:'FRC Robotics 604 · Hardware',icon:'robot'},
-    math:{name:'Mathematics',title:'Enjoying the challenge.',description:'Through Stratford’s Math Club, I scored 22/25 on the AMC 8 in sixth grade (March 2024) and 70/125 on the AMC 10B in seventh grade (November 2024).',detail:'Math Club · AMC 8 · AMC 10B',icon:'code'},
+    math:{name:'Mathematics',title:'Enjoying the challenge.',description:'Through Stratford’s Math Club, I scored 22/25 on the AMC 8 in sixth grade (March 2024) and 70/125 on the AMC 10B in seventh grade (November 2024).',detail:'Math Club · AMC 8 · AMC 10B',icon:'math'},
     code:{name:'Code',title:'Another way to solve a problem.',description:'A foundation in Python and Java, early exploration with Arduino, and new ideas through Leland Hackathon Club.',detail:'Python · Java · Arduino basics',icon:'code'},
   };
   const current = items[active];

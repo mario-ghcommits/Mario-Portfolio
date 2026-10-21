@@ -416,3 +416,9 @@ html[data-theme=dark] h4,
 html[data-theme=dark] .wordmark { color: var(--ink); }
 html[data-theme=dark] .appearance-toggle:hover { background: #292e38; }
 
+
+.top-view { padding: 9px 12px; border: 0; border-radius: 20px; background: var(--page, #fff); color: var(--ink); font-size: .6875rem; white-space: nowrap; cursor: pointer; }
+.top-view:active { transform: scale(.97); }
+@media(max-width:600px) { .top-view { padding: 9px 10px; } .view-tools { gap: 8px; } }
+
+@media(max-width:600px) { .stage-footer { gap: 10px; flex-wrap: wrap; } .segmented button { min-width: 80px; padding-inline: 8px; } }
