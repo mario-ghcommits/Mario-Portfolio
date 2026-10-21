@@ -36,7 +36,7 @@ a svg { flex-shrink: 0; }
 .header-inner nav a:hover { color: var(--blue); }
 .nav-connect { display: flex; gap: 8px; align-items: center; font-size: 0.75rem; color: var(--blue); }
 
-/* Introduction and ThreeUI material study */
+/* Introduction and brain assembly study */
 .hero { padding-top: 34px; }
 .hero-main { display: grid; grid-template-columns: 1fr 1fr; min-height: 620px; align-items: center; }
 .hero-copy { padding-bottom: 16px; z-index: 1; }
@@ -333,3 +333,7 @@ a svg { flex-shrink: 0; }
 .model-downloads { display: flex; flex-wrap: wrap; gap: 0 24px; margin-top: 4px; }
 .model-downloads a { display: inline-flex; align-items: center; min-height: 44px; font-size: .75rem; color: var(--blue); text-decoration: underline; text-underline-offset: 3px; }
 .model-downloads a:hover { color: var(--blue-hover); }
+
+.brain-object, .brain-sculpture { width: 100%; height: 100%; position: relative; }
+.brain-sculpture canvas { display: block; width: 100%; height: 100%; }
+.brain-fallback { position: absolute; inset: 0; display: grid; place-items: center; color: var(--secondary); font-size: .8125rem; }

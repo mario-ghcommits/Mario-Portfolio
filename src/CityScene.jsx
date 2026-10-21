@@ -126,5 +126,5 @@ export default function CityScene({separated, motion, resetToken}){
       model.dispose();floorGeo.dispose();floor.material.dispose();renderer.dispose();root.removeChild(renderer.domElement);
     };
   },[]);
-  return <div ref={host} className="city-scene" tabIndex={0} role="img" aria-label="Interactive Auquara model reconstructed from reference photos. Dimensions are estimated. Drag to rotate, use arrow keys to adjust, or press Home to reset."/>;
+  return <div ref={host} className="city-scene" tabIndex={0} role="img" aria-label="Interactive Auquara city model. Drag to rotate, use arrow keys to adjust, or press Home to reset."/>;
 }

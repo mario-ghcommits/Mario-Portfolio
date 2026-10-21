@@ -110,7 +110,7 @@ Restrained blue identifies primary actions, linked destinations, selected timeli
 
 White is the main canvas; porcelain marks broad background bands. Graphite carries headings, secondary gray supports prose, and pale lines separate content. The project and interest stages have distinct cool neutral fills. The current-status chip has its own pale blue and blue text. These local roles do not create additional global accent palettes.
 
-In increased contrast, the source overrides secondary text to `#33333b` and lines to `#73737c`; stage borders become visible. Scene material colors stay local to the authored city geometry.
+In increased contrast, the source overrides secondary text to `#33333b` and lines to `#73737c`; stage borders become visible. Scene material colors stay local: warm-white city architecture, muted blue accents, sage landscaping, and pale blue porcelain for the brain assembly.
 
 ## Typography
 
@@ -126,7 +126,7 @@ Desktop uses paired hero columns, side-by-side section introductions, an interes
 
 ## Elevation & Depth
 
-Broad surfaces are flat and separated by tone or fine lines. The sticky header uses translucent white, blur, and saturation to preserve context; reduced transparency and increased contrast replace it with opaque white. Small diffuse shadows distinguish the selected segment, primary-action hover, and tilted code study. The city uses rendered lighting and soft cast shadows; the silver study uses actual ThreeUI shaders. Neither is a shipping raster asset.
+Broad surfaces are flat and separated by tone or fine lines. The sticky header uses translucent white, blur, and saturation to preserve context; reduced transparency and increased contrast replace it with opaque white. Small diffuse shadows distinguish the selected segment, primary-action hover, and tilted code study. The city uses rendered lighting and soft cast shadows; the hero uses a procedural sixteen-piece porcelain brain assembly. Neither is a shipping raster asset.
 
 **The Context Rule.** Translucency belongs to the sticky navigation chrome and yields to the user's transparency and contrast preferences.
 
@@ -156,13 +156,13 @@ A compact wordmark, in-page links, and blue external contact link occupy the sti
 
 The city has Together and Exploded view buttons in a segmented group, a spring-driven white selection indicator, and a reset control. Selection is exposed through `aria-pressed`; the project disclosure uses `aria-expanded` and an explicit controlled region. City drag maps directly to bounded yaw and pitch, projects release velocity, and settles with interruptible springs. Touch keeps vertical scrolling available; arrow keys adjust rotation and Home resets it. Layer changes use response .4 and damping 1; the segmented indicator uses response .3 and damping 1. Both preserve presentation and velocity when retargeted.
 
-**The Motion Preference Rule.** Reduced motion and the manual animation switch remove decorative movement and settle state changes directly. The ThreeUI clock pauses while disabled, offscreen, or in a hidden document; city rendering runs only while needed. The snippets below represent source HTML/CSS states; JavaScript spring and WebGL behavior remains in the source components.
+**The Motion Preference Rule.** Reduced motion and the manual animation switch remove decorative movement and settle state changes directly. The brain assembly clock pauses while disabled, offscreen, or in a hidden document; city rendering runs only while needed. The snippets below represent source HTML/CSS states; JavaScript spring and WebGL behavior remains in the source components.
 
 ## Do's and Don'ts
 
 ### Do:
 - **Do** use blue for actions and keyboard focus.
-- **Do** label estimated model dimensions and interpreted geometry.
+- **Do** keep dimension estimates and model provenance in downloadable asset documentation.
 - **Do** preserve reduced-motion, reduced-transparency, and increased-contrast treatments.
 - **Do** use authored SVG geometry for interface icons.
 

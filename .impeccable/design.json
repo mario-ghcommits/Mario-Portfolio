@@ -353,13 +353,13 @@
       },
       {
         "name": "The Motion Preference Rule",
-        "body": "Reduced motion and the manual animation switch remove decorative movement and settle state changes directly. The ThreeUI clock pauses while disabled, offscreen, or in a hidden document; city rendering runs only while needed. The snippets below represent source HTML/CSS states; JavaScript spring and WebGL behavior remains in the source components.",
+        "body": "Reduced motion and the manual animation switch remove decorative movement and settle state changes directly. The brain assembly clock pauses while disabled, offscreen, or in a hidden document; city rendering runs only while needed. The snippets below represent source HTML/CSS states; JavaScript spring and WebGL behavior remains in the source components.",
         "section": "components"
       }
     ],
     "dos": [
       "Do use blue for actions and keyboard focus.",
-      "Do label estimated model dimensions and interpreted geometry.",
+      "Do keep dimension estimates and model provenance in downloadable asset documentation.",
       "Do preserve reduced-motion, reduced-transparency, and increased-contrast treatments.",
       "Do use authored SVG geometry for interface icons."
     ],

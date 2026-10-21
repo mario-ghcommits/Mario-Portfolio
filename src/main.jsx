@@ -1,12 +1,12 @@
 import React, {Component, Suspense, lazy, useEffect, useRef, useState} from 'react';
 import {createRoot} from 'react-dom/client';
-import ThreeUILiquidForm from './MetalScene.jsx';
+const BrainAssembly = lazy(() => import('./MetalScene.jsx')); 
 import './style.css';
 import SpringIndicator from './SpringIndicator.jsx';
 
 const CityScene = lazy(() => import('./CityScene.jsx'));
 const LINKEDIN = 'https://www.linkedin.com/in/mario-lin-0773aa409/';
-const SOURCE = 'https://github.com/mario-ghcommits/Mario-Portfolio';
+const SOURCE = 'https://github.com/mario-lindev/Mario-Portfolio';
 
 function Icon({name='arrow', size=20, ...props}) {
   const paths = {
@@ -42,8 +42,8 @@ function useMotion(){
   useEffect(() => {document.documentElement.dataset.motion = enabled ? 'on' : 'off';},[enabled]);
   return [enabled,setEnabled];
 }
-function MetalObject({motion}){
-  return <div className="metal-object" aria-hidden="true"><SceneBoundary fallback={<div className="metal-fallback"/>}><ThreeUILiquidForm enabled={motion}/></SceneBoundary></div>;
+function BrainObject({motion}){
+  return <div className="brain-object" aria-hidden="true"><SceneBoundary fallback={<span className="brain-fallback">Ideas take shape.</span>}><Suspense fallback={<span className="brain-fallback">Ideas take shape.</span>}><BrainAssembly enabled={motion}/></Suspense></SceneBoundary></div>;
 }
 function Project({motion}){
   const [separated,setSeparated] = useState(false);
@@ -68,10 +68,10 @@ function Project({motion}){
         <div className="stage-footer"><div className="segmented" role="group" aria-label="City visualization"><button aria-pressed={!separated} onClick={() => setSeparated(false)}>Together</button><button aria-pressed={separated} onClick={() => setSeparated(true)}>Exploded view</button><SpringIndicator second={separated} motion={motion}/></div><div className="view-tools"><span className="stage-hint">Drag to rotate. Arrow keys work, too.</span><button className="reset-view" onClick={()=>setResetToken(v=>v+1)} aria-label="Reset city view"><Icon name="reset" size={16}/></button></div></div>
       </div>
       <div className="project-summary"><div><h3>Auquara</h3><p>A city designed to work as one.</p></div><p className="project-description">A prototype for the Future City Competition, focused on efficiency, productivity, and overall effectiveness.</p><button className="round-button" aria-label={details?'Hide Auquara project details':'Explore Auquara project details'} aria-expanded={details} aria-controls="project-details" onClick={() => setDetails(v=>!v)}><Icon name="plus" size={22} className={details?'rotated':''}/></button></div>
-      <div className="project-details" id="project-details" hidden={!details}><div><h4>Thinking in systems.</h4><p>The project brought together construction, project management, and systems thinking to make the city’s parts work as a cohesive whole.</p><p>This 3D reconstruction follows four photos of the original model. The nominal 190 × 380 mm base and hidden geometry are estimates; the CAD scale is editable. Unfinished roofs and outlined satellite buildings are completed by inference.</p></div><a className="inline-link" href={LINKEDIN} target="_blank" rel="noreferrer">View project on LinkedIn <Icon name="external" size={17}/></a></div>
+      <div className="project-details" id="project-details" hidden={!details}><div><h4>Thinking in systems.</h4><p>The project brought together construction, project management, and systems thinking to make the city’s parts work as a cohesive whole.</p></div><a className="inline-link" href={LINKEDIN} target="_blank" rel="noreferrer">View project on LinkedIn <Icon name="external" size={17}/></a></div>
     </article>
     <div className="recognition"><div className="award-medallion"><Icon name="award" size={30}/></div><div><h3>Excellence in Systems Integration</h3></div><span>Future City Competition</span></div>
-    <p className="visual-note">Photo-based reconstruction with inferred roofs and unfinished buildings. Dimensions estimated.</p><div className="model-downloads"><a href="/models/auquara.glb" download>Download 3D model (.glb)</a><a href="/models/auquara.scad" download>Download editable CAD (.scad)</a></div>
+    <div className="model-downloads"><a href="/models/auquara.glb" download>Download 3D model (.glb)</a><a href="/models/auquara.scad" download>Download editable CAD (.scad)</a></div>
   </section>;
 }
 function Interests(){
@@ -88,13 +88,13 @@ function App(){
   return <><a className="skip-link" href="#main">Skip to content</a>
     <header className="site-header"><div className="header-inner"><a href="#" className="wordmark" aria-label="Mario Lin home">Mario Lin<span className="wordmark-dot"/></a><nav aria-label="Main navigation"><a href="#work">Work</a><a href="#about">About</a><a href="#journey">Journey</a></nav><a className="nav-connect" href={LINKEDIN} target="_blank" rel="noreferrer">Let’s connect <Icon name="external" size={15}/></a></div></header>
     <main id="main">
-      <section className="hero section-shell"><div className="hero-main"><div className="hero-copy"><h1>Curiosity.<br/><span>Made tangible.</span></h1><p>I’m Mario. A student exploring engineering,<br className="desktop-break"/> robotics, and the possibilities in between.</p><div className="hero-actions"><a href="#work" className="button-primary">Explore my work <Icon name="arrow" size={18}/></a><a href="#about" className="text-button">A little about me <Icon name="down" size={16}/></a></div></div><div className="hero-art"><MetalObject motion={motion}/><div className="art-caption"><span>A little room for experimentation.</span><button className="motion-control" onClick={()=>setMotion(v=>!v)} aria-label={motion?'Pause animations':'Play animations'} aria-pressed={motion}><Icon name={motion?'pause':'play'} size={14}/></button></div></div></div><div className="hero-foot"><span>Leland High School <span className="foot-dot"/> Class of 2030</span><span>San Jose, California</span></div></section>
+      <section className="hero section-shell"><div className="hero-main"><div className="hero-copy"><h1>Curiosity.<br/><span>Made tangible.</span></h1><p>I’m Mario. A student exploring engineering,<br className="desktop-break"/> robotics, and the possibilities in between.</p><div className="hero-actions"><a href="#work" className="button-primary">Explore my work <Icon name="arrow" size={18}/></a><a href="#about" className="text-button">A little about me <Icon name="down" size={16}/></a></div></div><div className="hero-art"><BrainObject motion={motion}/><div className="art-caption"><span>Ideas, coming together.</span><button className="motion-control" onClick={()=>setMotion(v=>!v)} aria-label={motion?'Pause animations':'Play animations'} aria-pressed={motion}><Icon name={motion?'pause':'play'} size={14}/></button></div></div></div><div className="hero-foot"><span>Leland High School <span className="foot-dot"/> Class of 2030</span><span>San Jose, California</span></div></section>
       <Project motion={motion}/>
       <Interests/>
       <section className="about-section" id="about"><div className="section-shell"><div className="about-heading"><h2>A few things<br/>beyond the build.</h2><p>Different settings. The same instinct<br className="desktop-break"/> to learn, contribute, and connect.</p></div><div className="about-stories"><article><Icon name="ball" size={28}/><h3>Make the assist.</h3><p>Starting point guard and co-captain on Stratford School’s basketball team. Another place to learn what it means to work together.</p><span>Basketball · Teamwork</span></article><article><Icon name="book" size={28}/><h3>Pass it on.</h3><p>Tutoring with Breakthrough Silicon Valley. Making space for someone else to learn, with a volunteer term listed for October–December 2026.</p><span>Education · Community</span></article></div></div></section>
       <section id="journey" className="journey-section section-shell"><div className="journey-heading"><h2>The story so far.</h2><p>A foundation to keep building on.</p></div><ol className="timeline"><li><div className="timeline-date">2026—2030<span>Expected graduation</span></div><div className="timeline-content"><h3>Leland High School <span className="current-label">Now</span></h3><p>FRC Robotics 604 · Leland Hackathon Club</p><span>Engineering, hardware, and new possibilities.</span></div></li><li><div className="timeline-date">2023—2026<span>Middle School Diploma</span></div><div className="timeline-content"><h3>Stratford School</h3><p>Math Club · AMC 8 & AMC 10 · Basketball co-captain</p><span>Python, Java, and an introduction to Arduino.</span></div></li></ol></section>
       <section className="contact-section"><div className="section-shell contact-inner"><div className="contact-monogram" aria-hidden="true">m<span>l.</span></div><h2>What could<br/>we build next?</h2><p>An interesting idea, a new perspective,<br/>or a simple hello. I’d love to hear it.</p><a className="button-primary" href={LINKEDIN} target="_blank" rel="noreferrer">Connect on LinkedIn <Icon name="external" size={18}/></a></div></section>
-    </main><footer className="site-footer section-shell"><div className="footer-top"><a href="#" className="wordmark">Mario Lin<span className="wordmark-dot"/></a><span>Always a work in progress.</span><a href="#" className="back-top">Back to top <Icon name="down" size={14}/></a></div><div className="footer-bottom"><span>© {new Date().getFullYear()} Mario Lin</span><div><a href={SOURCE} target="_blank" rel="noreferrer">GitHub <Icon name="external" size={12}/></a><a href="https://threeui.com/" target="_blank" rel="noreferrer">3D by ThreeUI <Icon name="external" size={12}/></a><button onClick={()=>setMotion(v=>!v)} aria-pressed={motion}>Animations {motion?'on':'off'}</button></div></div></footer>
+    </main><footer className="site-footer section-shell"><div className="footer-top"><a href="#" className="wordmark">Mario Lin<span className="wordmark-dot"/></a><span>Always a work in progress.</span><a href="#" className="back-top">Back to top <Icon name="down" size={14}/></a></div><div className="footer-bottom"><span>© {new Date().getFullYear()} Mario Lin</span><div><a href={SOURCE} target="_blank" rel="noreferrer">GitHub <Icon name="external" size={12}/></a><a href="https://threeui.com/" target="_blank" rel="noreferrer">ThreeUI inspiration <Icon name="external" size={12}/></a><button onClick={()=>setMotion(v=>!v)} aria-pressed={motion}>Animations {motion?'on':'off'}</button></div></div></footer>
   </>;
 }
 createRoot(document.getElementById('root')).render(<App/>);

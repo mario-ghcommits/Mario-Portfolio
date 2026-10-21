@@ -4,12 +4,13 @@ import * as THREE from 'three';
 // not a measurement. +Y points toward the three satellite modules in IMG_1315.
 export const AUQUARA_DESIGN = {
   name: 'Auquara — photo reconstruction',
-  version: 2,
+  version: 3,
   units: 'millimeters',
   nominalBase: {width:190,length:380,thickness:4,supportHeight:20},
   provenance: 'Reconstructed by visual interpretation of IMG_1345, IMG_1316, IMG_1315, and IMG_1296. Hidden geometry and dimensions are estimated. Original photos are not distributed.',
   completion: 'Unfinished brown tower roofs, the quartered satellite roof, and outlined satellite volumes are inferred as a finished design. Intentional circular and courtyard openings are preserved.',
-  palette: {base:'#7896a6',paving:'#82898d',road:'#3e474a',roadFill:'#b0b8b9',blue:'#5e9ebd',lightBlue:'#8bb8ca',white:'#e9e6da',gray:'#8b9290',brown:'#9b805e',darkBrown:'#685746',tan:'#c2a36d',green:'#6e8b5a'},
+  finish: 'Unified warm-white architecture, muted blue accents, sage parks, evergreen trees and planted roofs. Landscaping is an authored design addition.',
+  palette: {base:'#bacbd1',paving:'#d9dedb',road:'#7d8d8c',roadFill:'#edf0eb',blue:'#749bab',lightBlue:'#749bab',white:'#e8e8df',gray:'#e8e8df',brown:'#e8e8df',darkBrown:'#8b9c9a',tan:'#e8e8df',green:'#91aa89',foliage:'#50765e',trunk:'#8b9c9a'},
   parts: [],
 };
 const parts=AUQUARA_DESIGN.parts;
@@ -124,11 +125,32 @@ for(const [i,x0,x1,y0,y1,height] of [
   parts.at(-1).inferred=true;
 }
 
+
+// Authored landscape additions leave the photographed routes and openings clear.
+function tree(id,x,y,z=24.8,height=15,radius=3.5,layer='network'){
+  add(id+'-trunk','Landscape tree trunk',layer,'trunk',disk(.7),height*.42,x,y,z);
+  add(id+'-crown','Landscape tree canopy',layer,'foliage',{kind:'ellipsoid',radius},height*.74,x,y,z+height*.26);
+}
+for(const [i,x,y] of [[1,-70,103],[2,70,103],[3,-70,-103],[4,70,-103]]){
+  add('park-'+i,'Planted satellite pocket park '+i,'network','green',rect(28,18,5),.8,x,y,24);
+  for(let j=0;j<3;j++)tree('park-tree-'+i+'-'+j,x-8+j*8,y+(j%2?2:-2),24.8,14+j*2,3.2);
+}
+for(const [i,start,end] of [[1,9,44],[2,57,82],[3,118,145],[4,187,222],[5,279,309]]){
+  add('perimeter-garden-'+i,'Planted perimeter verge '+i,'network','green',sector(91.5,94,start,end),.65,0,0,24.1);
+  const [x,y]=polar(92.5,(start+end)/2);tree('avenue-tree-'+i,x,y,24.75,12,2.6);
+}
+for(const [i,angle,height] of [[1,45,55],[2,207,45],[3,263,52],[4,320,49]]){
+  const [x,y]=polar(70,angle),z=28.1+height;
+  add('roof-garden-'+i,'Planted tower roof terrace '+i,'buildings','green',rect(17,19,2),.55,x,y,z,angle-90);
+  tree('roof-tree-'+i,x,y,z+.55,8,2.3,'buildings');
+}
+
 export function outline(shape,segments=64) {
   const arc=(radius,start=0,end=360)=>{const count=Math.max(2,Math.ceil((end-start)/360*segments));return Array.from({length:count+1},(_,i)=>polar(radius,start+(end-start)*i/count));};
   const rectangle=(w,d,c=0)=>c?[[w/2-c,d/2],[-w/2+c,d/2],[-w/2,d/2-c],[-w/2,-d/2+c],[-w/2+c,-d/2],[w/2-c,-d/2],[w/2,-d/2+c],[w/2,d/2-c]]:[[-w/2,-d/2],[w/2,-d/2],[w/2,d/2],[-w/2,d/2]];
   switch(shape.kind){
     case 'rectangle':return {outer:rectangle(shape.width,shape.depth,shape.chamfer),holes:[]};
+    case 'ellipsoid':
     case 'circle':return {outer:arc(shape.radius).slice(0,-1),holes:[]};
     case 'ring':return {outer:arc(shape.outer).slice(0,-1),holes:[arc(shape.inner).slice(0,-1)]};
     case 'sector':return {outer:[...arc(shape.outer,shape.start,shape.end),...(shape.inner?arc(shape.inner,shape.start,shape.end).reverse():[[0,0]])],holes:[]};
@@ -157,8 +179,10 @@ export function createAuquaraModel({supports=true}={}){
     const {outer,holes}=outline(part.shape);
     const contour=new THREE.Shape(outer.map(([x,y])=>new THREE.Vector2(x*WORLD_UNITS_PER_MM,y*WORLD_UNITS_PER_MM)));
     for(const points of holes)contour.holes.push(new THREE.Path(points.map(([x,y])=>new THREE.Vector2(x*WORLD_UNITS_PER_MM,y*WORLD_UNITS_PER_MM))));
-    const geometry=new THREE.ExtrudeGeometry(contour,{depth:part.height*WORLD_UNITS_PER_MM,bevelEnabled:false,curveSegments:24});
-    geometry.rotateX(-Math.PI/2);geometries.push(geometry);
+    const geometry=part.shape.kind==='ellipsoid'
+      ? new THREE.SphereGeometry(part.shape.radius*WORLD_UNITS_PER_MM,12,8).scale(1,part.height/(2*part.shape.radius),1).translate(0,part.height*WORLD_UNITS_PER_MM/2,0)
+      : new THREE.ExtrudeGeometry(contour,{depth:part.height*WORLD_UNITS_PER_MM,bevelEnabled:false,curveSegments:24}).rotateX(-Math.PI/2);
+    geometries.push(geometry);
     const mesh=new THREE.Mesh(geometry,materials[part.material]);mesh.name=part.id;
     mesh.position.set(part.position[0]*WORLD_UNITS_PER_MM,part.position[2]*WORLD_UNITS_PER_MM,-part.position[1]*WORLD_UNITS_PER_MM);
     mesh.rotation.y=part.rotation*Math.PI/180;mesh.castShadow=true;mesh.receiveShadow=true;

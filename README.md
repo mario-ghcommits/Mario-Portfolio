@@ -19,7 +19,7 @@ Vercel settings: Vite preset, `pnpm build`, output `dist`, production branch `ma
 
 ## Experience
 
-- ThreeUI's MIT-licensed liquid-form shaders, with a project-owned renderer for continuous pause/resume and visibility handling.
+- A sixteen-piece procedural brain assembly in the hero, with a pausable twelve-second loop, offscreen suspension, and an assembled reduced-motion state. The previous ThreeUI shader assets remain as licensed reference material.
 - Authored Three.js geometric city with assembled/exploded systems views, deferred until near the viewport.
 - Inline accessible project disclosure, spring-based view selector, and robotics/code switcher.
 - Direct city manipulation with pointer capture and projected momentum, keyboard rotation, and reset. Mobile layout, keyboard focus, reduced-motion support, manual animation control, reduced-transparency and increased-contrast fallbacks.
@@ -32,3 +32,5 @@ Edit `src/main.jsx` for content, `src/CityScene.jsx` for city geometry and drag 
 Credits: [ThreeUI](https://threeui.com), [Emil Kowalski's motion guidance](https://emilkowal.ski/ui/good-vs-great-animations), and [Mario Lin on LinkedIn](https://www.linkedin.com/in/mario-lin-0773aa409/).
 
 The finished reconstruction infers ceilings over the brown tower shells, completes the partially covered quartered satellite, and extrudes the drawn parcels on the flat satellite. Inferred components are marked in auquara-design.json. Deliberate circular openings and gray courtyard roof openings remain.
+
+Auquara uses unified warm-white architecture with muted blue accents, sage pocket parks, perimeter plantings, 21 stylized trees, and four roof gardens. Landscaping is an authored addition. The hero uses a separate procedural brain assembly with sixteen pieces; this is an expressive sculpture, not an anatomical reference.

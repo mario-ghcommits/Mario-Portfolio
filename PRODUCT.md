@@ -42,3 +42,7 @@ LinkedIn was read in the original task and verified again in the signed-in brows
 Responsive layout, readable contrast, visible keyboard focus, accessible disclosure controls, reduced motion, and a manual animation switch.
 
 The finished reconstruction infers ceilings over the brown tower shells, completes the partially covered quartered satellite, and extrudes the drawn parcels on the flat satellite. Inferred components are marked in auquara-design.json. Deliberate circular openings and gray courtyard roof openings remain.
+
+Auquara uses unified warm-white architecture with muted blue accents, sage pocket parks, perimeter plantings, 21 stylized trees, and four roof gardens. Landscaping is an authored addition. The hero uses a separate procedural brain assembly with sixteen pieces; this is an expressive sculpture, not an anatomical reference.
+
+Website presentation: omit photo-reconstruction/source notes and dimension disclaimers from the project UI. Keep provenance and nominal scale in the downloadable model documentation.

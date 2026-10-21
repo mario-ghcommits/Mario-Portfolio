@@ -1,6 +1,6 @@
 {
   "name": "Auquara — photo reconstruction",
-  "version": 2,
+  "version": 3,
   "units": "millimeters",
   "nominalBase": {
     "width": 190,
@@ -10,19 +10,22 @@
   },
   "provenance": "Reconstructed by visual interpretation of IMG_1345, IMG_1316, IMG_1315, and IMG_1296. Hidden geometry and dimensions are estimated. Original photos are not distributed.",
   "completion": "Unfinished brown tower roofs, the quartered satellite roof, and outlined satellite volumes are inferred as a finished design. Intentional circular and courtyard openings are preserved.",
+  "finish": "Unified warm-white architecture, muted blue accents, sage parks, evergreen trees and planted roofs. Landscaping is an authored design addition.",
   "palette": {
-    "base": "#7896a6",
-    "paving": "#82898d",
-    "road": "#3e474a",
-    "roadFill": "#b0b8b9",
-    "blue": "#5e9ebd",
-    "lightBlue": "#8bb8ca",
-    "white": "#e9e6da",
-    "gray": "#8b9290",
-    "brown": "#9b805e",
-    "darkBrown": "#685746",
-    "tan": "#c2a36d",
-    "green": "#6e8b5a"
+    "base": "#bacbd1",
+    "paving": "#d9dedb",
+    "road": "#7d8d8c",
+    "roadFill": "#edf0eb",
+    "blue": "#749bab",
+    "lightBlue": "#749bab",
+    "white": "#e8e8df",
+    "gray": "#e8e8df",
+    "brown": "#e8e8df",
+    "darkBrown": "#8b9c9a",
+    "tan": "#e8e8df",
+    "green": "#91aa89",
+    "foliage": "#50765e",
+    "trunk": "#8b9c9a"
   },
   "parts": [
     {
@@ -2422,6 +2425,972 @@
       ],
       "rotation": 0,
       "inferred": true
+    },
+    {
+      "id": "park-1",
+      "name": "Planted satellite pocket park 1",
+      "layer": "network",
+      "material": "green",
+      "shape": {
+        "kind": "rectangle",
+        "width": 28,
+        "depth": 18,
+        "chamfer": 5
+      },
+      "height": 0.8,
+      "position": [
+        -70,
+        103,
+        24
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "park-tree-1-0-trunk",
+      "name": "Landscape tree trunk",
+      "layer": "network",
+      "material": "trunk",
+      "shape": {
+        "kind": "circle",
+        "radius": 0.7
+      },
+      "height": 5.88,
+      "position": [
+        -78,
+        101,
+        24.8
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "park-tree-1-0-crown",
+      "name": "Landscape tree canopy",
+      "layer": "network",
+      "material": "foliage",
+      "shape": {
+        "kind": "ellipsoid",
+        "radius": 3.2
+      },
+      "height": 10.36,
+      "position": [
+        -78,
+        101,
+        28.44
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "park-tree-1-1-trunk",
+      "name": "Landscape tree trunk",
+      "layer": "network",
+      "material": "trunk",
+      "shape": {
+        "kind": "circle",
+        "radius": 0.7
+      },
+      "height": 6.72,
+      "position": [
+        -70,
+        105,
+        24.8
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "park-tree-1-1-crown",
+      "name": "Landscape tree canopy",
+      "layer": "network",
+      "material": "foliage",
+      "shape": {
+        "kind": "ellipsoid",
+        "radius": 3.2
+      },
+      "height": 11.84,
+      "position": [
+        -70,
+        105,
+        28.96
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "park-tree-1-2-trunk",
+      "name": "Landscape tree trunk",
+      "layer": "network",
+      "material": "trunk",
+      "shape": {
+        "kind": "circle",
+        "radius": 0.7
+      },
+      "height": 7.56,
+      "position": [
+        -62,
+        101,
+        24.8
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "park-tree-1-2-crown",
+      "name": "Landscape tree canopy",
+      "layer": "network",
+      "material": "foliage",
+      "shape": {
+        "kind": "ellipsoid",
+        "radius": 3.2
+      },
+      "height": 13.32,
+      "position": [
+        -62,
+        101,
+        29.48
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "park-2",
+      "name": "Planted satellite pocket park 2",
+      "layer": "network",
+      "material": "green",
+      "shape": {
+        "kind": "rectangle",
+        "width": 28,
+        "depth": 18,
+        "chamfer": 5
+      },
+      "height": 0.8,
+      "position": [
+        70,
+        103,
+        24
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "park-tree-2-0-trunk",
+      "name": "Landscape tree trunk",
+      "layer": "network",
+      "material": "trunk",
+      "shape": {
+        "kind": "circle",
+        "radius": 0.7
+      },
+      "height": 5.88,
+      "position": [
+        62,
+        101,
+        24.8
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "park-tree-2-0-crown",
+      "name": "Landscape tree canopy",
+      "layer": "network",
+      "material": "foliage",
+      "shape": {
+        "kind": "ellipsoid",
+        "radius": 3.2
+      },
+      "height": 10.36,
+      "position": [
+        62,
+        101,
+        28.44
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "park-tree-2-1-trunk",
+      "name": "Landscape tree trunk",
+      "layer": "network",
+      "material": "trunk",
+      "shape": {
+        "kind": "circle",
+        "radius": 0.7
+      },
+      "height": 6.72,
+      "position": [
+        70,
+        105,
+        24.8
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "park-tree-2-1-crown",
+      "name": "Landscape tree canopy",
+      "layer": "network",
+      "material": "foliage",
+      "shape": {
+        "kind": "ellipsoid",
+        "radius": 3.2
+      },
+      "height": 11.84,
+      "position": [
+        70,
+        105,
+        28.96
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "park-tree-2-2-trunk",
+      "name": "Landscape tree trunk",
+      "layer": "network",
+      "material": "trunk",
+      "shape": {
+        "kind": "circle",
+        "radius": 0.7
+      },
+      "height": 7.56,
+      "position": [
+        78,
+        101,
+        24.8
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "park-tree-2-2-crown",
+      "name": "Landscape tree canopy",
+      "layer": "network",
+      "material": "foliage",
+      "shape": {
+        "kind": "ellipsoid",
+        "radius": 3.2
+      },
+      "height": 13.32,
+      "position": [
+        78,
+        101,
+        29.48
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "park-3",
+      "name": "Planted satellite pocket park 3",
+      "layer": "network",
+      "material": "green",
+      "shape": {
+        "kind": "rectangle",
+        "width": 28,
+        "depth": 18,
+        "chamfer": 5
+      },
+      "height": 0.8,
+      "position": [
+        -70,
+        -103,
+        24
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "park-tree-3-0-trunk",
+      "name": "Landscape tree trunk",
+      "layer": "network",
+      "material": "trunk",
+      "shape": {
+        "kind": "circle",
+        "radius": 0.7
+      },
+      "height": 5.88,
+      "position": [
+        -78,
+        -105,
+        24.8
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "park-tree-3-0-crown",
+      "name": "Landscape tree canopy",
+      "layer": "network",
+      "material": "foliage",
+      "shape": {
+        "kind": "ellipsoid",
+        "radius": 3.2
+      },
+      "height": 10.36,
+      "position": [
+        -78,
+        -105,
+        28.44
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "park-tree-3-1-trunk",
+      "name": "Landscape tree trunk",
+      "layer": "network",
+      "material": "trunk",
+      "shape": {
+        "kind": "circle",
+        "radius": 0.7
+      },
+      "height": 6.72,
+      "position": [
+        -70,
+        -101,
+        24.8
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "park-tree-3-1-crown",
+      "name": "Landscape tree canopy",
+      "layer": "network",
+      "material": "foliage",
+      "shape": {
+        "kind": "ellipsoid",
+        "radius": 3.2
+      },
+      "height": 11.84,
+      "position": [
+        -70,
+        -101,
+        28.96
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "park-tree-3-2-trunk",
+      "name": "Landscape tree trunk",
+      "layer": "network",
+      "material": "trunk",
+      "shape": {
+        "kind": "circle",
+        "radius": 0.7
+      },
+      "height": 7.56,
+      "position": [
+        -62,
+        -105,
+        24.8
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "park-tree-3-2-crown",
+      "name": "Landscape tree canopy",
+      "layer": "network",
+      "material": "foliage",
+      "shape": {
+        "kind": "ellipsoid",
+        "radius": 3.2
+      },
+      "height": 13.32,
+      "position": [
+        -62,
+        -105,
+        29.48
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "park-4",
+      "name": "Planted satellite pocket park 4",
+      "layer": "network",
+      "material": "green",
+      "shape": {
+        "kind": "rectangle",
+        "width": 28,
+        "depth": 18,
+        "chamfer": 5
+      },
+      "height": 0.8,
+      "position": [
+        70,
+        -103,
+        24
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "park-tree-4-0-trunk",
+      "name": "Landscape tree trunk",
+      "layer": "network",
+      "material": "trunk",
+      "shape": {
+        "kind": "circle",
+        "radius": 0.7
+      },
+      "height": 5.88,
+      "position": [
+        62,
+        -105,
+        24.8
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "park-tree-4-0-crown",
+      "name": "Landscape tree canopy",
+      "layer": "network",
+      "material": "foliage",
+      "shape": {
+        "kind": "ellipsoid",
+        "radius": 3.2
+      },
+      "height": 10.36,
+      "position": [
+        62,
+        -105,
+        28.44
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "park-tree-4-1-trunk",
+      "name": "Landscape tree trunk",
+      "layer": "network",
+      "material": "trunk",
+      "shape": {
+        "kind": "circle",
+        "radius": 0.7
+      },
+      "height": 6.72,
+      "position": [
+        70,
+        -101,
+        24.8
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "park-tree-4-1-crown",
+      "name": "Landscape tree canopy",
+      "layer": "network",
+      "material": "foliage",
+      "shape": {
+        "kind": "ellipsoid",
+        "radius": 3.2
+      },
+      "height": 11.84,
+      "position": [
+        70,
+        -101,
+        28.96
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "park-tree-4-2-trunk",
+      "name": "Landscape tree trunk",
+      "layer": "network",
+      "material": "trunk",
+      "shape": {
+        "kind": "circle",
+        "radius": 0.7
+      },
+      "height": 7.56,
+      "position": [
+        78,
+        -105,
+        24.8
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "park-tree-4-2-crown",
+      "name": "Landscape tree canopy",
+      "layer": "network",
+      "material": "foliage",
+      "shape": {
+        "kind": "ellipsoid",
+        "radius": 3.2
+      },
+      "height": 13.32,
+      "position": [
+        78,
+        -105,
+        29.48
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "perimeter-garden-1",
+      "name": "Planted perimeter verge 1",
+      "layer": "network",
+      "material": "green",
+      "shape": {
+        "kind": "sector",
+        "inner": 91.5,
+        "outer": 94,
+        "start": 9,
+        "end": 44
+      },
+      "height": 0.65,
+      "position": [
+        0,
+        0,
+        24.1
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "avenue-tree-1-trunk",
+      "name": "Landscape tree trunk",
+      "layer": "network",
+      "material": "trunk",
+      "shape": {
+        "kind": "circle",
+        "radius": 0.7
+      },
+      "height": 5.04,
+      "position": [
+        82.78142844818733,
+        41.27329771265731,
+        24.75
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "avenue-tree-1-crown",
+      "name": "Landscape tree canopy",
+      "layer": "network",
+      "material": "foliage",
+      "shape": {
+        "kind": "ellipsoid",
+        "radius": 2.6
+      },
+      "height": 8.879999999999999,
+      "position": [
+        82.78142844818733,
+        41.27329771265731,
+        27.87
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "perimeter-garden-2",
+      "name": "Planted perimeter verge 2",
+      "layer": "network",
+      "material": "green",
+      "shape": {
+        "kind": "sector",
+        "inner": 91.5,
+        "outer": 94,
+        "start": 57,
+        "end": 82
+      },
+      "height": 0.65,
+      "position": [
+        0,
+        0,
+        24.1
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "avenue-tree-2-trunk",
+      "name": "Landscape tree trunk",
+      "layer": "network",
+      "material": "trunk",
+      "shape": {
+        "kind": "circle",
+        "radius": 0.7
+      },
+      "height": 5.04,
+      "position": [
+        32.39418276650074,
+        86.64217750547678,
+        24.75
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "avenue-tree-2-crown",
+      "name": "Landscape tree canopy",
+      "layer": "network",
+      "material": "foliage",
+      "shape": {
+        "kind": "ellipsoid",
+        "radius": 2.6
+      },
+      "height": 8.879999999999999,
+      "position": [
+        32.39418276650074,
+        86.64217750547678,
+        27.87
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "perimeter-garden-3",
+      "name": "Planted perimeter verge 3",
+      "layer": "network",
+      "material": "green",
+      "shape": {
+        "kind": "sector",
+        "inner": 91.5,
+        "outer": 94,
+        "start": 118,
+        "end": 145
+      },
+      "height": 0.65,
+      "position": [
+        0,
+        0,
+        24.1
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "avenue-tree-3-trunk",
+      "name": "Landscape tree trunk",
+      "layer": "network",
+      "material": "trunk",
+      "shape": {
+        "kind": "circle",
+        "radius": 0.7
+      },
+      "height": 5.04,
+      "position": [
+        -61.29235445995573,
+        69.27840417298269,
+        24.75
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "avenue-tree-3-crown",
+      "name": "Landscape tree canopy",
+      "layer": "network",
+      "material": "foliage",
+      "shape": {
+        "kind": "ellipsoid",
+        "radius": 2.6
+      },
+      "height": 8.879999999999999,
+      "position": [
+        -61.29235445995573,
+        69.27840417298269,
+        27.87
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "perimeter-garden-4",
+      "name": "Planted perimeter verge 4",
+      "layer": "network",
+      "material": "green",
+      "shape": {
+        "kind": "sector",
+        "inner": 91.5,
+        "outer": 94,
+        "start": 187,
+        "end": 222
+      },
+      "height": 0.65,
+      "position": [
+        0,
+        0,
+        24.1
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "avenue-tree-4-trunk",
+      "name": "Landscape tree trunk",
+      "layer": "network",
+      "material": "trunk",
+      "shape": {
+        "kind": "circle",
+        "radius": 0.7
+      },
+      "height": 5.04,
+      "position": [
+        -84.17141755608024,
+        -38.359124945702106,
+        24.75
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "avenue-tree-4-crown",
+      "name": "Landscape tree canopy",
+      "layer": "network",
+      "material": "foliage",
+      "shape": {
+        "kind": "ellipsoid",
+        "radius": 2.6
+      },
+      "height": 8.879999999999999,
+      "position": [
+        -84.17141755608024,
+        -38.359124945702106,
+        27.87
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "perimeter-garden-5",
+      "name": "Planted perimeter verge 5",
+      "layer": "network",
+      "material": "green",
+      "shape": {
+        "kind": "sector",
+        "inner": 91.5,
+        "outer": 94,
+        "start": 279,
+        "end": 309
+      },
+      "height": 0.65,
+      "position": [
+        0,
+        0,
+        24.1
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "avenue-tree-5-trunk",
+      "name": "Landscape tree trunk",
+      "layer": "network",
+      "material": "trunk",
+      "shape": {
+        "kind": "circle",
+        "radius": 0.7
+      },
+      "height": 5.04,
+      "position": [
+        37.62313948451155,
+        -84.50295483194057,
+        24.75
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "avenue-tree-5-crown",
+      "name": "Landscape tree canopy",
+      "layer": "network",
+      "material": "foliage",
+      "shape": {
+        "kind": "ellipsoid",
+        "radius": 2.6
+      },
+      "height": 8.879999999999999,
+      "position": [
+        37.62313948451155,
+        -84.50295483194057,
+        27.87
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "roof-garden-1",
+      "name": "Planted tower roof terrace 1",
+      "layer": "buildings",
+      "material": "green",
+      "shape": {
+        "kind": "rectangle",
+        "width": 17,
+        "depth": 19,
+        "chamfer": 2
+      },
+      "height": 0.55,
+      "position": [
+        49.49747468305833,
+        49.49747468305832,
+        83.1
+      ],
+      "rotation": -45
+    },
+    {
+      "id": "roof-tree-1-trunk",
+      "name": "Landscape tree trunk",
+      "layer": "buildings",
+      "material": "trunk",
+      "shape": {
+        "kind": "circle",
+        "radius": 0.7
+      },
+      "height": 3.36,
+      "position": [
+        49.49747468305833,
+        49.49747468305832,
+        83.64999999999999
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "roof-tree-1-crown",
+      "name": "Landscape tree canopy",
+      "layer": "buildings",
+      "material": "foliage",
+      "shape": {
+        "kind": "ellipsoid",
+        "radius": 2.3
+      },
+      "height": 5.92,
+      "position": [
+        49.49747468305833,
+        49.49747468305832,
+        85.72999999999999
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "roof-garden-2",
+      "name": "Planted tower roof terrace 2",
+      "layer": "buildings",
+      "material": "green",
+      "shape": {
+        "kind": "rectangle",
+        "width": 17,
+        "depth": 19,
+        "chamfer": 2
+      },
+      "height": 0.55,
+      "position": [
+        -62.370456693185766,
+        -31.779334981768237,
+        73.1
+      ],
+      "rotation": 117
+    },
+    {
+      "id": "roof-tree-2-trunk",
+      "name": "Landscape tree trunk",
+      "layer": "buildings",
+      "material": "trunk",
+      "shape": {
+        "kind": "circle",
+        "radius": 0.7
+      },
+      "height": 3.36,
+      "position": [
+        -62.370456693185766,
+        -31.779334981768237,
+        73.64999999999999
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "roof-tree-2-crown",
+      "name": "Landscape tree canopy",
+      "layer": "buildings",
+      "material": "foliage",
+      "shape": {
+        "kind": "ellipsoid",
+        "radius": 2.3
+      },
+      "height": 5.92,
+      "position": [
+        -62.370456693185766,
+        -31.779334981768237,
+        75.72999999999999
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "roof-garden-3",
+      "name": "Planted tower roof terrace 3",
+      "layer": "buildings",
+      "material": "green",
+      "shape": {
+        "kind": "rectangle",
+        "width": 17,
+        "depth": 19,
+        "chamfer": 2
+      },
+      "height": 0.55,
+      "position": [
+        -8.530854038360301,
+        -69.47823061489255,
+        80.1
+      ],
+      "rotation": 173
+    },
+    {
+      "id": "roof-tree-3-trunk",
+      "name": "Landscape tree trunk",
+      "layer": "buildings",
+      "material": "trunk",
+      "shape": {
+        "kind": "circle",
+        "radius": 0.7
+      },
+      "height": 3.36,
+      "position": [
+        -8.530854038360301,
+        -69.47823061489255,
+        80.64999999999999
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "roof-tree-3-crown",
+      "name": "Landscape tree canopy",
+      "layer": "buildings",
+      "material": "foliage",
+      "shape": {
+        "kind": "ellipsoid",
+        "radius": 2.3
+      },
+      "height": 5.92,
+      "position": [
+        -8.530854038360301,
+        -69.47823061489255,
+        82.72999999999999
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "roof-garden-4",
+      "name": "Planted tower roof terrace 4",
+      "layer": "buildings",
+      "material": "green",
+      "shape": {
+        "kind": "rectangle",
+        "width": 17,
+        "depth": 19,
+        "chamfer": 2
+      },
+      "height": 0.55,
+      "position": [
+        53.623111018328444,
+        -44.99513267805777,
+        77.1
+      ],
+      "rotation": 230
+    },
+    {
+      "id": "roof-tree-4-trunk",
+      "name": "Landscape tree trunk",
+      "layer": "buildings",
+      "material": "trunk",
+      "shape": {
+        "kind": "circle",
+        "radius": 0.7
+      },
+      "height": 3.36,
+      "position": [
+        53.623111018328444,
+        -44.99513267805777,
+        77.64999999999999
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "roof-tree-4-crown",
+      "name": "Landscape tree canopy",
+      "layer": "buildings",
+      "material": "foliage",
+      "shape": {
+        "kind": "ellipsoid",
+        "radius": 2.3
+      },
+      "height": 5.92,
+      "position": [
+        53.623111018328444,
+        -44.99513267805777,
+        79.72999999999999
+      ],
+      "rotation": 0
     }
   ]
 }
