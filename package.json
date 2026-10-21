@@ -7,7 +7,9 @@
     "dev": "vite --host 127.0.0.1",
     "build": "vite build",
     "preview": "vite preview --host 127.0.0.1",
-    "model:export": "node scripts/export-auquara.mjs"
+    "model:export": "node scripts/export-auquara.mjs",
+    "brain:build": "node scripts/build-brain-puzzle.mjs",
+    "brain:check": "node scripts/check-brain-puzzle.mjs"
   },
   "dependencies": {
     "@designcodeio/threeui": "1.2.0",
@@ -16,6 +18,8 @@
     "three": "0.180.0"
   },
   "devDependencies": {
+    "three-bvh-csg": "0.0.18",
+    "three-mesh-bvh": "0.9.7",
     "vite": "7.3.1"
   }
 }

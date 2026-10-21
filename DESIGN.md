@@ -110,7 +110,7 @@ Restrained blue identifies primary actions, linked destinations, selected timeli
 
 White is the main canvas; porcelain marks broad background bands. Graphite carries headings, secondary gray supports prose, and pale lines separate content. The project and interest stages have distinct cool neutral fills. The current-status chip has its own pale blue and blue text. These local roles do not create additional global accent palettes.
 
-In increased contrast, the source overrides secondary text to `#33333b` and lines to `#73737c`; stage borders become visible. Scene material colors stay local: warm-white city architecture, muted blue accents, sage landscaping, and soft pink for the brain assembly.
+In increased contrast, the source overrides secondary text to `#33333b` and lines to `#73737c`; stage borders become visible. Scene material colors stay local: uniform white city architecture, grassy ground, sage landscaping, and soft pink for the brain assembly.
 
 ## Typography
 
@@ -126,7 +126,7 @@ Desktop uses paired hero columns, side-by-side section introductions, an interes
 
 ## Elevation & Depth
 
-Broad surfaces are flat and separated by tone or fine lines. The sticky header uses translucent white, blur, and saturation to preserve context; reduced transparency and increased contrast replace it with opaque white. Small diffuse shadows distinguish the selected segment, primary-action hover, and tilted code study. The city uses rendered lighting and soft cast shadows; the hero uses a procedural ninety-six-piece pink brain assembly. Neither is a shipping raster asset.
+Broad surfaces are flat and separated by tone or fine lines. The sticky header uses translucent white, blur, and saturation to preserve context; reduced transparency and increased contrast replace it with opaque white. Small diffuse shadows distinguish the selected segment, primary-action hover, and tilted code study. The city uses rendered lighting and soft cast shadows; the hero uses the Pegasus cortical model with solid rounded top pieces. Neither is a shipping raster asset.
 
 **The Context Rule.** Translucency belongs to the sticky navigation chrome and yields to the user's transparency and contrast preferences.
 
@@ -171,4 +171,10 @@ The city has Together and Exploded view buttons in a segmented group, a spring-d
 - **Don't** add tickers, section numbers, neon, or fake trademarks.
 - **Don't** claim the photo-derived model has measured dimensions or fabrication accuracy.
 
-The brain sculpture follows the supplied pink brain reference with fuller winding folds, 96 small cortical pieces and three lower anatomical forms. Drag rotates it independently of the assembly loop; arrow keys rotate and Home resets. Both the outer board and the central city platform are rectangular, while circular city routes remain.
+Both the outer board and central city platform are rectangular, while circular city routes remain.
+
+The hero loads the Pegasus fsaverage5 cortical model from commit 52ba71e3b4bb53063eff035a6e2223388889ca1c. Its solid fixed base is about 65% of the cortical surface; 44 rounded volumetric top pieces fill the remainder, hold complete for one second, then reset and rebuild. Drag rotates independently, arrow keys rotate, and Home resets. Reduced motion starts at the complete state; pausing retains the current frame.
+
+Appearance: the header toggle switches Light/Dark and saves the preference locally. Dark mode uses light primary text, high-contrast secondary text, and dark backgrounds across chrome, controls, project stages, code, stories, and footer. The appearance button text is explicitly light.
+
+Auquara’s default orthographic view aligns with the platform edges so the rectangular footprint is visible as a rectangle. Its building materials are uniformly white; continuous grass fills the ground between the paved paths. The CAD preserves right-angle rectangular boards.

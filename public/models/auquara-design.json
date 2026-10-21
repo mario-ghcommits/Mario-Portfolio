@@ -1,6 +1,6 @@
 {
   "name": "Auquara — photo reconstruction",
-  "version": 4,
+  "version": 5,
   "units": "millimeters",
   "nominalBase": {
     "width": 190,
@@ -10,10 +10,10 @@
   },
   "provenance": "Reconstructed by visual interpretation of IMG_1345, IMG_1316, IMG_1315, and IMG_1296. Hidden geometry and dimensions are estimated. Original photos are not distributed.",
   "completion": "Unfinished brown tower roofs, the quartered satellite roof, and outlined satellite volumes are inferred as a finished design. Intentional circular and courtyard openings are preserved.",
-  "finish": "Unified warm-white architecture, muted blue accents, sage parks, evergreen trees and planted roofs. Landscaping is an authored design addition.",
+  "finish": "Uniform white architecture on a rectangular white display board, with continuous grass ground, planted roofs, paved circular routes, and trees. Landscaping is an authored design addition.",
   "palette": {
-    "base": "#bacbd1",
-    "paving": "#d9dedb",
+    "base": "#e3e6e0",
+    "paving": "#92ad82",
     "road": "#7d8d8c",
     "roadFill": "#edf0eb",
     "blue": "#749bab",
@@ -23,7 +23,7 @@
     "brown": "#e8e8df",
     "darkBrown": "#8b9c9a",
     "tan": "#e8e8df",
-    "green": "#91aa89",
+    "green": "#92ad82",
     "foliage": "#50765e",
     "trunk": "#8b9c9a"
   },
@@ -51,7 +51,7 @@
       "id": "support-1",
       "name": "Blue platform support 1",
       "layer": "base",
-      "material": "blue",
+      "material": "white",
       "shape": {
         "kind": "rectangle",
         "width": 9,
@@ -70,7 +70,7 @@
       "id": "support-2",
       "name": "Blue platform support 2",
       "layer": "base",
-      "material": "blue",
+      "material": "white",
       "shape": {
         "kind": "rectangle",
         "width": 9,
@@ -89,7 +89,7 @@
       "id": "support-3",
       "name": "Blue platform support 3",
       "layer": "base",
-      "material": "blue",
+      "material": "white",
       "shape": {
         "kind": "rectangle",
         "width": 9,
@@ -108,7 +108,7 @@
       "id": "support-4",
       "name": "Blue platform support 4",
       "layer": "base",
-      "material": "blue",
+      "material": "white",
       "shape": {
         "kind": "rectangle",
         "width": 9,
@@ -120,6 +120,25 @@
         82,
         177,
         0
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "grass-ground",
+      "name": "Continuous grass ground plane",
+      "layer": "network",
+      "material": "green",
+      "shape": {
+        "kind": "rectangle",
+        "width": 184,
+        "depth": 374,
+        "chamfer": 0
+      },
+      "height": 0.12,
+      "position": [
+        0,
+        0,
+        24
       ],
       "rotation": 0
     },
@@ -139,6 +158,60 @@
         0,
         0,
         24
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "paved-ring-27",
+      "name": "Paved circular pedestrian route",
+      "layer": "network",
+      "material": "roadFill",
+      "shape": {
+        "kind": "ring",
+        "inner": 25.3,
+        "outer": 28.7
+      },
+      "height": 0.1,
+      "position": [
+        0,
+        0,
+        25.21
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "paved-ring-48",
+      "name": "Paved circular pedestrian route",
+      "layer": "network",
+      "material": "roadFill",
+      "shape": {
+        "kind": "ring",
+        "inner": 46.3,
+        "outer": 49.7
+      },
+      "height": 0.1,
+      "position": [
+        0,
+        0,
+        25.21
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "paved-ring-85",
+      "name": "Paved circular pedestrian route",
+      "layer": "network",
+      "material": "roadFill",
+      "shape": {
+        "kind": "ring",
+        "inner": 83.3,
+        "outer": 86.7
+      },
+      "height": 0.1,
+      "position": [
+        0,
+        0,
+        25.21
       ],
       "rotation": 0
     },
@@ -197,6 +270,25 @@
       "rotation": 0
     },
     {
+      "id": "paved-spoke-0",
+      "name": "Paved radial pedestrian route",
+      "layer": "network",
+      "material": "roadFill",
+      "shape": {
+        "kind": "rectangle",
+        "width": 57,
+        "depth": 2.8,
+        "chamfer": 0
+      },
+      "height": 0.1,
+      "position": [
+        54,
+        0,
+        25.21
+      ],
+      "rotation": 0
+    },
+    {
       "id": "radial-route-0",
       "name": "Radial route marking",
       "layer": "network",
@@ -214,6 +306,25 @@
         25.24
       ],
       "rotation": 0
+    },
+    {
+      "id": "paved-spoke-45",
+      "name": "Paved radial pedestrian route",
+      "layer": "network",
+      "material": "roadFill",
+      "shape": {
+        "kind": "rectangle",
+        "width": 57,
+        "depth": 2.8,
+        "chamfer": 0
+      },
+      "height": 0.1,
+      "position": [
+        38.18376618407357,
+        38.18376618407356,
+        25.21
+      ],
+      "rotation": 45
     },
     {
       "id": "radial-route-45",
@@ -235,6 +346,25 @@
       "rotation": 45
     },
     {
+      "id": "paved-spoke-90",
+      "name": "Paved radial pedestrian route",
+      "layer": "network",
+      "material": "roadFill",
+      "shape": {
+        "kind": "rectangle",
+        "width": 57,
+        "depth": 2.8,
+        "chamfer": 0
+      },
+      "height": 0.1,
+      "position": [
+        3.3065463576978537e-15,
+        54,
+        25.21
+      ],
+      "rotation": 90
+    },
+    {
       "id": "radial-route-90",
       "name": "Radial route marking",
       "layer": "network",
@@ -252,6 +382,25 @@
         25.24
       ],
       "rotation": 90
+    },
+    {
+      "id": "paved-spoke-135",
+      "name": "Paved radial pedestrian route",
+      "layer": "network",
+      "material": "roadFill",
+      "shape": {
+        "kind": "rectangle",
+        "width": 57,
+        "depth": 2.8,
+        "chamfer": 0
+      },
+      "height": 0.1,
+      "position": [
+        -38.18376618407356,
+        38.18376618407357,
+        25.21
+      ],
+      "rotation": 135
     },
     {
       "id": "radial-route-135",
@@ -273,6 +422,25 @@
       "rotation": 135
     },
     {
+      "id": "paved-spoke-180",
+      "name": "Paved radial pedestrian route",
+      "layer": "network",
+      "material": "roadFill",
+      "shape": {
+        "kind": "rectangle",
+        "width": 57,
+        "depth": 2.8,
+        "chamfer": 0
+      },
+      "height": 0.1,
+      "position": [
+        -54,
+        6.6130927153957075e-15,
+        25.21
+      ],
+      "rotation": 180
+    },
+    {
       "id": "radial-route-180",
       "name": "Radial route marking",
       "layer": "network",
@@ -290,6 +458,25 @@
         25.24
       ],
       "rotation": 180
+    },
+    {
+      "id": "paved-spoke-225",
+      "name": "Paved radial pedestrian route",
+      "layer": "network",
+      "material": "roadFill",
+      "shape": {
+        "kind": "rectangle",
+        "width": 57,
+        "depth": 2.8,
+        "chamfer": 0
+      },
+      "height": 0.1,
+      "position": [
+        -38.183766184073576,
+        -38.18376618407356,
+        25.21
+      ],
+      "rotation": 225
     },
     {
       "id": "radial-route-225",
@@ -311,6 +498,25 @@
       "rotation": 225
     },
     {
+      "id": "paved-spoke-270",
+      "name": "Paved radial pedestrian route",
+      "layer": "network",
+      "material": "roadFill",
+      "shape": {
+        "kind": "rectangle",
+        "width": 57,
+        "depth": 2.8,
+        "chamfer": 0
+      },
+      "height": 0.1,
+      "position": [
+        -9.91963907309356e-15,
+        -54,
+        25.21
+      ],
+      "rotation": 270
+    },
+    {
       "id": "radial-route-270",
       "name": "Radial route marking",
       "layer": "network",
@@ -328,6 +534,25 @@
         25.24
       ],
       "rotation": 270
+    },
+    {
+      "id": "paved-spoke-315",
+      "name": "Paved radial pedestrian route",
+      "layer": "network",
+      "material": "roadFill",
+      "shape": {
+        "kind": "rectangle",
+        "width": 57,
+        "depth": 2.8,
+        "chamfer": 0
+      },
+      "height": 0.1,
+      "position": [
+        38.183766184073555,
+        -38.183766184073576,
+        25.21
+      ],
+      "rotation": 315
     },
     {
       "id": "radial-route-315",
@@ -582,7 +807,7 @@
       "id": "blue-tower-1",
       "name": "Curved blue tower 1",
       "layer": "buildings",
-      "material": "blue",
+      "material": "white",
       "shape": {
         "kind": "sector",
         "inner": 62,
@@ -602,7 +827,7 @@
       "id": "blue-roof-1",
       "name": "Pale blue roof 1",
       "layer": "buildings",
-      "material": "lightBlue",
+      "material": "white",
       "shape": {
         "kind": "sector",
         "inner": 62,
@@ -622,7 +847,7 @@
       "id": "blue-tower-2",
       "name": "Curved blue tower 2",
       "layer": "buildings",
-      "material": "blue",
+      "material": "white",
       "shape": {
         "kind": "sector",
         "inner": 62,
@@ -642,7 +867,7 @@
       "id": "blue-roof-2",
       "name": "Pale blue roof 2",
       "layer": "buildings",
-      "material": "lightBlue",
+      "material": "white",
       "shape": {
         "kind": "sector",
         "inner": 62,
@@ -662,7 +887,7 @@
       "id": "blue-tower-3",
       "name": "Curved blue tower 3",
       "layer": "buildings",
-      "material": "blue",
+      "material": "white",
       "shape": {
         "kind": "sector",
         "inner": 62,
@@ -682,7 +907,7 @@
       "id": "blue-roof-3",
       "name": "Pale blue roof 3",
       "layer": "buildings",
-      "material": "lightBlue",
+      "material": "white",
       "shape": {
         "kind": "sector",
         "inner": 62,
@@ -702,7 +927,7 @@
       "id": "brown-floor-1",
       "name": "Open tower floor 1",
       "layer": "buildings",
-      "material": "darkBrown",
+      "material": "white",
       "shape": {
         "kind": "rectangle",
         "width": 23,
@@ -721,7 +946,7 @@
       "id": "brown-tower-1",
       "name": "Open brown tower 1",
       "layer": "buildings",
-      "material": "brown",
+      "material": "white",
       "shape": {
         "kind": "courtyard",
         "width": 23,
@@ -741,7 +966,7 @@
       "id": "brown-roof-1",
       "name": "Inferred finished tower roof 1",
       "layer": "buildings",
-      "material": "brown",
+      "material": "white",
       "shape": {
         "kind": "rectangle",
         "width": 23,
@@ -761,7 +986,7 @@
       "id": "brown-floor-2",
       "name": "Open tower floor 2",
       "layer": "buildings",
-      "material": "darkBrown",
+      "material": "white",
       "shape": {
         "kind": "rectangle",
         "width": 23,
@@ -780,7 +1005,7 @@
       "id": "brown-tower-2",
       "name": "Open brown tower 2",
       "layer": "buildings",
-      "material": "brown",
+      "material": "white",
       "shape": {
         "kind": "courtyard",
         "width": 23,
@@ -800,7 +1025,7 @@
       "id": "brown-roof-2",
       "name": "Inferred finished tower roof 2",
       "layer": "buildings",
-      "material": "brown",
+      "material": "white",
       "shape": {
         "kind": "rectangle",
         "width": 23,
@@ -820,7 +1045,7 @@
       "id": "brown-floor-3",
       "name": "Open tower floor 3",
       "layer": "buildings",
-      "material": "darkBrown",
+      "material": "white",
       "shape": {
         "kind": "rectangle",
         "width": 23,
@@ -839,7 +1064,7 @@
       "id": "brown-tower-3",
       "name": "Open brown tower 3",
       "layer": "buildings",
-      "material": "brown",
+      "material": "white",
       "shape": {
         "kind": "courtyard",
         "width": 23,
@@ -859,7 +1084,7 @@
       "id": "brown-roof-3",
       "name": "Inferred finished tower roof 3",
       "layer": "buildings",
-      "material": "brown",
+      "material": "white",
       "shape": {
         "kind": "rectangle",
         "width": 23,
@@ -879,7 +1104,7 @@
       "id": "brown-floor-4",
       "name": "Open tower floor 4",
       "layer": "buildings",
-      "material": "darkBrown",
+      "material": "white",
       "shape": {
         "kind": "rectangle",
         "width": 23,
@@ -898,7 +1123,7 @@
       "id": "brown-tower-4",
       "name": "Open brown tower 4",
       "layer": "buildings",
-      "material": "brown",
+      "material": "white",
       "shape": {
         "kind": "courtyard",
         "width": 23,
@@ -918,7 +1143,7 @@
       "id": "brown-roof-4",
       "name": "Inferred finished tower roof 4",
       "layer": "buildings",
-      "material": "brown",
+      "material": "white",
       "shape": {
         "kind": "rectangle",
         "width": 23,
@@ -1014,7 +1239,7 @@
       "id": "gray-court-floor-1",
       "name": "Gray courtyard floor 1",
       "layer": "buildings",
-      "material": "road",
+      "material": "white",
       "shape": {
         "kind": "rectangle",
         "width": 23,
@@ -1033,7 +1258,7 @@
       "id": "gray-court-wall-1",
       "name": "Gray courtyard walls 1",
       "layer": "buildings",
-      "material": "gray",
+      "material": "white",
       "shape": {
         "kind": "courtyard",
         "width": 23,
@@ -1053,7 +1278,7 @@
       "id": "gray-court-roof-1",
       "name": "Gray roof with square opening 1",
       "layer": "buildings",
-      "material": "gray",
+      "material": "white",
       "shape": {
         "kind": "roofOpening",
         "width": 23,
@@ -1074,7 +1299,7 @@
       "id": "gray-court-floor-2",
       "name": "Gray courtyard floor 2",
       "layer": "buildings",
-      "material": "road",
+      "material": "white",
       "shape": {
         "kind": "rectangle",
         "width": 23,
@@ -1093,7 +1318,7 @@
       "id": "gray-court-wall-2",
       "name": "Gray courtyard walls 2",
       "layer": "buildings",
-      "material": "gray",
+      "material": "white",
       "shape": {
         "kind": "courtyard",
         "width": 23,
@@ -1113,7 +1338,7 @@
       "id": "gray-court-roof-2",
       "name": "Gray roof with square opening 2",
       "layer": "buildings",
-      "material": "gray",
+      "material": "white",
       "shape": {
         "kind": "roofOpening",
         "width": 23,
@@ -1134,7 +1359,7 @@
       "id": "gray-court-floor-3",
       "name": "Gray courtyard floor 3",
       "layer": "buildings",
-      "material": "road",
+      "material": "white",
       "shape": {
         "kind": "rectangle",
         "width": 23,
@@ -1153,7 +1378,7 @@
       "id": "gray-court-wall-3",
       "name": "Gray courtyard walls 3",
       "layer": "buildings",
-      "material": "gray",
+      "material": "white",
       "shape": {
         "kind": "courtyard",
         "width": 23,
@@ -1173,7 +1398,7 @@
       "id": "gray-court-roof-3",
       "name": "Gray roof with square opening 3",
       "layer": "buildings",
-      "material": "gray",
+      "material": "white",
       "shape": {
         "kind": "roofOpening",
         "width": 23,
@@ -1334,7 +1559,7 @@
       "id": "central-tan-infill",
       "name": "Small tan central infill",
       "layer": "buildings",
-      "material": "tan",
+      "material": "white",
       "shape": {
         "kind": "sector",
         "inner": 0,
@@ -1354,7 +1579,7 @@
       "id": "blue-triangle",
       "name": "Blue triangular infill",
       "layer": "buildings",
-      "material": "blue",
+      "material": "white",
       "shape": {
         "kind": "polygon",
         "points": [
@@ -1422,7 +1647,7 @@
       "id": "satellite-d",
       "name": "D-shaped gray satellite with round opening",
       "layer": "buildings",
-      "material": "gray",
+      "material": "white",
       "shape": {
         "kind": "dShape",
         "radius": 24,
@@ -1461,7 +1686,7 @@
       "id": "satellite-d-rail-blue",
       "name": "Blue rail beside D-shaped module",
       "layer": "buildings",
-      "material": "lightBlue",
+      "material": "white",
       "shape": {
         "kind": "rectangle",
         "width": 5,
@@ -1499,7 +1724,7 @@
       "id": "satellite-quarter-1",
       "name": "Two-tone quartered circular satellite 1",
       "layer": "buildings",
-      "material": "gray",
+      "material": "white",
       "shape": {
         "kind": "sector",
         "inner": 1.2,
@@ -1519,7 +1744,7 @@
       "id": "satellite-quarter-2",
       "name": "Two-tone quartered circular satellite 2",
       "layer": "buildings",
-      "material": "tan",
+      "material": "white",
       "shape": {
         "kind": "sector",
         "inner": 1.2,
@@ -1539,7 +1764,7 @@
       "id": "satellite-quarter-3",
       "name": "Two-tone quartered circular satellite 3",
       "layer": "buildings",
-      "material": "gray",
+      "material": "white",
       "shape": {
         "kind": "sector",
         "inner": 1.2,
@@ -1559,7 +1784,7 @@
       "id": "satellite-quarter-4",
       "name": "Two-tone quartered circular satellite 4",
       "layer": "buildings",
-      "material": "tan",
+      "material": "white",
       "shape": {
         "kind": "sector",
         "inner": 1.2,
@@ -1579,7 +1804,7 @@
       "id": "open-satellite-floor",
       "name": "Open quartered satellite floor",
       "layer": "buildings",
-      "material": "darkBrown",
+      "material": "white",
       "shape": {
         "kind": "circle",
         "radius": 33
@@ -1596,7 +1821,7 @@
       "id": "open-satellite-ring",
       "name": "Open quartered satellite outer wall",
       "layer": "buildings",
-      "material": "brown",
+      "material": "white",
       "shape": {
         "kind": "ring",
         "inner": 31,
@@ -1614,7 +1839,7 @@
       "id": "open-satellite-divider-x",
       "name": "Quartered satellite partition",
       "layer": "buildings",
-      "material": "brown",
+      "material": "white",
       "shape": {
         "kind": "rectangle",
         "width": 64,
@@ -1633,7 +1858,7 @@
       "id": "open-satellite-divider-y",
       "name": "Quartered satellite partition",
       "layer": "buildings",
-      "material": "brown",
+      "material": "white",
       "shape": {
         "kind": "rectangle",
         "width": 1.8,
@@ -1652,7 +1877,7 @@
       "id": "open-satellite-blue-floor",
       "name": "Blue lower quadrant",
       "layer": "buildings",
-      "material": "blue",
+      "material": "white",
       "shape": {
         "kind": "sector",
         "inner": 1.6,
@@ -1692,7 +1917,7 @@
       "id": "completed-quarter-roof-1",
       "name": "Inferred quartered satellite ceiling 1",
       "layer": "buildings",
-      "material": "brown",
+      "material": "white",
       "shape": {
         "kind": "sector",
         "inner": 1.4,
@@ -1734,7 +1959,7 @@
       "id": "completed-quarter-roof-3",
       "name": "Inferred quartered satellite ceiling 3",
       "layer": "buildings",
-      "material": "brown",
+      "material": "white",
       "shape": {
         "kind": "sector",
         "inner": 1.4,
@@ -1847,7 +2072,7 @@
       "id": "inferred-parcel-1",
       "name": "Inferred outlined satellite building 1",
       "layer": "buildings",
-      "material": "gray",
+      "material": "white",
       "shape": {
         "kind": "polygon",
         "points": [
@@ -1982,7 +2207,7 @@
       "id": "inferred-parcel-2",
       "name": "Inferred outlined satellite building 2",
       "layer": "buildings",
-      "material": "gray",
+      "material": "white",
       "shape": {
         "kind": "polygon",
         "points": [
@@ -2168,7 +2393,7 @@
       "id": "inferred-parcel-4",
       "name": "Inferred outlined satellite building 4",
       "layer": "buildings",
-      "material": "gray",
+      "material": "white",
       "shape": {
         "kind": "polygon",
         "points": [
@@ -2227,7 +2452,7 @@
       "id": "inferred-parcel-5",
       "name": "Inferred outlined satellite building 5",
       "layer": "buildings",
-      "material": "gray",
+      "material": "white",
       "shape": {
         "kind": "polygon",
         "points": [
@@ -2369,7 +2594,7 @@
       "id": "inferred-parcel-7",
       "name": "Inferred outlined satellite building 7",
       "layer": "buildings",
-      "material": "gray",
+      "material": "white",
       "shape": {
         "kind": "polygon",
         "points": [

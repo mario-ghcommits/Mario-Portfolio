@@ -21,6 +21,12 @@ importers:
         specifier: 0.180.0
         version: 0.180.0
     devDependencies:
+      three-bvh-csg:
+        specifier: 0.0.18
+        version: 0.0.18(three-mesh-bvh@0.9.7(three@0.180.0))(three@0.180.0)
+      three-mesh-bvh:
+        specifier: 0.9.7
+        version: 0.9.7(three@0.180.0)
       vite:
         specifier: 7.3.1
         version: 7.3.1
@@ -394,6 +400,17 @@ packages:
     resolution: {integrity: sha512-KGj/8Y43x35aZVDtt+J4mK1hoLGHULMYfSkODJNQjNDC3oW1PqPoxMwo0pLUsWM/UEGzON/NxeHywEfNXNP3Vw==}
     engines: {node: '>=0.10.0'}
 
+  three-bvh-csg@0.0.18:
+    resolution: {integrity: sha512-M3GCZMmGFgASGuDf+YMamM83nVlD/vdwzVHcYbFxgW+g1S7/nKPiuY00YVHOMbjmJPh8mLevGZL65ItHUuGt2w==}
+    peerDependencies:
+      three: '>=0.179.0'
+      three-mesh-bvh: '>=0.9.7'
+
+  three-mesh-bvh@0.9.7:
+    resolution: {integrity: sha512-EYSJbykeAjhVxwZjuUYq/kelIbqBoV9sbAgvZ+j1xCgZyNYSkr51WDJWS4WIfK2OX6YcjBGoTicX4RoOVQzx0g==}
+    peerDependencies:
+      three: '>= 0.159.0'
+
   three@0.128.0:
     resolution: {integrity: sha512-i0ap/E+OaSfzw7bD1TtYnPo3VEplkl70WX5fZqZnfZsE3k3aSFudqrrC9ldFZfYFkn1zwDmBcdGfiIm/hnbyZA==}
 
@@ -705,6 +722,15 @@ snapshots:
   scheduler@0.27.0: {}
 
   source-map-js@1.2.2: {}
+
+  three-bvh-csg@0.0.18(three-mesh-bvh@0.9.7(three@0.180.0))(three@0.180.0):
+    dependencies:
+      three: 0.180.0
+      three-mesh-bvh: 0.9.7(three@0.180.0)
+
+  three-mesh-bvh@0.9.7(three@0.180.0):
+    dependencies:
+      three: 0.180.0
 
   three@0.128.0: {}
 

@@ -16,7 +16,7 @@ People exploring Mario's projects and background. A specific professional audien
 
 ## Operating Context
 
-Single-page React/Vite website, public source at mario-ghcommits/Mario-Portfolio, prepared for Vercel. Vercel connection was blocked by scope access in the prior task; deployment is not verified.
+Single-page React/Vite website, public source at mario-lindev/Mario-Portfolio, prepared for Vercel. Vercel connection was blocked by scope access in the prior task; deployment is not verified.
 
 ## Capabilities and Constraints
 
@@ -24,7 +24,7 @@ Keep all verified achievements, project exploration, education, community involv
 
 ## Brand Commitments
 
-Mario Lin. User references: Apple design, Emil Kowalski's interaction craft. Replace the prior graphite/lime visual identity across the whole website. Retain actual ThreeUI animation from the original request. User supplied apple-design guidance on interruptible springs, momentum, direct manipulation, functional translucent navigation, system typography, and three accessibility preference signals. Apply the supplied guidance directly; no separate installed skill is claimed.
+Mario Lin. User references: Apple design, Emil Kowalski's interaction craft. Replace the prior graphite/lime visual identity across the whole website. The later user request replaces the ThreeUI hero animation with the Pegasus brain model; retain the original ThreeUI notices as applicable. User supplied apple-design guidance on interruptible springs, momentum, direct manipulation, functional translucent navigation, system typography, and three accessibility preference signals. Apply the supplied guidance directly; no separate installed skill is claimed.
 
 ## Evidence on Hand
 
@@ -43,8 +43,14 @@ Responsive layout, readable contrast, visible keyboard focus, accessible disclos
 
 The finished reconstruction infers ceilings over the brown tower shells, completes the partially covered quartered satellite, and extrudes the drawn parcels on the flat satellite. Inferred components are marked in auquara-design.json. Deliberate circular openings and gray courtyard roof openings remain.
 
-Auquara uses unified warm-white architecture with muted blue accents, sage pocket parks, perimeter plantings, 21 stylized trees, and four roof gardens. Landscaping is an authored addition. The hero uses a separate procedural brain assembly with 96 cortical pieces plus the cerebellum and stem; this is an expressive sculpture, not an anatomical reference.
+Auquara uses uniform white architecture with continuous grassy ground, sage pocket parks, perimeter plantings, 21 stylized trees, and four roof gardens. Landscaping is an authored addition.
 
 Website presentation: omit photo-reconstruction/source notes and dimension disclaimers from the project UI. Keep provenance and nominal scale in the downloadable model documentation.
 
-The brain sculpture follows the supplied pink brain reference with fuller winding folds, 96 small cortical pieces and three lower anatomical forms. Drag rotates it independently of the assembly loop; arrow keys rotate and Home resets. Both the outer board and the central city platform are rectangular, while circular city routes remain.
+Both the outer board and central city platform are rectangular, while circular city routes remain.
+
+The hero loads the Pegasus fsaverage5 cortical model from commit 52ba71e3b4bb53063eff035a6e2223388889ca1c. Its solid fixed base is about 65% of the cortical surface; 44 rounded volumetric top pieces fill the remainder, hold complete for one second, then reset and rebuild. Drag rotates independently, arrow keys rotate, and Home resets. Reduced motion starts at the complete state; pausing retains the current frame.
+
+Appearance: the header toggle switches Light/Dark and saves the preference locally. Dark mode uses light primary text, high-contrast secondary text, and dark backgrounds across chrome, controls, project stages, code, stories, and footer. The appearance button text is explicitly light.
+
+Auquara’s default orthographic view aligns with the platform edges so the rectangular footprint is visible as a rectangle. Its building materials are uniformly white; continuous grass fills the ground between the paved paths. The CAD preserves right-angle rectangular boards.

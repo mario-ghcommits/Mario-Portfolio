@@ -1,13 +1,12 @@
 import React, {useEffect, useRef, useState} from 'react';
 import * as THREE from 'three';
 
-import {createBrainModel} from './brainModel.js';
+import {loadBrainModel,topPieceState,brainTimeline} from './brainModel.js';
 import {stepSpring,projectVelocity,clamp,rubberband} from './physics.js';
 
-const smooth=t=>{const x=Math.max(0,Math.min(1,t));return x*x*x*(x*(x*6-15)+10);};
 export default function BrainAssembly({enabled}){
   const host=useRef(null),enabledRef=useRef(enabled),control=useRef(null);
-  const [failed,setFailed]=useState(false);enabledRef.current=enabled;
+  const [failed,setFailed]=useState(false),[ready,setReady]=useState(false);enabledRef.current=enabled;
   useEffect(()=>{control.current?.sync();},[enabled]);
   useEffect(()=>{
     const node=host.current;
@@ -21,19 +20,17 @@ export default function BrainAssembly({enabled}){
     scene.add(new THREE.HemisphereLight(0xffffff,0xa98796,1.9));
     const key=new THREE.DirectionalLight(0xfffaf2,2.7);key.position.set(-3,5,4);scene.add(key);
     const rim=new THREE.DirectionalLight(0xffd9e2,1.5);rim.position.set(3,1,-4);scene.add(rim);
-    const model=createBrainModel();assembly.add(model.root);
-    const pieces=model.pieces;
+    let model=null,disposed=false;
+    loadBrainModel().then(loaded=>{if(disposed){loaded.dispose();return;}model=loaded;if(!enabledRef.current&&elapsed===0)elapsed=brainTimeline(model.pieces.length).fillEnd+.5;assembly.add(model.root);setReady(true);draw();sync();}).catch(()=>{if(!disposed)setFailed(true);});
     let yaw={value:0,velocity:0},pitch={value:0,velocity:0},yawTarget=0,pitchTarget=0,gesture=null;
     assembly.rotation.y=-.1;assembly.rotation.z=-.08;
-    let elapsed=6,frame=0,last=performance.now(),visible=true;
+    let elapsed=0,frame=0,last=performance.now(),visible=true;
     const draw=()=>{
-      const t=elapsed%12;
-      for(const {group,direction,order,spin} of pieces){
-        const offset=order*.055;
-        let spread=t<5?1-smooth((t-offset)/3.7):t<8?0:t<11?smooth((t-8-offset)/2.3):1;
-        if(!enabledRef.current&&elapsed===6)spread=0;
-        group.position.copy(direction).multiplyScalar(spread*.62);
-        group.rotation.set(spread*spin,spread*spin*.7,spread*spin*.4);
+      if(model)for(const {group,rest,rank} of model.pieces){
+        const state=topPieceState(elapsed,rank,model.pieces.length);
+        group.visible=state.visible;group.material.opacity=state.opacity;
+        group.position.copy(rest).add(new THREE.Vector3(Math.sin(rank*2.4)*.32,.95+rank%3*.12,.18).multiplyScalar(state.travel));
+        group.rotation.set(state.travel*.12,state.travel*Math.sin(rank)*.18,0);
       }
       assembly.rotation.y=-.1+yaw.value;assembly.rotation.x=pitch.value;
       renderer.render(scene,camera);
@@ -73,7 +70,7 @@ export default function BrainAssembly({enabled}){
     const resize=()=>{const {width,height}=node.getBoundingClientRect();const aspect=width/Math.max(height,1),extent=Math.max(2.1,2.15/aspect);camera.left=-extent*aspect;camera.right=extent*aspect;camera.top=extent;camera.bottom=-extent;camera.updateProjectionMatrix();renderer.setSize(width,height);draw();sync();};
     const observer=new IntersectionObserver(([entry])=>{visible=entry.isIntersecting;sync();});observer.observe(node);
     const resizer=new ResizeObserver(resize);resizer.observe(node);document.addEventListener('visibilitychange',sync);resize();
-    return()=>{cancelAnimationFrame(frame);control.current=null;observer.disconnect();resizer.disconnect();document.removeEventListener('visibilitychange',sync);node.removeEventListener('pointerdown',down);node.removeEventListener('pointermove',move);node.removeEventListener('pointerup',up);node.removeEventListener('pointercancel',cancel);node.removeEventListener('lostpointercapture',cancel);node.removeEventListener('keydown',onKey);model.dispose();renderer.dispose();node.removeChild(renderer.domElement);};
+    return()=>{cancelAnimationFrame(frame);control.current=null;observer.disconnect();resizer.disconnect();document.removeEventListener('visibilitychange',sync);node.removeEventListener('pointerdown',down);node.removeEventListener('pointermove',move);node.removeEventListener('pointerup',up);node.removeEventListener('pointercancel',cancel);node.removeEventListener('lostpointercapture',cancel);node.removeEventListener('keydown',onKey);disposed=true;model?.dispose();renderer.dispose();node.removeChild(renderer.domElement);};
   },[]);
-  return <div ref={host} className="brain-sculpture" tabIndex={0} role="img" aria-label="Interactive brain puzzle. Drag to rotate, use arrow keys to turn, or press Home to reset.">{failed&&<span className="brain-fallback">Ideas take shape.</span>}</div>;
+  return <div ref={host} className="brain-sculpture" tabIndex={0} role="img" aria-label="Interactive brain puzzle. Drag to rotate, use arrow keys to turn, or press Home to reset.">{(!ready||failed)&&<span className="brain-fallback">{failed?'Brain view unavailable.':'Assembling ideas…'}</span>}</div>;
 }

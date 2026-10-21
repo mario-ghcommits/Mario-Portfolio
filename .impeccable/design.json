@@ -260,7 +260,27 @@
         "name": "small",
         "value": "max-width:360px"
       }
-    ]
+    ],
+    "appearance": {
+      "storageKey": "mario-appearance",
+      "light": {
+        "background": "#ffffff",
+        "text": "#1d1d1f"
+      },
+      "dark": {
+        "background": "#111216",
+        "text": "#f2f3f5",
+        "secondary": "#b1b4bf",
+        "surface": "#1a1c22"
+      }
+    },
+    "brain": {
+      "source": "rishith-c/pegasus",
+      "pieces": 44,
+      "baseFraction": 0.65,
+      "solid": true,
+      "completeHoldSeconds": 1
+    }
   },
   "components": [
     {

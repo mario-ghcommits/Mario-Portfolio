@@ -17,7 +17,7 @@ export default function CityScene({separated, motion, resetToken}){
     const root=host.current;
     const scene=new THREE.Scene();
     const camera=new THREE.OrthographicCamera(-6,6,4.2,-4.2,.1,100);
-    camera.position.set(7,12,13);camera.lookAt(0,.7,0);
+    camera.position.set(0,16,12);camera.lookAt(0,.7,0);
     const renderer=new THREE.WebGLRenderer({alpha:true,antialias:true,preserveDrawingBuffer:true});
     renderer.setPixelRatio(Math.min(window.devicePixelRatio,1.75));
     renderer.setClearColor(0x000000,0);

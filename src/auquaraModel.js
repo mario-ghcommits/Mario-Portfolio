@@ -4,13 +4,13 @@ import * as THREE from 'three';
 // not a measurement. +Y points toward the three satellite modules in IMG_1315.
 export const AUQUARA_DESIGN = {
   name: 'Auquara — photo reconstruction',
-  version: 4,
+  version: 5,
   units: 'millimeters',
   nominalBase: {width:190,length:380,thickness:4,supportHeight:20},
   provenance: 'Reconstructed by visual interpretation of IMG_1345, IMG_1316, IMG_1315, and IMG_1296. Hidden geometry and dimensions are estimated. Original photos are not distributed.',
   completion: 'Unfinished brown tower roofs, the quartered satellite roof, and outlined satellite volumes are inferred as a finished design. Intentional circular and courtyard openings are preserved.',
-  finish: 'Unified warm-white architecture, muted blue accents, sage parks, evergreen trees and planted roofs. Landscaping is an authored design addition.',
-  palette: {base:'#bacbd1',paving:'#d9dedb',road:'#7d8d8c',roadFill:'#edf0eb',blue:'#749bab',lightBlue:'#749bab',white:'#e8e8df',gray:'#e8e8df',brown:'#e8e8df',darkBrown:'#8b9c9a',tan:'#e8e8df',green:'#91aa89',foliage:'#50765e',trunk:'#8b9c9a'},
+  finish: 'Uniform white architecture on a rectangular white display board, with continuous grass ground, planted roofs, paved circular routes, and trees. Landscaping is an authored design addition.',
+  palette: {base:'#e3e6e0',paving:'#92ad82',road:'#7d8d8c',roadFill:'#edf0eb',blue:'#749bab',lightBlue:'#749bab',white:'#e8e8df',gray:'#e8e8df',brown:'#e8e8df',darkBrown:'#8b9c9a',tan:'#e8e8df',green:'#92ad82',foliage:'#50765e',trunk:'#8b9c9a'},
   parts: [],
 };
 const parts=AUQUARA_DESIGN.parts;
@@ -23,11 +23,14 @@ const ring=(inner,outer)=>({kind:'ring',inner,outer});
 const sector=(inner,outer,start,end)=>({kind:'sector',inner,outer,start,end});
 
 add('board','Painted blue rectangular display board','base','base',rect(190,380),4,0,0,20);
-for(const [i,x,y] of [[1,-82,-177],[2,82,-177],[3,-82,177],[4,82,177]])add('support-'+i,'Blue platform support '+i,'base','blue',rect(9,11),20,x,y,0);
+for(const [i,x,y] of [[1,-82,-177],[2,82,-177],[3,-82,177],[4,82,177]])add('support-'+i,'Blue platform support '+i,'base','white',rect(9,11),20,x,y,0);
+add('grass-ground','Continuous grass ground plane','network','green',rect(184,374),.12,0,0,24);
 add('city-disc','Rectangular central city platform','network','paving',rect(184,190),1.2,0,0,24);
+for(const radius of [27,48,85])add('paved-ring-'+radius,'Paved circular pedestrian route','network','roadFill',ring(radius-1.7,radius+1.7),.1,0,0,25.21);
 for(const radius of [27,48,85])add('ring-route-'+radius,'Concentric route marking','network','road',ring(radius-.42,radius+.42),.18,0,0,25.22);
 for(const angle of [0,45,90,135,180,225,270,315]){
   const [x,y]=polar(54,angle);
+  add('paved-spoke-'+angle,'Paved radial pedestrian route','network','roadFill',rect(57,2.8),.1,x,y,25.21,angle);
   add('radial-route-'+angle,'Radial route marking','network','road',rect(57,.7),.18,x,y,25.24,angle);
 }
 for(const [i,x,y] of [[1,-61,145],[2,0,148],[3,61,145],[4,-43,-147],[5,45,-147]]){
@@ -144,6 +147,9 @@ for(const [i,angle,height] of [[1,45,55],[2,207,45],[3,263,52],[4,320,49]]){
   add('roof-garden-'+i,'Planted tower roof terrace '+i,'buildings','green',rect(17,19,2),.55,x,y,z,angle-90);
   tree('roof-tree-'+i,x,y,z+.55,8,2.3,'buildings');
 }
+
+// One architectural finish; vegetation keeps its own landscape materials.
+for(const part of parts)if(part.layer==='buildings'&&!['green','foliage','trunk'].includes(part.material))part.material='white';
 
 export function outline(shape,segments=64) {
   const arc=(radius,start=0,end=360)=>{const count=Math.max(2,Math.ceil((end-start)/360*segments));return Array.from({length:count+1},(_,i)=>polar(radius,start+(end-start)*i/count));};
