@@ -4,13 +4,13 @@ import * as THREE from 'three';
 // not a measurement. +Y points toward the three satellite modules in IMG_1315.
 export const AUQUARA_DESIGN = {
   name: 'Auquara — photo reconstruction',
-  version: 6,
+  version: 11,
   units: 'millimeters',
   nominalBase: {width:190,length:380,thickness:4,supportHeight:20},
   provenance: 'Reconstructed by visual interpretation of IMG_1345, IMG_1316, IMG_1315, and IMG_1296. Hidden geometry and dimensions are estimated. Original photos are not distributed.',
   completion: 'Unfinished brown tower roofs, the quartered satellite roof, and outlined satellite volumes are inferred as a finished design. Intentional circular and courtyard openings are preserved.',
-  finish: 'Light-blue offices, white housing and gray factories on a predominantly paved rectangular site with pocket lawns, planted roofs, and trees. Outer buildings are offices or factories. Program assignments and landscaping are authored design choices.',
-  palette: {base:'#e3e6e0',paving:'#d8ddd7',road:'#7d8d8c',roadFill:'#edf0eb',blue:'#a5c9de',lightBlue:'#a5c9de',white:'#e8e8df',gray:'#90989e',brown:'#e8e8df',darkBrown:'#8b9c9a',tan:'#e8e8df',green:'#92ad82',foliage:'#50765e',trunk:'#8b9c9a'},
+  finish: 'Clean architectural masses with pale-blue curved towers, white housing, pale-gray outer modules, pocket gardens, planted roofs, and a circular glass greenhouse on a pale rectangular display base. Outer buildings are offices or factories. Program assignments and landscaping are authored design choices.',
+  palette: {base:'#e3e6e0',paving:'#d8ddd7',road:'#7d8d8c',roadFill:'#edf0eb',blue:'#a5c9de',lightBlue:'#a5c9de',white:'#e8e8df',gray:'#c4cccb',brown:'#e8e8df',darkBrown:'#8b9c9a',tan:'#e8e8df',green:'#92ad82',foliage:'#50765e',trunk:'#8b9c9a',glass:'#41637a',frame:'#c4d0d4',equipment:'#a2aeb5',glassLight:'#7291a2',glassDark:'#304d61',greenhouse:'#a4d6c9'},
   parts: [],
 };
 const parts=AUQUARA_DESIGN.parts;
@@ -22,9 +22,9 @@ const disk=radius=>({kind:'circle',radius});
 const ring=(inner,outer)=>({kind:'ring',inner,outer});
 const sector=(inner,outer,start,end)=>({kind:'sector',inner,outer,start,end});
 
-add('board','Painted blue rectangular display board','base','base',rect(190,380),4,0,0,20);
+add('board','Pale rectangular display base','base','base',rect(190,380),4,0,0,20);
 for(const [i,x,y] of [[1,-82,-177],[2,82,-177],[3,-82,177],[4,82,177]])add('support-'+i,'Blue platform support '+i,'base','white',rect(9,11),20,x,y,0);
-add('city-disc','Rectangular central city platform','network','paving',rect(184,190),1.2,0,0,24);
+add('city-disc','Circular main floating island','network','paving',disk(95),1.2,0,0,24);
 for(const radius of [27,48,85])add('paved-ring-'+radius,'Paved circular pedestrian route','network','roadFill',ring(radius-1.7,radius+1.7),.1,0,0,25.21);
 for(const radius of [27,48,85])add('ring-route-'+radius,'Concentric route marking','network','road',ring(radius-.42,radius+.42),.18,0,0,25.22);
 for(const angle of [0,45,90,135,180,225,270,315]){
@@ -39,6 +39,8 @@ for(const [i,x,y] of [[1,-61,145],[2,0,148],[3,61,145],[4,-43,-147],[5,45,-147]]
   add('satellite-link-edge-'+i,'Satellite connecting route outline '+i,'network','road',rect(length,3.1),.2,cx,cy,24.03,angle);
   add('satellite-link-'+i,'Satellite connecting route '+i,'network','roadFill',rect(length,1.9),.22,cx,cy,24.25,angle);
 }
+// Floating foundations sit above the water; garden islands remain clear of the links.
+for(const [i,x,y,r] of [[1,-61,145,29],[2,0,148,20],[3,61,145,32],[4,-43,-147,35],[5,45,-147,34]])add('floating-district-'+i,'Floating satellite foundation '+i,'network','paving',disk(r),.8,x,y,24);
 for(const [index,start,end] of [[1,43,132],[2,205,252]])add('inner-landscape-'+index,'Small inner green arc '+index,'network','green',sector(29,34,start,end),.28,0,0,25.3);
 
 // Three blue curved tower volumes, grouped on one side of the circular district.
@@ -133,9 +135,10 @@ function tree(id,x,y,z=24.8,height=15,radius=3.5,layer='network'){
   add(id+'-trunk','Landscape tree trunk',layer,'trunk',disk(.7),height*.42,x,y,z);
   add(id+'-crown','Landscape tree canopy',layer,'foliage',{kind:'ellipsoid',radius},height*.74,x,y,z+height*.26);
 }
-for(const [i,x,y] of [[1,-70,103],[2,70,103],[3,-70,-103],[4,70,-103]]){
-  add('park-'+i,'Planted satellite pocket park '+i,'network','green',rect(48,24,5),.8,x*.9,y,24);
-  for(let j=0;j<3;j++)tree('park-tree-'+i+'-'+j,x-8+j*8,y+(j%2?2:-2),24.8,14+j*2,3.2);
+for(const [i,x,y] of [[1,-77,110],[2,77,110],[3,-77,-110],[4,77,-110]]){
+  add('park-float-'+i,'Floating garden pontoon '+i,'network','paving',rect(26,24,2),1.2,x,y,24);
+  add('park-'+i,'Floating pocket garden '+i,'network','green',rect(22,20,2),.6,x,y,25.2);
+  for(let j=0;j<3;j++)tree('park-tree-'+i+'-'+j,x-6+j*6,y+(j%2?2:-2),25.8,12+j,2.6);
 }
 for(const [i,start,end] of [[1,9,44],[2,57,82],[3,118,145],[4,187,222],[5,279,309]]){
   add('perimeter-garden-'+i,'Planted perimeter verge '+i,'network','green',sector(91.5,94,start,end),.65,0,0,24.1);
@@ -147,15 +150,22 @@ for(const [i,angle,height] of [[1,45,55],[2,207,45],[3,263,52],[4,320,49]]){
   tree('roof-tree-'+i,x,y,z+.55,8,2.3,'buildings');
 }
 
+// Small inset roof gardens bring greenery into the center without blocking routes.
+for(const [i,angle,height] of [[1,24,24],[2,145,30],[3,267,21]]){
+  const [x,y]=polar(5,angle);
+  add('central-roof-garden-'+i,'Central residential roof garden '+i,'buildings','green',sector(2,12,angle-31,angle+31),.55,x,y,25.35+height);
+  const [dx,dy]=polar(8,angle);
+  add('central-roof-shrub-'+i,'Low central roof planting '+i,'buildings','foliage',{kind:'ellipsoid',radius:2.4},2.5,x+dx,y+dy,25.9+height);
+}
+
 // Landscape beds sit within a predominantly paved site.
-for(const [i,x,y] of [[1,-74,73],[2,74,73],[3,-74,-73],[4,74,-73]])add('corner-lawn-'+i,'Corner lawn','network','green',rect(22,25,4),.22,x,y,25.22);
 for(const angle of [10,100,190,280])add('city-pocket-lawn-'+angle,'Inner planted pocket','network','green',sector(29,41,angle-6,angle+6),.18,0,0,25.22);
 // Program colors are consistent across each building's walls, floors and roof.
 for(const part of parts){
  if(part.layer!=='buildings'||['green','foliage','trunk'].includes(part.material))continue;
  const id=part.id;
  let use='housing';
- if(/^(blue-|brown-)/.test(id))use='office';
+ if(/^blue-/.test(id))use='office';
  if(/^(gray-court-|perimeter-wall-)/.test(id))use='factory';
  if(/^satellite-d/.test(id)||/^satellite-quarter-/.test(id)||/^inferred-parcel-/.test(id))use='factory';
  if(id==='satellite-u'||/^(open-satellite-|completed-quarter-roof-)/.test(id))use='office';
@@ -163,11 +173,36 @@ for(const part of parts){
  part.material={office:'lightBlue',housing:'white',factory:'gray'}[use];
 }
 
+// The lower-left satellite is a circular greenhouse with a transparent dome.
+for(let i=parts.length-1;i>=0;i--)if(parts[i].id.startsWith('satellite-d'))parts.splice(i,1);
+add('greenhouse-floor','Circular greenhouse floor','buildings','paving',disk(27),1,-61,145,24.8);
+for(const [i,x,y] of [[1,-10,-9],[2,10,-9],[3,-10,9],[4,10,9]]){
+  add('greenhouse-bed-edge-'+i,'Raised greenhouse planting bed '+i,'buildings','frame',rect(12,11,1),1.3,-61+x,145+y,25.8);
+  add('greenhouse-bed-'+i,'Greenhouse planted bed '+i,'buildings','green',rect(10.5,9.5,1),.5,-61+x,145+y,27.1);
+  for(let j=0;j<3;j++)tree('greenhouse-plant-'+i+'-'+j,-61+x-3+j*3,145+y+(j%2?2:-2),27.6,6.5+j*1.1,1.7,'buildings');
+}
+add('greenhouse-glass','Transparent greenhouse dome','buildings','greenhouse',{kind:'dome',radius:27},24,-61,145,25.8);
+for(let i=0;i<6;i++){
+ const angle=i*30*Math.PI/180;
+ const path=Array.from({length:33},(_,j)=>{
+  const a=j/32*Math.PI,r=Math.cos(a)*27;
+  return [r*Math.cos(angle),r*Math.sin(angle),Math.sin(a)*24];
+ });
+ add('greenhouse-rib-'+i,'Arched greenhouse frame '+i,'buildings','frame',{kind:'tube',radius:.28,path},1,-61,145,25.8);
+}
+for(const [i,z] of [[1,0],[2,10],[3,18]]){
+ const r=27*Math.sqrt(1-(z/24)**2);
+ const path=Array.from({length:65},(_,j)=>[Math.cos(j/64*Math.PI*2)*r,Math.sin(j/64*Math.PI*2)*r,z]);
+ add('greenhouse-ring-'+i,'Greenhouse horizontal frame '+i,'buildings','frame',{kind:'tube',radius:.28,path},1,-61,145,25.8);
+}
+
 export function outline(shape,segments=64) {
   const arc=(radius,start=0,end=360)=>{const count=Math.max(2,Math.ceil((end-start)/360*segments));return Array.from({length:count+1},(_,i)=>polar(radius,start+(end-start)*i/count));};
   const rectangle=(w,d,c=0)=>c?[[w/2-c,d/2],[-w/2+c,d/2],[-w/2,d/2-c],[-w/2,-d/2+c],[-w/2+c,-d/2],[w/2-c,-d/2],[w/2,-d/2+c],[w/2,d/2-c]]:[[-w/2,-d/2],[w/2,-d/2],[w/2,d/2],[-w/2,d/2]];
   switch(shape.kind){
     case 'rectangle':return {outer:rectangle(shape.width,shape.depth,shape.chamfer),holes:[]};
+    case 'tube':return {outer:arc(shape.radius).slice(0,-1),holes:[]};
+    case 'dome':
     case 'ellipsoid':
     case 'circle':return {outer:arc(shape.radius).slice(0,-1),holes:[]};
     case 'ring':return {outer:arc(shape.outer).slice(0,-1),holes:[arc(shape.inner).slice(0,-1)]};
@@ -191,19 +226,25 @@ export function createAuquaraModel({supports=true}={}){
   const layers={base:new THREE.Group(),network:new THREE.Group(),buildings:new THREE.Group()};
   for(const [name,group] of Object.entries(layers)){group.name=name;root.add(group);}
   const materials=Object.fromEntries(Object.entries(AUQUARA_DESIGN.palette).map(([name,color])=>[name,new THREE.MeshStandardMaterial({name,color,roughness:.83,metalness:0})]));
+  Object.assign(materials.greenhouse,{transparent:true,opacity:.22,depthWrite:false,roughness:.16,metalness:.05,side:THREE.DoubleSide});
+  materials.glass.roughness=.32;materials.glassLight.roughness=.38;materials.glassDark.roughness=.28;
   const geometries=[];
   for(const part of parts){
     if(!supports&&part.id.startsWith('support-'))continue;
     const {outer,holes}=outline(part.shape);
     const contour=new THREE.Shape(outer.map(([x,y])=>new THREE.Vector2(x*WORLD_UNITS_PER_MM,y*WORLD_UNITS_PER_MM)));
     for(const points of holes)contour.holes.push(new THREE.Path(points.map(([x,y])=>new THREE.Vector2(x*WORLD_UNITS_PER_MM,y*WORLD_UNITS_PER_MM))));
-    const geometry=part.shape.kind==='ellipsoid'
+    const geometry=part.shape.kind==='dome'
+      ? new THREE.SphereGeometry(part.shape.radius*WORLD_UNITS_PER_MM,48,24,0,Math.PI*2,0,Math.PI/2).scale(1,part.height/part.shape.radius,1)
+      : part.shape.kind==='tube'
+      ? new THREE.TubeGeometry(new THREE.CatmullRomCurve3(part.shape.path.map(([x,y,z])=>new THREE.Vector3(x*WORLD_UNITS_PER_MM,z*WORLD_UNITS_PER_MM,-y*WORLD_UNITS_PER_MM))),96,part.shape.radius*WORLD_UNITS_PER_MM,6,false)
+      : part.shape.kind==='ellipsoid'
       ? new THREE.SphereGeometry(part.shape.radius*WORLD_UNITS_PER_MM,12,8).scale(1,part.height/(2*part.shape.radius),1).translate(0,part.height*WORLD_UNITS_PER_MM/2,0)
       : new THREE.ExtrudeGeometry(contour,{depth:part.height*WORLD_UNITS_PER_MM,bevelEnabled:false,curveSegments:24}).rotateX(-Math.PI/2);
     geometries.push(geometry);
     const mesh=new THREE.Mesh(geometry,materials[part.material]);mesh.name=part.id;
     mesh.position.set(part.position[0]*WORLD_UNITS_PER_MM,part.position[2]*WORLD_UNITS_PER_MM,-part.position[1]*WORLD_UNITS_PER_MM);
-    mesh.rotation.y=part.rotation*Math.PI/180;mesh.castShadow=true;mesh.receiveShadow=true;
+    mesh.rotation.y=part.rotation*Math.PI/180;mesh.castShadow=part.material!=='greenhouse';mesh.receiveShadow=part.material!=='greenhouse';if(part.material==='greenhouse')mesh.renderOrder=2;
     mesh.userData={label:part.name,layer:part.layer,use:part.use,zone:part.zone};layers[part.layer].add(mesh);
   }
   return {root,layers,dispose(){geometries.forEach(geometry=>geometry.dispose());Object.values(materials).forEach(material=>material.dispose());}};

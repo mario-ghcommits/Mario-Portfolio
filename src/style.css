@@ -238,11 +238,11 @@ a svg { flex-shrink: 0; }
   .recognition>span { display: none; }
   .visual-note { font-size: 0.5625rem; }
   .interests { padding-top: 75px; padding-bottom: 70px; }
-  .interest-layout { grid-template-columns: 1fr; gap: 28px; margin-top: 30px; }
-  .interest-menu { flex-direction: row; gap: 26px; padding: 0; }
+  .interest-layout { grid-template-columns: minmax(0,1fr); gap: 28px; margin-top: 30px; }
+  .interest-menu { flex-direction: row; gap: 16px; padding: 0; }
   .interest-menu button { padding: 15px 0; gap: 10px; flex: 1; font-size: 0.8125rem; min-height: 50px; }
   .interest-menu button svg:first-child { width: 18px; height: 18px; }
-  .interest-menu button svg:last-child { width: 15px; height: 15px; }
+  .interest-menu button svg:last-child { display: none; }
   .interest-menu button[aria-pressed=true] { border-bottom-color: #1d1d1f; }
   .interest-symbol { height: 255px; border-radius: 14px; }
   .interest-text { padding-top: 24px; }
@@ -416,9 +416,3 @@ html[data-theme=dark] h4,
 html[data-theme=dark] .wordmark { color: var(--ink); }
 html[data-theme=dark] .appearance-toggle:hover { background: #292e38; }
 
-.model-key { display: flex; flex-wrap: wrap; gap: 12px 24px; padding: 0; margin: 0 0 24px; list-style: none; font-size: .75rem; color: var(--secondary); }
-.model-key li { display: flex; align-items: center; gap: 8px; }
-.model-key li>span { width: 12px; height: 12px; border: 1px solid #7b87934d; border-radius: 3px; }
-.key-office { background: #a5c9de; }
-.key-housing { background: #e8e8df; }
-.key-factory { background: #90989e; }

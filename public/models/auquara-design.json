@@ -1,6 +1,6 @@
 {
   "name": "Auquara — photo reconstruction",
-  "version": 6,
+  "version": 11,
   "units": "millimeters",
   "nominalBase": {
     "width": 190,
@@ -10,7 +10,7 @@
   },
   "provenance": "Reconstructed by visual interpretation of IMG_1345, IMG_1316, IMG_1315, and IMG_1296. Hidden geometry and dimensions are estimated. Original photos are not distributed.",
   "completion": "Unfinished brown tower roofs, the quartered satellite roof, and outlined satellite volumes are inferred as a finished design. Intentional circular and courtyard openings are preserved.",
-  "finish": "Light-blue offices, white housing and gray factories on a predominantly paved rectangular site with pocket lawns, planted roofs, and trees. Outer buildings are offices or factories. Program assignments and landscaping are authored design choices.",
+  "finish": "Clean architectural masses with pale-blue curved towers, white housing, pale-gray outer modules, pocket gardens, planted roofs, and a circular glass greenhouse on a pale rectangular display base. Outer buildings are offices or factories. Program assignments and landscaping are authored design choices.",
   "palette": {
     "base": "#e3e6e0",
     "paving": "#d8ddd7",
@@ -19,18 +19,24 @@
     "blue": "#a5c9de",
     "lightBlue": "#a5c9de",
     "white": "#e8e8df",
-    "gray": "#90989e",
+    "gray": "#c4cccb",
     "brown": "#e8e8df",
     "darkBrown": "#8b9c9a",
     "tan": "#e8e8df",
     "green": "#92ad82",
     "foliage": "#50765e",
-    "trunk": "#8b9c9a"
+    "trunk": "#8b9c9a",
+    "glass": "#41637a",
+    "frame": "#c4d0d4",
+    "equipment": "#a2aeb5",
+    "glassLight": "#7291a2",
+    "glassDark": "#304d61",
+    "greenhouse": "#a4d6c9"
   },
   "parts": [
     {
       "id": "board",
-      "name": "Painted blue rectangular display board",
+      "name": "Pale rectangular display base",
       "layer": "base",
       "material": "base",
       "shape": {
@@ -125,14 +131,12 @@
     },
     {
       "id": "city-disc",
-      "name": "Rectangular central city platform",
+      "name": "Circular main floating island",
       "layer": "network",
       "material": "paving",
       "shape": {
-        "kind": "rectangle",
-        "width": 184,
-        "depth": 190,
-        "chamfer": 0
+        "kind": "circle",
+        "radius": 95
       },
       "height": 1.2,
       "position": [
@@ -745,6 +749,91 @@
       "rotation": -72.97947438848014
     },
     {
+      "id": "floating-district-1",
+      "name": "Floating satellite foundation 1",
+      "layer": "network",
+      "material": "paving",
+      "shape": {
+        "kind": "circle",
+        "radius": 29
+      },
+      "height": 0.8,
+      "position": [
+        -61,
+        145,
+        24
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "floating-district-2",
+      "name": "Floating satellite foundation 2",
+      "layer": "network",
+      "material": "paving",
+      "shape": {
+        "kind": "circle",
+        "radius": 20
+      },
+      "height": 0.8,
+      "position": [
+        0,
+        148,
+        24
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "floating-district-3",
+      "name": "Floating satellite foundation 3",
+      "layer": "network",
+      "material": "paving",
+      "shape": {
+        "kind": "circle",
+        "radius": 32
+      },
+      "height": 0.8,
+      "position": [
+        61,
+        145,
+        24
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "floating-district-4",
+      "name": "Floating satellite foundation 4",
+      "layer": "network",
+      "material": "paving",
+      "shape": {
+        "kind": "circle",
+        "radius": 35
+      },
+      "height": 0.8,
+      "position": [
+        -43,
+        -147,
+        24
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "floating-district-5",
+      "name": "Floating satellite foundation 5",
+      "layer": "network",
+      "material": "paving",
+      "shape": {
+        "kind": "circle",
+        "radius": 34
+      },
+      "height": 0.8,
+      "position": [
+        45,
+        -147,
+        24
+      ],
+      "rotation": 0
+    },
+    {
       "id": "inner-landscape-1",
       "name": "Small inner green arc 1",
       "layer": "network",
@@ -920,7 +1009,7 @@
       "id": "brown-floor-1",
       "name": "Open tower floor 1",
       "layer": "buildings",
-      "material": "lightBlue",
+      "material": "white",
       "shape": {
         "kind": "rectangle",
         "width": 23,
@@ -934,14 +1023,14 @@
         25.3
       ],
       "rotation": -45,
-      "use": "office",
+      "use": "housing",
       "zone": "city"
     },
     {
       "id": "brown-tower-1",
       "name": "Open brown tower 1",
       "layer": "buildings",
-      "material": "lightBlue",
+      "material": "white",
       "shape": {
         "kind": "courtyard",
         "width": 23,
@@ -956,14 +1045,14 @@
         26.6
       ],
       "rotation": -45,
-      "use": "office",
+      "use": "housing",
       "zone": "city"
     },
     {
       "id": "brown-roof-1",
       "name": "Inferred finished tower roof 1",
       "layer": "buildings",
-      "material": "lightBlue",
+      "material": "white",
       "shape": {
         "kind": "rectangle",
         "width": 23,
@@ -978,14 +1067,14 @@
       ],
       "rotation": -45,
       "inferred": true,
-      "use": "office",
+      "use": "housing",
       "zone": "city"
     },
     {
       "id": "brown-floor-2",
       "name": "Open tower floor 2",
       "layer": "buildings",
-      "material": "lightBlue",
+      "material": "white",
       "shape": {
         "kind": "rectangle",
         "width": 23,
@@ -999,14 +1088,14 @@
         25.3
       ],
       "rotation": 117,
-      "use": "office",
+      "use": "housing",
       "zone": "city"
     },
     {
       "id": "brown-tower-2",
       "name": "Open brown tower 2",
       "layer": "buildings",
-      "material": "lightBlue",
+      "material": "white",
       "shape": {
         "kind": "courtyard",
         "width": 23,
@@ -1021,14 +1110,14 @@
         26.6
       ],
       "rotation": 117,
-      "use": "office",
+      "use": "housing",
       "zone": "city"
     },
     {
       "id": "brown-roof-2",
       "name": "Inferred finished tower roof 2",
       "layer": "buildings",
-      "material": "lightBlue",
+      "material": "white",
       "shape": {
         "kind": "rectangle",
         "width": 23,
@@ -1043,14 +1132,14 @@
       ],
       "rotation": 117,
       "inferred": true,
-      "use": "office",
+      "use": "housing",
       "zone": "city"
     },
     {
       "id": "brown-floor-3",
       "name": "Open tower floor 3",
       "layer": "buildings",
-      "material": "lightBlue",
+      "material": "white",
       "shape": {
         "kind": "rectangle",
         "width": 23,
@@ -1064,14 +1153,14 @@
         25.3
       ],
       "rotation": 173,
-      "use": "office",
+      "use": "housing",
       "zone": "city"
     },
     {
       "id": "brown-tower-3",
       "name": "Open brown tower 3",
       "layer": "buildings",
-      "material": "lightBlue",
+      "material": "white",
       "shape": {
         "kind": "courtyard",
         "width": 23,
@@ -1086,14 +1175,14 @@
         26.6
       ],
       "rotation": 173,
-      "use": "office",
+      "use": "housing",
       "zone": "city"
     },
     {
       "id": "brown-roof-3",
       "name": "Inferred finished tower roof 3",
       "layer": "buildings",
-      "material": "lightBlue",
+      "material": "white",
       "shape": {
         "kind": "rectangle",
         "width": 23,
@@ -1108,14 +1197,14 @@
       ],
       "rotation": 173,
       "inferred": true,
-      "use": "office",
+      "use": "housing",
       "zone": "city"
     },
     {
       "id": "brown-floor-4",
       "name": "Open tower floor 4",
       "layer": "buildings",
-      "material": "lightBlue",
+      "material": "white",
       "shape": {
         "kind": "rectangle",
         "width": 23,
@@ -1129,14 +1218,14 @@
         25.3
       ],
       "rotation": 230,
-      "use": "office",
+      "use": "housing",
       "zone": "city"
     },
     {
       "id": "brown-tower-4",
       "name": "Open brown tower 4",
       "layer": "buildings",
-      "material": "lightBlue",
+      "material": "white",
       "shape": {
         "kind": "courtyard",
         "width": 23,
@@ -1151,14 +1240,14 @@
         26.6
       ],
       "rotation": 230,
-      "use": "office",
+      "use": "housing",
       "zone": "city"
     },
     {
       "id": "brown-roof-4",
       "name": "Inferred finished tower roof 4",
       "layer": "buildings",
-      "material": "lightBlue",
+      "material": "white",
       "shape": {
         "kind": "rectangle",
         "width": 23,
@@ -1173,7 +1262,7 @@
       ],
       "rotation": 230,
       "inferred": true,
-      "use": "office",
+      "use": "housing",
       "zone": "city"
     },
     {
@@ -1705,70 +1794,6 @@
       "rotation": -12,
       "use": "housing",
       "zone": "city"
-    },
-    {
-      "id": "satellite-d",
-      "name": "D-shaped gray satellite with round opening",
-      "layer": "buildings",
-      "material": "gray",
-      "shape": {
-        "kind": "dShape",
-        "radius": 24,
-        "back": 12,
-        "holeRadius": 7,
-        "holeX": 7
-      },
-      "height": 28,
-      "position": [
-        -61,
-        145,
-        24
-      ],
-      "rotation": 0,
-      "use": "factory",
-      "zone": "outer"
-    },
-    {
-      "id": "satellite-d-rail-white",
-      "name": "White rail beside D-shaped module",
-      "layer": "buildings",
-      "material": "gray",
-      "shape": {
-        "kind": "rectangle",
-        "width": 6,
-        "depth": 47,
-        "chamfer": 0
-      },
-      "height": 29,
-      "position": [
-        -83,
-        145,
-        24
-      ],
-      "rotation": 0,
-      "use": "factory",
-      "zone": "outer"
-    },
-    {
-      "id": "satellite-d-rail-blue",
-      "name": "Blue rail beside D-shaped module",
-      "layer": "buildings",
-      "material": "gray",
-      "shape": {
-        "kind": "rectangle",
-        "width": 5,
-        "depth": 44,
-        "chamfer": 0
-      },
-      "height": 25,
-      "position": [
-        -91,
-        145,
-        24
-      ],
-      "rotation": 0,
-      "use": "factory",
-      "zone": "outer"
     },
     {
       "id": "satellite-u",
@@ -2765,21 +2790,40 @@
       "zone": "outer"
     },
     {
+      "id": "park-float-1",
+      "name": "Floating garden pontoon 1",
+      "layer": "network",
+      "material": "paving",
+      "shape": {
+        "kind": "rectangle",
+        "width": 26,
+        "depth": 24,
+        "chamfer": 2
+      },
+      "height": 1.2,
+      "position": [
+        -77,
+        110,
+        24
+      ],
+      "rotation": 0
+    },
+    {
       "id": "park-1",
-      "name": "Planted satellite pocket park 1",
+      "name": "Floating pocket garden 1",
       "layer": "network",
       "material": "green",
       "shape": {
         "kind": "rectangle",
-        "width": 48,
-        "depth": 24,
-        "chamfer": 5
+        "width": 22,
+        "depth": 20,
+        "chamfer": 2
       },
-      "height": 0.8,
+      "height": 0.6,
       "position": [
-        -63,
-        103,
-        24
+        -77,
+        110,
+        25.2
       ],
       "rotation": 0
     },
@@ -2792,11 +2836,11 @@
         "kind": "circle",
         "radius": 0.7
       },
-      "height": 5.88,
+      "height": 5.04,
       "position": [
-        -78,
-        101,
-        24.8
+        -83,
+        108,
+        25.8
       ],
       "rotation": 0
     },
@@ -2807,13 +2851,13 @@
       "material": "foliage",
       "shape": {
         "kind": "ellipsoid",
-        "radius": 3.2
+        "radius": 2.6
       },
-      "height": 10.36,
+      "height": 8.879999999999999,
       "position": [
-        -78,
-        101,
-        28.44
+        -83,
+        108,
+        28.92
       ],
       "rotation": 0
     },
@@ -2826,11 +2870,11 @@
         "kind": "circle",
         "radius": 0.7
       },
-      "height": 6.72,
+      "height": 5.46,
       "position": [
-        -70,
-        105,
-        24.8
+        -77,
+        112,
+        25.8
       ],
       "rotation": 0
     },
@@ -2841,13 +2885,13 @@
       "material": "foliage",
       "shape": {
         "kind": "ellipsoid",
-        "radius": 3.2
+        "radius": 2.6
       },
-      "height": 11.84,
+      "height": 9.62,
       "position": [
-        -70,
-        105,
-        28.96
+        -77,
+        112,
+        29.18
       ],
       "rotation": 0
     },
@@ -2860,11 +2904,11 @@
         "kind": "circle",
         "radius": 0.7
       },
-      "height": 7.56,
+      "height": 5.88,
       "position": [
-        -62,
-        101,
-        24.8
+        -71,
+        108,
+        25.8
       ],
       "rotation": 0
     },
@@ -2875,32 +2919,51 @@
       "material": "foliage",
       "shape": {
         "kind": "ellipsoid",
-        "radius": 3.2
+        "radius": 2.6
       },
-      "height": 13.32,
+      "height": 10.36,
       "position": [
-        -62,
-        101,
-        29.48
+        -71,
+        108,
+        29.44
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "park-float-2",
+      "name": "Floating garden pontoon 2",
+      "layer": "network",
+      "material": "paving",
+      "shape": {
+        "kind": "rectangle",
+        "width": 26,
+        "depth": 24,
+        "chamfer": 2
+      },
+      "height": 1.2,
+      "position": [
+        77,
+        110,
+        24
       ],
       "rotation": 0
     },
     {
       "id": "park-2",
-      "name": "Planted satellite pocket park 2",
+      "name": "Floating pocket garden 2",
       "layer": "network",
       "material": "green",
       "shape": {
         "kind": "rectangle",
-        "width": 48,
-        "depth": 24,
-        "chamfer": 5
+        "width": 22,
+        "depth": 20,
+        "chamfer": 2
       },
-      "height": 0.8,
+      "height": 0.6,
       "position": [
-        63,
-        103,
-        24
+        77,
+        110,
+        25.2
       ],
       "rotation": 0
     },
@@ -2913,11 +2976,11 @@
         "kind": "circle",
         "radius": 0.7
       },
-      "height": 5.88,
+      "height": 5.04,
       "position": [
-        62,
-        101,
-        24.8
+        71,
+        108,
+        25.8
       ],
       "rotation": 0
     },
@@ -2928,13 +2991,13 @@
       "material": "foliage",
       "shape": {
         "kind": "ellipsoid",
-        "radius": 3.2
+        "radius": 2.6
       },
-      "height": 10.36,
+      "height": 8.879999999999999,
       "position": [
-        62,
-        101,
-        28.44
+        71,
+        108,
+        28.92
       ],
       "rotation": 0
     },
@@ -2947,11 +3010,11 @@
         "kind": "circle",
         "radius": 0.7
       },
-      "height": 6.72,
+      "height": 5.46,
       "position": [
-        70,
-        105,
-        24.8
+        77,
+        112,
+        25.8
       ],
       "rotation": 0
     },
@@ -2962,13 +3025,13 @@
       "material": "foliage",
       "shape": {
         "kind": "ellipsoid",
-        "radius": 3.2
+        "radius": 2.6
       },
-      "height": 11.84,
+      "height": 9.62,
       "position": [
-        70,
-        105,
-        28.96
+        77,
+        112,
+        29.18
       ],
       "rotation": 0
     },
@@ -2981,11 +3044,11 @@
         "kind": "circle",
         "radius": 0.7
       },
-      "height": 7.56,
+      "height": 5.88,
       "position": [
-        78,
-        101,
-        24.8
+        83,
+        108,
+        25.8
       ],
       "rotation": 0
     },
@@ -2996,32 +3059,51 @@
       "material": "foliage",
       "shape": {
         "kind": "ellipsoid",
-        "radius": 3.2
+        "radius": 2.6
       },
-      "height": 13.32,
+      "height": 10.36,
       "position": [
-        78,
-        101,
-        29.48
+        83,
+        108,
+        29.44
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "park-float-3",
+      "name": "Floating garden pontoon 3",
+      "layer": "network",
+      "material": "paving",
+      "shape": {
+        "kind": "rectangle",
+        "width": 26,
+        "depth": 24,
+        "chamfer": 2
+      },
+      "height": 1.2,
+      "position": [
+        -77,
+        -110,
+        24
       ],
       "rotation": 0
     },
     {
       "id": "park-3",
-      "name": "Planted satellite pocket park 3",
+      "name": "Floating pocket garden 3",
       "layer": "network",
       "material": "green",
       "shape": {
         "kind": "rectangle",
-        "width": 48,
-        "depth": 24,
-        "chamfer": 5
+        "width": 22,
+        "depth": 20,
+        "chamfer": 2
       },
-      "height": 0.8,
+      "height": 0.6,
       "position": [
-        -63,
-        -103,
-        24
+        -77,
+        -110,
+        25.2
       ],
       "rotation": 0
     },
@@ -3034,11 +3116,11 @@
         "kind": "circle",
         "radius": 0.7
       },
-      "height": 5.88,
+      "height": 5.04,
       "position": [
-        -78,
-        -105,
-        24.8
+        -83,
+        -112,
+        25.8
       ],
       "rotation": 0
     },
@@ -3049,13 +3131,13 @@
       "material": "foliage",
       "shape": {
         "kind": "ellipsoid",
-        "radius": 3.2
+        "radius": 2.6
       },
-      "height": 10.36,
+      "height": 8.879999999999999,
       "position": [
-        -78,
-        -105,
-        28.44
+        -83,
+        -112,
+        28.92
       ],
       "rotation": 0
     },
@@ -3068,11 +3150,11 @@
         "kind": "circle",
         "radius": 0.7
       },
-      "height": 6.72,
+      "height": 5.46,
       "position": [
-        -70,
-        -101,
-        24.8
+        -77,
+        -108,
+        25.8
       ],
       "rotation": 0
     },
@@ -3083,13 +3165,13 @@
       "material": "foliage",
       "shape": {
         "kind": "ellipsoid",
-        "radius": 3.2
+        "radius": 2.6
       },
-      "height": 11.84,
+      "height": 9.62,
       "position": [
-        -70,
-        -101,
-        28.96
+        -77,
+        -108,
+        29.18
       ],
       "rotation": 0
     },
@@ -3102,11 +3184,11 @@
         "kind": "circle",
         "radius": 0.7
       },
-      "height": 7.56,
+      "height": 5.88,
       "position": [
-        -62,
-        -105,
-        24.8
+        -71,
+        -112,
+        25.8
       ],
       "rotation": 0
     },
@@ -3117,32 +3199,51 @@
       "material": "foliage",
       "shape": {
         "kind": "ellipsoid",
-        "radius": 3.2
+        "radius": 2.6
       },
-      "height": 13.32,
+      "height": 10.36,
       "position": [
-        -62,
-        -105,
-        29.48
+        -71,
+        -112,
+        29.44
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "park-float-4",
+      "name": "Floating garden pontoon 4",
+      "layer": "network",
+      "material": "paving",
+      "shape": {
+        "kind": "rectangle",
+        "width": 26,
+        "depth": 24,
+        "chamfer": 2
+      },
+      "height": 1.2,
+      "position": [
+        77,
+        -110,
+        24
       ],
       "rotation": 0
     },
     {
       "id": "park-4",
-      "name": "Planted satellite pocket park 4",
+      "name": "Floating pocket garden 4",
       "layer": "network",
       "material": "green",
       "shape": {
         "kind": "rectangle",
-        "width": 48,
-        "depth": 24,
-        "chamfer": 5
+        "width": 22,
+        "depth": 20,
+        "chamfer": 2
       },
-      "height": 0.8,
+      "height": 0.6,
       "position": [
-        63,
-        -103,
-        24
+        77,
+        -110,
+        25.2
       ],
       "rotation": 0
     },
@@ -3155,11 +3256,11 @@
         "kind": "circle",
         "radius": 0.7
       },
-      "height": 5.88,
+      "height": 5.04,
       "position": [
-        62,
-        -105,
-        24.8
+        71,
+        -112,
+        25.8
       ],
       "rotation": 0
     },
@@ -3170,13 +3271,13 @@
       "material": "foliage",
       "shape": {
         "kind": "ellipsoid",
-        "radius": 3.2
+        "radius": 2.6
       },
-      "height": 10.36,
+      "height": 8.879999999999999,
       "position": [
-        62,
-        -105,
-        28.44
+        71,
+        -112,
+        28.92
       ],
       "rotation": 0
     },
@@ -3189,11 +3290,11 @@
         "kind": "circle",
         "radius": 0.7
       },
-      "height": 6.72,
+      "height": 5.46,
       "position": [
-        70,
-        -101,
-        24.8
+        77,
+        -108,
+        25.8
       ],
       "rotation": 0
     },
@@ -3204,13 +3305,13 @@
       "material": "foliage",
       "shape": {
         "kind": "ellipsoid",
-        "radius": 3.2
+        "radius": 2.6
       },
-      "height": 11.84,
+      "height": 9.62,
       "position": [
-        70,
-        -101,
-        28.96
+        77,
+        -108,
+        29.18
       ],
       "rotation": 0
     },
@@ -3223,11 +3324,11 @@
         "kind": "circle",
         "radius": 0.7
       },
-      "height": 7.56,
+      "height": 5.88,
       "position": [
-        78,
-        -105,
-        24.8
+        83,
+        -112,
+        25.8
       ],
       "rotation": 0
     },
@@ -3238,13 +3339,13 @@
       "material": "foliage",
       "shape": {
         "kind": "ellipsoid",
-        "radius": 3.2
+        "radius": 2.6
       },
-      "height": 13.32,
+      "height": 10.36,
       "position": [
-        78,
-        -105,
-        29.48
+        83,
+        -112,
+        29.44
       ],
       "rotation": 0
     },
@@ -3731,78 +3832,113 @@
       "rotation": 0
     },
     {
-      "id": "corner-lawn-1",
-      "name": "Corner lawn",
-      "layer": "network",
+      "id": "central-roof-garden-1",
+      "name": "Central residential roof garden 1",
+      "layer": "buildings",
       "material": "green",
       "shape": {
-        "kind": "rectangle",
-        "width": 22,
-        "depth": 25,
-        "chamfer": 4
+        "kind": "sector",
+        "inner": 2,
+        "outer": 12,
+        "start": -7,
+        "end": 55
       },
-      "height": 0.22,
+      "height": 0.55,
       "position": [
-        -74,
-        73,
-        25.22
+        4.567727288213004,
+        2.0336832153790008,
+        49.35
       ],
       "rotation": 0
     },
     {
-      "id": "corner-lawn-2",
-      "name": "Corner lawn",
-      "layer": "network",
-      "material": "green",
+      "id": "central-roof-shrub-1",
+      "name": "Low central roof planting 1",
+      "layer": "buildings",
+      "material": "foliage",
       "shape": {
-        "kind": "rectangle",
-        "width": 22,
-        "depth": 25,
-        "chamfer": 4
+        "kind": "ellipsoid",
+        "radius": 2.4
       },
-      "height": 0.22,
+      "height": 2.5,
       "position": [
-        74,
-        73,
-        25.22
+        11.876090949353811,
+        5.287576359985402,
+        49.9
       ],
       "rotation": 0
     },
     {
-      "id": "corner-lawn-3",
-      "name": "Corner lawn",
-      "layer": "network",
+      "id": "central-roof-garden-2",
+      "name": "Central residential roof garden 2",
+      "layer": "buildings",
       "material": "green",
       "shape": {
-        "kind": "rectangle",
-        "width": 22,
-        "depth": 25,
-        "chamfer": 4
+        "kind": "sector",
+        "inner": 2,
+        "outer": 12,
+        "start": 114,
+        "end": 176
       },
-      "height": 0.22,
+      "height": 0.55,
       "position": [
-        -74,
-        -73,
-        25.22
+        -4.095760221444958,
+        2.867882181755232,
+        55.35
       ],
       "rotation": 0
     },
     {
-      "id": "corner-lawn-4",
-      "name": "Corner lawn",
-      "layer": "network",
+      "id": "central-roof-shrub-2",
+      "name": "Low central roof planting 2",
+      "layer": "buildings",
+      "material": "foliage",
+      "shape": {
+        "kind": "ellipsoid",
+        "radius": 2.4
+      },
+      "height": 2.5,
+      "position": [
+        -10.64897657575689,
+        7.456493672563603,
+        55.9
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "central-roof-garden-3",
+      "name": "Central residential roof garden 3",
+      "layer": "buildings",
       "material": "green",
       "shape": {
-        "kind": "rectangle",
-        "width": 22,
-        "depth": 25,
-        "chamfer": 4
+        "kind": "sector",
+        "inner": 2,
+        "outer": 12,
+        "start": 236,
+        "end": 298
       },
-      "height": 0.22,
+      "height": 0.55,
       "position": [
-        74,
-        -73,
-        25.22
+        -0.2616797812147215,
+        -4.993147673772869,
+        46.35
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "central-roof-shrub-3",
+      "name": "Low central roof planting 3",
+      "layer": "buildings",
+      "material": "foliage",
+      "shape": {
+        "kind": "ellipsoid",
+        "radius": 2.4
+      },
+      "height": 2.5,
+      "position": [
+        -0.6803674311582759,
+        -12.98218395180946,
+        46.9
       ],
       "rotation": 0
     },
@@ -3883,6 +4019,2736 @@
         0,
         0,
         25.22
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "greenhouse-floor",
+      "name": "Circular greenhouse floor",
+      "layer": "buildings",
+      "material": "paving",
+      "shape": {
+        "kind": "circle",
+        "radius": 27
+      },
+      "height": 1,
+      "position": [
+        -61,
+        145,
+        24.8
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "greenhouse-bed-edge-1",
+      "name": "Raised greenhouse planting bed 1",
+      "layer": "buildings",
+      "material": "frame",
+      "shape": {
+        "kind": "rectangle",
+        "width": 12,
+        "depth": 11,
+        "chamfer": 1
+      },
+      "height": 1.3,
+      "position": [
+        -71,
+        136,
+        25.8
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "greenhouse-bed-1",
+      "name": "Greenhouse planted bed 1",
+      "layer": "buildings",
+      "material": "green",
+      "shape": {
+        "kind": "rectangle",
+        "width": 10.5,
+        "depth": 9.5,
+        "chamfer": 1
+      },
+      "height": 0.5,
+      "position": [
+        -71,
+        136,
+        27.1
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "greenhouse-plant-1-0-trunk",
+      "name": "Landscape tree trunk",
+      "layer": "buildings",
+      "material": "trunk",
+      "shape": {
+        "kind": "circle",
+        "radius": 0.7
+      },
+      "height": 2.73,
+      "position": [
+        -74,
+        134,
+        27.6
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "greenhouse-plant-1-0-crown",
+      "name": "Landscape tree canopy",
+      "layer": "buildings",
+      "material": "foliage",
+      "shape": {
+        "kind": "ellipsoid",
+        "radius": 1.7
+      },
+      "height": 4.81,
+      "position": [
+        -74,
+        134,
+        29.290000000000003
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "greenhouse-plant-1-1-trunk",
+      "name": "Landscape tree trunk",
+      "layer": "buildings",
+      "material": "trunk",
+      "shape": {
+        "kind": "circle",
+        "radius": 0.7
+      },
+      "height": 3.1919999999999997,
+      "position": [
+        -71,
+        138,
+        27.6
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "greenhouse-plant-1-1-crown",
+      "name": "Landscape tree canopy",
+      "layer": "buildings",
+      "material": "foliage",
+      "shape": {
+        "kind": "ellipsoid",
+        "radius": 1.7
+      },
+      "height": 5.624,
+      "position": [
+        -71,
+        138,
+        29.576
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "greenhouse-plant-1-2-trunk",
+      "name": "Landscape tree trunk",
+      "layer": "buildings",
+      "material": "trunk",
+      "shape": {
+        "kind": "circle",
+        "radius": 0.7
+      },
+      "height": 3.6539999999999995,
+      "position": [
+        -68,
+        134,
+        27.6
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "greenhouse-plant-1-2-crown",
+      "name": "Landscape tree canopy",
+      "layer": "buildings",
+      "material": "foliage",
+      "shape": {
+        "kind": "ellipsoid",
+        "radius": 1.7
+      },
+      "height": 6.438,
+      "position": [
+        -68,
+        134,
+        29.862000000000002
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "greenhouse-bed-edge-2",
+      "name": "Raised greenhouse planting bed 2",
+      "layer": "buildings",
+      "material": "frame",
+      "shape": {
+        "kind": "rectangle",
+        "width": 12,
+        "depth": 11,
+        "chamfer": 1
+      },
+      "height": 1.3,
+      "position": [
+        -51,
+        136,
+        25.8
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "greenhouse-bed-2",
+      "name": "Greenhouse planted bed 2",
+      "layer": "buildings",
+      "material": "green",
+      "shape": {
+        "kind": "rectangle",
+        "width": 10.5,
+        "depth": 9.5,
+        "chamfer": 1
+      },
+      "height": 0.5,
+      "position": [
+        -51,
+        136,
+        27.1
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "greenhouse-plant-2-0-trunk",
+      "name": "Landscape tree trunk",
+      "layer": "buildings",
+      "material": "trunk",
+      "shape": {
+        "kind": "circle",
+        "radius": 0.7
+      },
+      "height": 2.73,
+      "position": [
+        -54,
+        134,
+        27.6
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "greenhouse-plant-2-0-crown",
+      "name": "Landscape tree canopy",
+      "layer": "buildings",
+      "material": "foliage",
+      "shape": {
+        "kind": "ellipsoid",
+        "radius": 1.7
+      },
+      "height": 4.81,
+      "position": [
+        -54,
+        134,
+        29.290000000000003
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "greenhouse-plant-2-1-trunk",
+      "name": "Landscape tree trunk",
+      "layer": "buildings",
+      "material": "trunk",
+      "shape": {
+        "kind": "circle",
+        "radius": 0.7
+      },
+      "height": 3.1919999999999997,
+      "position": [
+        -51,
+        138,
+        27.6
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "greenhouse-plant-2-1-crown",
+      "name": "Landscape tree canopy",
+      "layer": "buildings",
+      "material": "foliage",
+      "shape": {
+        "kind": "ellipsoid",
+        "radius": 1.7
+      },
+      "height": 5.624,
+      "position": [
+        -51,
+        138,
+        29.576
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "greenhouse-plant-2-2-trunk",
+      "name": "Landscape tree trunk",
+      "layer": "buildings",
+      "material": "trunk",
+      "shape": {
+        "kind": "circle",
+        "radius": 0.7
+      },
+      "height": 3.6539999999999995,
+      "position": [
+        -48,
+        134,
+        27.6
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "greenhouse-plant-2-2-crown",
+      "name": "Landscape tree canopy",
+      "layer": "buildings",
+      "material": "foliage",
+      "shape": {
+        "kind": "ellipsoid",
+        "radius": 1.7
+      },
+      "height": 6.438,
+      "position": [
+        -48,
+        134,
+        29.862000000000002
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "greenhouse-bed-edge-3",
+      "name": "Raised greenhouse planting bed 3",
+      "layer": "buildings",
+      "material": "frame",
+      "shape": {
+        "kind": "rectangle",
+        "width": 12,
+        "depth": 11,
+        "chamfer": 1
+      },
+      "height": 1.3,
+      "position": [
+        -71,
+        154,
+        25.8
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "greenhouse-bed-3",
+      "name": "Greenhouse planted bed 3",
+      "layer": "buildings",
+      "material": "green",
+      "shape": {
+        "kind": "rectangle",
+        "width": 10.5,
+        "depth": 9.5,
+        "chamfer": 1
+      },
+      "height": 0.5,
+      "position": [
+        -71,
+        154,
+        27.1
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "greenhouse-plant-3-0-trunk",
+      "name": "Landscape tree trunk",
+      "layer": "buildings",
+      "material": "trunk",
+      "shape": {
+        "kind": "circle",
+        "radius": 0.7
+      },
+      "height": 2.73,
+      "position": [
+        -74,
+        152,
+        27.6
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "greenhouse-plant-3-0-crown",
+      "name": "Landscape tree canopy",
+      "layer": "buildings",
+      "material": "foliage",
+      "shape": {
+        "kind": "ellipsoid",
+        "radius": 1.7
+      },
+      "height": 4.81,
+      "position": [
+        -74,
+        152,
+        29.290000000000003
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "greenhouse-plant-3-1-trunk",
+      "name": "Landscape tree trunk",
+      "layer": "buildings",
+      "material": "trunk",
+      "shape": {
+        "kind": "circle",
+        "radius": 0.7
+      },
+      "height": 3.1919999999999997,
+      "position": [
+        -71,
+        156,
+        27.6
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "greenhouse-plant-3-1-crown",
+      "name": "Landscape tree canopy",
+      "layer": "buildings",
+      "material": "foliage",
+      "shape": {
+        "kind": "ellipsoid",
+        "radius": 1.7
+      },
+      "height": 5.624,
+      "position": [
+        -71,
+        156,
+        29.576
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "greenhouse-plant-3-2-trunk",
+      "name": "Landscape tree trunk",
+      "layer": "buildings",
+      "material": "trunk",
+      "shape": {
+        "kind": "circle",
+        "radius": 0.7
+      },
+      "height": 3.6539999999999995,
+      "position": [
+        -68,
+        152,
+        27.6
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "greenhouse-plant-3-2-crown",
+      "name": "Landscape tree canopy",
+      "layer": "buildings",
+      "material": "foliage",
+      "shape": {
+        "kind": "ellipsoid",
+        "radius": 1.7
+      },
+      "height": 6.438,
+      "position": [
+        -68,
+        152,
+        29.862000000000002
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "greenhouse-bed-edge-4",
+      "name": "Raised greenhouse planting bed 4",
+      "layer": "buildings",
+      "material": "frame",
+      "shape": {
+        "kind": "rectangle",
+        "width": 12,
+        "depth": 11,
+        "chamfer": 1
+      },
+      "height": 1.3,
+      "position": [
+        -51,
+        154,
+        25.8
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "greenhouse-bed-4",
+      "name": "Greenhouse planted bed 4",
+      "layer": "buildings",
+      "material": "green",
+      "shape": {
+        "kind": "rectangle",
+        "width": 10.5,
+        "depth": 9.5,
+        "chamfer": 1
+      },
+      "height": 0.5,
+      "position": [
+        -51,
+        154,
+        27.1
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "greenhouse-plant-4-0-trunk",
+      "name": "Landscape tree trunk",
+      "layer": "buildings",
+      "material": "trunk",
+      "shape": {
+        "kind": "circle",
+        "radius": 0.7
+      },
+      "height": 2.73,
+      "position": [
+        -54,
+        152,
+        27.6
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "greenhouse-plant-4-0-crown",
+      "name": "Landscape tree canopy",
+      "layer": "buildings",
+      "material": "foliage",
+      "shape": {
+        "kind": "ellipsoid",
+        "radius": 1.7
+      },
+      "height": 4.81,
+      "position": [
+        -54,
+        152,
+        29.290000000000003
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "greenhouse-plant-4-1-trunk",
+      "name": "Landscape tree trunk",
+      "layer": "buildings",
+      "material": "trunk",
+      "shape": {
+        "kind": "circle",
+        "radius": 0.7
+      },
+      "height": 3.1919999999999997,
+      "position": [
+        -51,
+        156,
+        27.6
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "greenhouse-plant-4-1-crown",
+      "name": "Landscape tree canopy",
+      "layer": "buildings",
+      "material": "foliage",
+      "shape": {
+        "kind": "ellipsoid",
+        "radius": 1.7
+      },
+      "height": 5.624,
+      "position": [
+        -51,
+        156,
+        29.576
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "greenhouse-plant-4-2-trunk",
+      "name": "Landscape tree trunk",
+      "layer": "buildings",
+      "material": "trunk",
+      "shape": {
+        "kind": "circle",
+        "radius": 0.7
+      },
+      "height": 3.6539999999999995,
+      "position": [
+        -48,
+        152,
+        27.6
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "greenhouse-plant-4-2-crown",
+      "name": "Landscape tree canopy",
+      "layer": "buildings",
+      "material": "foliage",
+      "shape": {
+        "kind": "ellipsoid",
+        "radius": 1.7
+      },
+      "height": 6.438,
+      "position": [
+        -48,
+        152,
+        29.862000000000002
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "greenhouse-glass",
+      "name": "Transparent greenhouse dome",
+      "layer": "buildings",
+      "material": "greenhouse",
+      "shape": {
+        "kind": "dome",
+        "radius": 27
+      },
+      "height": 24,
+      "position": [
+        -61,
+        145,
+        25.8
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "greenhouse-rib-0",
+      "name": "Arched greenhouse frame 0",
+      "layer": "buildings",
+      "material": "frame",
+      "shape": {
+        "kind": "tube",
+        "radius": 0.28,
+        "path": [
+          [
+            27,
+            0,
+            0
+          ],
+          [
+            26.869987620149317,
+            0,
+            2.3524113679094545
+          ],
+          [
+            26.48120257088722,
+            0,
+            4.682167728387078
+          ],
+          [
+            25.83738906476964,
+            0,
+            6.966832254107096
+          ],
+          [
+            24.94474737780474,
+            0,
+            9.184402376762154
+          ],
+          [
+            23.811874137405585,
+            0,
+            11.313521683823943
+          ],
+          [
+            22.449679532168723,
+            0,
+            13.333685592470452
+          ],
+          [
+            20.8712822407939,
+            0,
+            15.225438819927492
+          ],
+          [
+            19.091883092036785,
+            0,
+            16.97056274847714
+          ],
+          [
+            17.12861867241843,
+            0,
+            18.552250880705685
+          ],
+          [
+            15.000396291529261,
+            0,
+            19.955270695261085
+          ],
+          [
+            12.72771189430194,
+            0,
+            21.16611034436052
+          ],
+          [
+            10.332452673857425,
+            0,
+            22.17310878027088
+          ],
+          [
+            7.8376862858704825,
+            0,
+            22.966568057573014
+          ],
+          [
+            5.267438694435465,
+            0,
+            23.53884672967753
+          ],
+          [
+            2.6464627888981407,
+            0,
+            23.884433440132725
+          ],
+          [
+            1.6532731788489269e-15,
+            0,
+            24
+          ],
+          [
+            -2.6464627888981376,
+            0,
+            23.884433440132725
+          ],
+          [
+            -5.267438694435461,
+            0,
+            23.53884672967753
+          ],
+          [
+            -7.837686285870478,
+            0,
+            22.966568057573014
+          ],
+          [
+            -10.332452673857423,
+            0,
+            22.17310878027088
+          ],
+          [
+            -12.727711894301939,
+            0,
+            21.166110344360522
+          ],
+          [
+            -15.000396291529253,
+            0,
+            19.95527069526109
+          ],
+          [
+            -17.128618672418426,
+            0,
+            18.552250880705692
+          ],
+          [
+            -19.09188309203678,
+            0,
+            16.970562748477143
+          ],
+          [
+            -20.8712822407939,
+            0,
+            15.225438819927492
+          ],
+          [
+            -22.449679532168723,
+            0,
+            13.333685592470452
+          ],
+          [
+            -23.81187413740558,
+            0,
+            11.313521683823948
+          ],
+          [
+            -24.94474737780474,
+            0,
+            9.184402376762158
+          ],
+          [
+            -25.83738906476964,
+            0,
+            6.966832254107097
+          ],
+          [
+            -26.48120257088722,
+            0,
+            4.682167728387086
+          ],
+          [
+            -26.869987620149313,
+            0,
+            2.35241136790946
+          ],
+          [
+            -27,
+            0,
+            2.9391523179536475e-15
+          ]
+        ]
+      },
+      "height": 1,
+      "position": [
+        -61,
+        145,
+        25.8
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "greenhouse-rib-1",
+      "name": "Arched greenhouse frame 1",
+      "layer": "buildings",
+      "material": "frame",
+      "shape": {
+        "kind": "tube",
+        "radius": 0.28,
+        "path": [
+          [
+            23.382685902179844,
+            13.499999999999998,
+            0
+          ],
+          [
+            23.270091878422683,
+            13.434993810074657,
+            2.3524113679094545
+          ],
+          [
+            22.93339414915012,
+            13.240601285443608,
+            4.682167728387078
+          ],
+          [
+            22.37583529755277,
+            12.918694532384817,
+            6.966832254107096
+          ],
+          [
+            21.60278492016417,
+            12.472373688902369,
+            9.184402376762154
+          ],
+          [
+            20.621687914710904,
+            11.90593706870279,
+            11.313521683823943
+          ],
+          [
+            19.441992781677666,
+            11.22483976608436,
+            13.333685592470452
+          ],
+          [
+            18.075060630082522,
+            10.435641120396948,
+            15.225438819927492
+          ],
+          [
+            16.534055763786455,
+            9.54594154601839,
+            16.97056274847714
+          ],
+          [
+            14.833818902050847,
+            8.564309336209213,
+            18.552250880705685
+          ],
+          [
+            12.990724255298225,
+            7.50019814576463,
+            19.955270695261085
+          ],
+          [
+            11.02252183251484,
+            6.363855947150969,
+            21.16611034436052
+          ],
+          [
+            8.94816649896098,
+            5.166226336928712,
+            22.17310878027088
+          ],
+          [
+            6.787635430456742,
+            3.918843142935241,
+            22.966568057573014
+          ],
+          [
+            4.56173572225825,
+            2.633719347217732,
+            23.53884672967753
+          ],
+          [
+            2.2919040053560042,
+            1.3232313944490701,
+            23.884433440132725
+          ],
+          [
+            1.4317765722786245e-15,
+            8.266365894244633e-16,
+            24
+          ],
+          [
+            -2.2919040053560016,
+            -1.3232313944490686,
+            23.884433440132725
+          ],
+          [
+            -4.5617357222582475,
+            -2.6337193472177303,
+            23.53884672967753
+          ],
+          [
+            -6.787635430456739,
+            -3.9188431429352386,
+            22.966568057573014
+          ],
+          [
+            -8.948166498960978,
+            -5.166226336928711,
+            22.17310878027088
+          ],
+          [
+            -11.02252183251484,
+            -6.363855947150968,
+            21.166110344360522
+          ],
+          [
+            -12.990724255298218,
+            -7.500198145764625,
+            19.95527069526109
+          ],
+          [
+            -14.833818902050844,
+            -8.564309336209211,
+            18.552250880705692
+          ],
+          [
+            -16.53405576378645,
+            -9.545941546018389,
+            16.970562748477143
+          ],
+          [
+            -18.075060630082522,
+            -10.435641120396948,
+            15.225438819927492
+          ],
+          [
+            -19.441992781677666,
+            -11.22483976608436,
+            13.333685592470452
+          ],
+          [
+            -20.6216879147109,
+            -11.905937068702789,
+            11.313521683823948
+          ],
+          [
+            -21.60278492016417,
+            -12.472373688902369,
+            9.184402376762158
+          ],
+          [
+            -22.37583529755277,
+            -12.918694532384817,
+            6.966832254107097
+          ],
+          [
+            -22.93339414915012,
+            -13.240601285443608,
+            4.682167728387086
+          ],
+          [
+            -23.27009187842268,
+            -13.434993810074655,
+            2.35241136790946
+          ],
+          [
+            -23.382685902179844,
+            -13.499999999999998,
+            2.9391523179536475e-15
+          ]
+        ]
+      },
+      "height": 1,
+      "position": [
+        -61,
+        145,
+        25.8
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "greenhouse-rib-2",
+      "name": "Arched greenhouse frame 2",
+      "layer": "buildings",
+      "material": "frame",
+      "shape": {
+        "kind": "tube",
+        "radius": 0.28,
+        "path": [
+          [
+            13.500000000000004,
+            23.38268590217984,
+            0
+          ],
+          [
+            13.434993810074662,
+            23.27009187842268,
+            2.3524113679094545
+          ],
+          [
+            13.240601285443613,
+            22.933394149150118,
+            4.682167728387078
+          ],
+          [
+            12.918694532384823,
+            22.375835297552765,
+            6.966832254107096
+          ],
+          [
+            12.472373688902374,
+            21.60278492016417,
+            9.184402376762154
+          ],
+          [
+            11.905937068702794,
+            20.621687914710904,
+            11.313521683823943
+          ],
+          [
+            11.224839766084363,
+            19.441992781677666,
+            13.333685592470452
+          ],
+          [
+            10.435641120396951,
+            18.07506063008252,
+            15.225438819927492
+          ],
+          [
+            9.545941546018394,
+            16.53405576378645,
+            16.97056274847714
+          ],
+          [
+            8.564309336209217,
+            14.833818902050846,
+            18.552250880705685
+          ],
+          [
+            7.5001981457646325,
+            12.990724255298224,
+            19.955270695261085
+          ],
+          [
+            6.363855947150972,
+            11.02252183251484,
+            21.16611034436052
+          ],
+          [
+            5.166226336928713,
+            8.948166498960978,
+            22.17310878027088
+          ],
+          [
+            3.918843142935242,
+            6.787635430456741,
+            22.966568057573014
+          ],
+          [
+            2.633719347217733,
+            4.561735722258249,
+            23.53884672967753
+          ],
+          [
+            1.3232313944490706,
+            2.291904005356004,
+            23.884433440132725
+          ],
+          [
+            8.266365894244636e-16,
+            1.4317765722786243e-15,
+            24
+          ],
+          [
+            -1.323231394449069,
+            -2.291904005356001,
+            23.884433440132725
+          ],
+          [
+            -2.633719347217731,
+            -4.561735722258247,
+            23.53884672967753
+          ],
+          [
+            -3.91884314293524,
+            -6.787635430456738,
+            22.966568057573014
+          ],
+          [
+            -5.1662263369287125,
+            -8.948166498960978,
+            22.17310878027088
+          ],
+          [
+            -6.363855947150971,
+            -11.022521832514839,
+            21.166110344360522
+          ],
+          [
+            -7.500198145764628,
+            -12.990724255298217,
+            19.95527069526109
+          ],
+          [
+            -8.564309336209215,
+            -14.833818902050842,
+            18.552250880705692
+          ],
+          [
+            -9.545941546018392,
+            -16.534055763786448,
+            16.970562748477143
+          ],
+          [
+            -10.435641120396951,
+            -18.07506063008252,
+            15.225438819927492
+          ],
+          [
+            -11.224839766084363,
+            -19.441992781677666,
+            13.333685592470452
+          ],
+          [
+            -11.905937068702793,
+            -20.6216879147109,
+            11.313521683823948
+          ],
+          [
+            -12.472373688902374,
+            -21.60278492016417,
+            9.184402376762158
+          ],
+          [
+            -12.918694532384823,
+            -22.375835297552765,
+            6.966832254107097
+          ],
+          [
+            -13.240601285443613,
+            -22.933394149150118,
+            4.682167728387086
+          ],
+          [
+            -13.43499381007466,
+            -23.270091878422676,
+            2.35241136790946
+          ],
+          [
+            -13.500000000000004,
+            -23.38268590217984,
+            2.9391523179536475e-15
+          ]
+        ]
+      },
+      "height": 1,
+      "position": [
+        -61,
+        145,
+        25.8
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "greenhouse-rib-3",
+      "name": "Arched greenhouse frame 3",
+      "layer": "buildings",
+      "material": "frame",
+      "shape": {
+        "kind": "tube",
+        "radius": 0.28,
+        "path": [
+          [
+            1.6532731788489269e-15,
+            27,
+            0
+          ],
+          [
+            1.6453122166072435e-15,
+            26.869987620149317,
+            2.3524113679094545
+          ],
+          [
+            1.6215059983004847e-15,
+            26.48120257088722,
+            4.682167728387078
+          ],
+          [
+            1.5820837908247481e-15,
+            25.83738906476964,
+            6.966832254107096
+          ],
+          [
+            1.5274252515883954e-15,
+            24.94474737780474,
+            9.184402376762154
+          ],
+          [
+            1.4580567722036696e-15,
+            23.811874137405585,
+            11.313521683823943
+          ],
+          [
+            1.3746464090477138e-15,
+            22.449679532168723,
+            13.333685592470452
+          ],
+          [
+            1.2779974495144624e-15,
+            20.8712822407939,
+            15.225438819927492
+          ],
+          [
+            1.169040675917916e-15,
+            19.091883092036785,
+            16.97056274847714
+          ],
+          [
+            1.0488254015496409e-15,
+            17.12861867241843,
+            18.552250880705685
+          ],
+          [
+            9.185093652181568e-16,
+            15.000396291529261,
+            19.955270695261085
+          ],
+          [
+            7.793475815913284e-16,
+            12.72771189430194,
+            21.16611034436052
+          ],
+          [
+            6.326802547190504e-16,
+            10.332452673857425,
+            22.17310878027088
+          ],
+          [
+            4.799198711356196e-16,
+            7.8376862858704825,
+            22.966568057573014
+          ],
+          [
+            3.225375968422653e-16,
+            5.267438694435465,
+            23.53884672967753
+          ],
+          [
+            1.6204910917433427e-16,
+            2.6464627888981407,
+            23.884433440132725
+          ],
+          [
+            1.012337853296754e-31,
+            1.6532731788489269e-15,
+            24
+          ],
+          [
+            -1.6204910917433408e-16,
+            -2.6464627888981376,
+            23.884433440132725
+          ],
+          [
+            -3.2253759684226503e-16,
+            -5.267438694435461,
+            23.53884672967753
+          ],
+          [
+            -4.799198711356194e-16,
+            -7.837686285870478,
+            22.966568057573014
+          ],
+          [
+            -6.326802547190503e-16,
+            -10.332452673857423,
+            22.17310878027088
+          ],
+          [
+            -7.793475815913283e-16,
+            -12.727711894301939,
+            21.166110344360522
+          ],
+          [
+            -9.185093652181563e-16,
+            -15.000396291529253,
+            19.95527069526109
+          ],
+          [
+            -1.0488254015496407e-15,
+            -17.128618672418426,
+            18.552250880705692
+          ],
+          [
+            -1.1690406759179158e-15,
+            -19.09188309203678,
+            16.970562748477143
+          ],
+          [
+            -1.2779974495144624e-15,
+            -20.8712822407939,
+            15.225438819927492
+          ],
+          [
+            -1.3746464090477138e-15,
+            -22.449679532168723,
+            13.333685592470452
+          ],
+          [
+            -1.4580567722036694e-15,
+            -23.81187413740558,
+            11.313521683823948
+          ],
+          [
+            -1.5274252515883954e-15,
+            -24.94474737780474,
+            9.184402376762158
+          ],
+          [
+            -1.5820837908247481e-15,
+            -25.83738906476964,
+            6.966832254107097
+          ],
+          [
+            -1.6215059983004847e-15,
+            -26.48120257088722,
+            4.682167728387086
+          ],
+          [
+            -1.6453122166072433e-15,
+            -26.869987620149313,
+            2.35241136790946
+          ],
+          [
+            -1.6532731788489269e-15,
+            -27,
+            2.9391523179536475e-15
+          ]
+        ]
+      },
+      "height": 1,
+      "position": [
+        -61,
+        145,
+        25.8
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "greenhouse-rib-4",
+      "name": "Arched greenhouse frame 4",
+      "layer": "buildings",
+      "material": "frame",
+      "shape": {
+        "kind": "tube",
+        "radius": 0.28,
+        "path": [
+          [
+            -13.499999999999995,
+            23.382685902179844,
+            0
+          ],
+          [
+            -13.434993810074653,
+            23.270091878422683,
+            2.3524113679094545
+          ],
+          [
+            -13.240601285443605,
+            22.93339414915012,
+            4.682167728387078
+          ],
+          [
+            -12.918694532384814,
+            22.37583529755277,
+            6.966832254107096
+          ],
+          [
+            -12.472373688902366,
+            21.60278492016417,
+            9.184402376762154
+          ],
+          [
+            -11.905937068702787,
+            20.621687914710904,
+            11.313521683823943
+          ],
+          [
+            -11.224839766084356,
+            19.441992781677666,
+            13.333685592470452
+          ],
+          [
+            -10.435641120396944,
+            18.075060630082522,
+            15.225438819927492
+          ],
+          [
+            -9.545941546018389,
+            16.534055763786455,
+            16.97056274847714
+          ],
+          [
+            -8.564309336209211,
+            14.833818902050847,
+            18.552250880705685
+          ],
+          [
+            -7.500198145764627,
+            12.990724255298225,
+            19.955270695261085
+          ],
+          [
+            -6.3638559471509675,
+            11.02252183251484,
+            21.16611034436052
+          ],
+          [
+            -5.16622633692871,
+            8.94816649896098,
+            22.17310878027088
+          ],
+          [
+            -3.9188431429352395,
+            6.787635430456742,
+            22.966568057573014
+          ],
+          [
+            -2.633719347217731,
+            4.56173572225825,
+            23.53884672967753
+          ],
+          [
+            -1.3232313944490697,
+            2.2919040053560042,
+            23.884433440132725
+          ],
+          [
+            -8.26636589424463e-16,
+            1.4317765722786245e-15,
+            24
+          ],
+          [
+            1.3232313944490681,
+            -2.2919040053560016,
+            23.884433440132725
+          ],
+          [
+            2.6337193472177294,
+            -4.5617357222582475,
+            23.53884672967753
+          ],
+          [
+            3.9188431429352373,
+            -6.787635430456739,
+            22.966568057573014
+          ],
+          [
+            5.166226336928709,
+            -8.948166498960978,
+            22.17310878027088
+          ],
+          [
+            6.363855947150967,
+            -11.02252183251484,
+            21.166110344360522
+          ],
+          [
+            7.500198145764623,
+            -12.990724255298218,
+            19.95527069526109
+          ],
+          [
+            8.56430933620921,
+            -14.833818902050844,
+            18.552250880705692
+          ],
+          [
+            9.545941546018387,
+            -16.53405576378645,
+            16.970562748477143
+          ],
+          [
+            10.435641120396944,
+            -18.075060630082522,
+            15.225438819927492
+          ],
+          [
+            11.224839766084356,
+            -19.441992781677666,
+            13.333685592470452
+          ],
+          [
+            11.905937068702785,
+            -20.6216879147109,
+            11.313521683823948
+          ],
+          [
+            12.472373688902366,
+            -21.60278492016417,
+            9.184402376762158
+          ],
+          [
+            12.918694532384814,
+            -22.37583529755277,
+            6.966832254107097
+          ],
+          [
+            13.240601285443605,
+            -22.93339414915012,
+            4.682167728387086
+          ],
+          [
+            13.434993810074651,
+            -23.27009187842268,
+            2.35241136790946
+          ],
+          [
+            13.499999999999995,
+            -23.382685902179844,
+            2.9391523179536475e-15
+          ]
+        ]
+      },
+      "height": 1,
+      "position": [
+        -61,
+        145,
+        25.8
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "greenhouse-rib-5",
+      "name": "Arched greenhouse frame 5",
+      "layer": "buildings",
+      "material": "frame",
+      "shape": {
+        "kind": "tube",
+        "radius": 0.28,
+        "path": [
+          [
+            -23.382685902179844,
+            13.499999999999998,
+            0
+          ],
+          [
+            -23.270091878422683,
+            13.434993810074657,
+            2.3524113679094545
+          ],
+          [
+            -22.93339414915012,
+            13.240601285443608,
+            4.682167728387078
+          ],
+          [
+            -22.37583529755277,
+            12.918694532384817,
+            6.966832254107096
+          ],
+          [
+            -21.60278492016417,
+            12.472373688902369,
+            9.184402376762154
+          ],
+          [
+            -20.621687914710904,
+            11.90593706870279,
+            11.313521683823943
+          ],
+          [
+            -19.441992781677666,
+            11.22483976608436,
+            13.333685592470452
+          ],
+          [
+            -18.075060630082522,
+            10.435641120396948,
+            15.225438819927492
+          ],
+          [
+            -16.534055763786455,
+            9.54594154601839,
+            16.97056274847714
+          ],
+          [
+            -14.833818902050847,
+            8.564309336209213,
+            18.552250880705685
+          ],
+          [
+            -12.990724255298225,
+            7.50019814576463,
+            19.955270695261085
+          ],
+          [
+            -11.02252183251484,
+            6.363855947150969,
+            21.16611034436052
+          ],
+          [
+            -8.94816649896098,
+            5.166226336928712,
+            22.17310878027088
+          ],
+          [
+            -6.787635430456742,
+            3.918843142935241,
+            22.966568057573014
+          ],
+          [
+            -4.56173572225825,
+            2.633719347217732,
+            23.53884672967753
+          ],
+          [
+            -2.2919040053560042,
+            1.3232313944490701,
+            23.884433440132725
+          ],
+          [
+            -1.4317765722786245e-15,
+            8.266365894244633e-16,
+            24
+          ],
+          [
+            2.2919040053560016,
+            -1.3232313944490686,
+            23.884433440132725
+          ],
+          [
+            4.5617357222582475,
+            -2.6337193472177303,
+            23.53884672967753
+          ],
+          [
+            6.787635430456739,
+            -3.9188431429352386,
+            22.966568057573014
+          ],
+          [
+            8.948166498960978,
+            -5.166226336928711,
+            22.17310878027088
+          ],
+          [
+            11.02252183251484,
+            -6.363855947150968,
+            21.166110344360522
+          ],
+          [
+            12.990724255298218,
+            -7.500198145764625,
+            19.95527069526109
+          ],
+          [
+            14.833818902050844,
+            -8.564309336209211,
+            18.552250880705692
+          ],
+          [
+            16.53405576378645,
+            -9.545941546018389,
+            16.970562748477143
+          ],
+          [
+            18.075060630082522,
+            -10.435641120396948,
+            15.225438819927492
+          ],
+          [
+            19.441992781677666,
+            -11.22483976608436,
+            13.333685592470452
+          ],
+          [
+            20.6216879147109,
+            -11.905937068702789,
+            11.313521683823948
+          ],
+          [
+            21.60278492016417,
+            -12.472373688902369,
+            9.184402376762158
+          ],
+          [
+            22.37583529755277,
+            -12.918694532384817,
+            6.966832254107097
+          ],
+          [
+            22.93339414915012,
+            -13.240601285443608,
+            4.682167728387086
+          ],
+          [
+            23.27009187842268,
+            -13.434993810074655,
+            2.35241136790946
+          ],
+          [
+            23.382685902179844,
+            -13.499999999999998,
+            2.9391523179536475e-15
+          ]
+        ]
+      },
+      "height": 1,
+      "position": [
+        -61,
+        145,
+        25.8
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "greenhouse-ring-1",
+      "name": "Greenhouse horizontal frame 1",
+      "layer": "buildings",
+      "material": "frame",
+      "shape": {
+        "kind": "tube",
+        "radius": 0.28,
+        "path": [
+          [
+            27,
+            0,
+            0
+          ],
+          [
+            26.869987620149317,
+            2.6464627888981362,
+            0
+          ],
+          [
+            26.48120257088722,
+            5.267438694435462,
+            0
+          ],
+          [
+            25.83738906476964,
+            7.8376862858704825,
+            0
+          ],
+          [
+            24.94474737780474,
+            10.332452673857425,
+            0
+          ],
+          [
+            23.811874137405585,
+            12.727711894301937,
+            0
+          ],
+          [
+            22.449679532168723,
+            15.00039629152926,
+            0
+          ],
+          [
+            20.8712822407939,
+            17.12861867241843,
+            0
+          ],
+          [
+            19.091883092036785,
+            19.09188309203678,
+            0
+          ],
+          [
+            17.12861867241843,
+            20.871282240793896,
+            0
+          ],
+          [
+            15.000396291529261,
+            22.449679532168723,
+            0
+          ],
+          [
+            12.72771189430194,
+            23.81187413740558,
+            0
+          ],
+          [
+            10.332452673857425,
+            24.94474737780474,
+            0
+          ],
+          [
+            7.8376862858704825,
+            25.837389064769642,
+            0
+          ],
+          [
+            5.267438694435465,
+            26.48120257088722,
+            0
+          ],
+          [
+            2.6464627888981407,
+            26.869987620149313,
+            0
+          ],
+          [
+            1.6532731788489269e-15,
+            27,
+            0
+          ],
+          [
+            -2.6464627888981376,
+            26.869987620149317,
+            0
+          ],
+          [
+            -5.267438694435461,
+            26.48120257088722,
+            0
+          ],
+          [
+            -7.837686285870478,
+            25.837389064769642,
+            0
+          ],
+          [
+            -10.332452673857423,
+            24.94474737780474,
+            0
+          ],
+          [
+            -12.727711894301939,
+            23.811874137405585,
+            0
+          ],
+          [
+            -15.000396291529253,
+            22.449679532168723,
+            0
+          ],
+          [
+            -17.128618672418426,
+            20.871282240793903,
+            0
+          ],
+          [
+            -19.09188309203678,
+            19.091883092036785,
+            0
+          ],
+          [
+            -20.8712822407939,
+            17.12861867241843,
+            0
+          ],
+          [
+            -22.449679532168723,
+            15.00039629152926,
+            0
+          ],
+          [
+            -23.81187413740558,
+            12.727711894301942,
+            0
+          ],
+          [
+            -24.94474737780474,
+            10.332452673857427,
+            0
+          ],
+          [
+            -25.83738906476964,
+            7.837686285870484,
+            0
+          ],
+          [
+            -26.48120257088722,
+            5.267438694435472,
+            0
+          ],
+          [
+            -26.869987620149313,
+            2.6464627888981425,
+            0
+          ],
+          [
+            -27,
+            3.3065463576978537e-15,
+            0
+          ],
+          [
+            -26.869987620149317,
+            -2.646462788898136,
+            0
+          ],
+          [
+            -26.48120257088722,
+            -5.267438694435466,
+            0
+          ],
+          [
+            -25.837389064769642,
+            -7.837686285870477,
+            0
+          ],
+          [
+            -24.944747377804745,
+            -10.33245267385742,
+            0
+          ],
+          [
+            -23.811874137405585,
+            -12.727711894301937,
+            0
+          ],
+          [
+            -22.449679532168727,
+            -15.000396291529253,
+            0
+          ],
+          [
+            -20.871282240793903,
+            -17.128618672418423,
+            0
+          ],
+          [
+            -19.091883092036788,
+            -19.09188309203678,
+            0
+          ],
+          [
+            -17.12861867241844,
+            -20.87128224079389,
+            0
+          ],
+          [
+            -15.00039629152926,
+            -22.449679532168723,
+            0
+          ],
+          [
+            -12.727711894301944,
+            -23.81187413740558,
+            0
+          ],
+          [
+            -10.33245267385744,
+            -24.944747377804735,
+            0
+          ],
+          [
+            -7.837686285870486,
+            -25.83738906476964,
+            0
+          ],
+          [
+            -5.267438694435474,
+            -26.48120257088722,
+            0
+          ],
+          [
+            -2.6464627888981322,
+            -26.869987620149317,
+            0
+          ],
+          [
+            -4.95981953654678e-15,
+            -27,
+            0
+          ],
+          [
+            2.6464627888981225,
+            -26.869987620149317,
+            0
+          ],
+          [
+            5.267438694435464,
+            -26.48120257088722,
+            0
+          ],
+          [
+            7.8376862858704754,
+            -25.837389064769642,
+            0
+          ],
+          [
+            10.33245267385743,
+            -24.944747377804738,
+            0
+          ],
+          [
+            12.727711894301935,
+            -23.811874137405585,
+            0
+          ],
+          [
+            15.000396291529249,
+            -22.449679532168727,
+            0
+          ],
+          [
+            17.12861867241843,
+            -20.871282240793896,
+            0
+          ],
+          [
+            19.091883092036777,
+            -19.091883092036788,
+            0
+          ],
+          [
+            20.871282240793885,
+            -17.12861867241844,
+            0
+          ],
+          [
+            22.449679532168723,
+            -15.00039629152926,
+            0
+          ],
+          [
+            23.81187413740558,
+            -12.727711894301944,
+            0
+          ],
+          [
+            24.944747377804735,
+            -10.332452673857441,
+            0
+          ],
+          [
+            25.83738906476964,
+            -7.837686285870488,
+            0
+          ],
+          [
+            26.48120257088722,
+            -5.267438694435476,
+            0
+          ],
+          [
+            26.869987620149317,
+            -2.6464627888981336,
+            0
+          ],
+          [
+            27,
+            -6.6130927153957075e-15,
+            0
+          ]
+        ]
+      },
+      "height": 1,
+      "position": [
+        -61,
+        145,
+        25.8
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "greenhouse-ring-2",
+      "name": "Greenhouse horizontal frame 2",
+      "layer": "buildings",
+      "material": "frame",
+      "shape": {
+        "kind": "tube",
+        "radius": 0.28,
+        "path": [
+          [
+            24.544602257930357,
+            0,
+            10
+          ],
+          [
+            24.42641328933621,
+            2.40579172384881,
+            10
+          ],
+          [
+            24.07298460792999,
+            4.7884143582574215,
+            10
+          ],
+          [
+            23.487719925117407,
+            7.124921944782461,
+            10
+          ],
+          [
+            22.67625565973217,
+            9.392812638100722,
+            10
+          ],
+          [
+            21.64640665624143,
+            11.570245411080384,
+            10
+          ],
+          [
+            20.40809092352153,
+            13.636250395811823,
+            10
+          ],
+          [
+            18.973234119010804,
+            15.570930834898867,
+            10
+          ],
+          [
+            17.355654698109202,
+            17.3556546981092,
+            10
+          ],
+          [
+            15.570930834898867,
+            18.9732341190108,
+            10
+          ],
+          [
+            13.636250395811825,
+            20.40809092352153,
+            10
+          ],
+          [
+            11.570245411080387,
+            21.646406656241428,
+            10
+          ],
+          [
+            9.392812638100724,
+            22.67625565973217,
+            10
+          ],
+          [
+            7.124921944782461,
+            23.48771992511741,
+            10
+          ],
+          [
+            4.788414358257424,
+            24.07298460792999,
+            10
+          ],
+          [
+            2.405791723848814,
+            24.426413289336207,
+            10
+          ],
+          [
+            1.5029234295759655e-15,
+            24.544602257930357,
+            10
+          ],
+          [
+            -2.405791723848811,
+            24.42641328933621,
+            10
+          ],
+          [
+            -4.788414358257421,
+            24.07298460792999,
+            10
+          ],
+          [
+            -7.124921944782457,
+            23.48771992511741,
+            10
+          ],
+          [
+            -9.39281263810072,
+            22.67625565973217,
+            10
+          ],
+          [
+            -11.570245411080386,
+            21.64640665624143,
+            10
+          ],
+          [
+            -13.636250395811818,
+            20.408090923521534,
+            10
+          ],
+          [
+            -15.570930834898865,
+            18.973234119010808,
+            10
+          ],
+          [
+            -17.3556546981092,
+            17.355654698109202,
+            10
+          ],
+          [
+            -18.973234119010804,
+            15.570930834898867,
+            10
+          ],
+          [
+            -20.408090923521534,
+            13.636250395811823,
+            10
+          ],
+          [
+            -21.646406656241428,
+            11.57024541108039,
+            10
+          ],
+          [
+            -22.67625565973217,
+            9.392812638100725,
+            10
+          ],
+          [
+            -23.487719925117407,
+            7.1249219447824625,
+            10
+          ],
+          [
+            -24.07298460792999,
+            4.78841435825743,
+            10
+          ],
+          [
+            -24.426413289336207,
+            2.4057917238488153,
+            10
+          ],
+          [
+            -24.544602257930357,
+            3.005846859151931e-15,
+            10
+          ],
+          [
+            -24.42641328933621,
+            -2.4057917238488096,
+            10
+          ],
+          [
+            -24.07298460792999,
+            -4.788414358257425,
+            10
+          ],
+          [
+            -23.48771992511741,
+            -7.124921944782455,
+            10
+          ],
+          [
+            -22.676255659732174,
+            -9.392812638100718,
+            10
+          ],
+          [
+            -21.64640665624143,
+            -11.570245411080384,
+            10
+          ],
+          [
+            -20.408090923521534,
+            -13.636250395811818,
+            10
+          ],
+          [
+            -18.973234119010808,
+            -15.570930834898862,
+            10
+          ],
+          [
+            -17.355654698109205,
+            -17.3556546981092,
+            10
+          ],
+          [
+            -15.57093083489888,
+            -18.973234119010794,
+            10
+          ],
+          [
+            -13.636250395811823,
+            -20.40809092352153,
+            10
+          ],
+          [
+            -11.570245411080391,
+            -21.646406656241428,
+            10
+          ],
+          [
+            -9.392812638100736,
+            -22.676255659732167,
+            10
+          ],
+          [
+            -7.124921944782464,
+            -23.487719925117407,
+            10
+          ],
+          [
+            -4.788414358257432,
+            -24.072984607929985,
+            10
+          ],
+          [
+            -2.405791723848806,
+            -24.42641328933621,
+            10
+          ],
+          [
+            -4.508770288727896e-15,
+            -24.544602257930357,
+            10
+          ],
+          [
+            2.405791723848797,
+            -24.42641328933621,
+            10
+          ],
+          [
+            4.788414358257423,
+            -24.07298460792999,
+            10
+          ],
+          [
+            7.1249219447824546,
+            -23.48771992511741,
+            10
+          ],
+          [
+            9.392812638100727,
+            -22.67625565973217,
+            10
+          ],
+          [
+            11.570245411080382,
+            -21.64640665624143,
+            10
+          ],
+          [
+            13.636250395811814,
+            -20.408090923521534,
+            10
+          ],
+          [
+            15.57093083489887,
+            -18.9732341190108,
+            10
+          ],
+          [
+            17.3556546981092,
+            -17.355654698109205,
+            10
+          ],
+          [
+            18.973234119010794,
+            -15.57093083489888,
+            10
+          ],
+          [
+            20.40809092352153,
+            -13.636250395811823,
+            10
+          ],
+          [
+            21.646406656241425,
+            -11.570245411080391,
+            10
+          ],
+          [
+            22.676255659732167,
+            -9.392812638100736,
+            10
+          ],
+          [
+            23.487719925117407,
+            -7.124921944782465,
+            10
+          ],
+          [
+            24.072984607929985,
+            -4.788414358257434,
+            10
+          ],
+          [
+            24.42641328933621,
+            -2.4057917238488074,
+            10
+          ],
+          [
+            24.544602257930357,
+            -6.011693718303862e-15,
+            10
+          ]
+        ]
+      },
+      "height": 1,
+      "position": [
+        -61,
+        145,
+        25.8
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "greenhouse-ring-3",
+      "name": "Greenhouse horizontal frame 3",
+      "layer": "buildings",
+      "material": "frame",
+      "shape": {
+        "kind": "tube",
+        "radius": 0.28,
+        "path": [
+          [
+            17.858821349685986,
+            0,
+            18
+          ],
+          [
+            17.772826243574844,
+            1.7504705983527242,
+            18
+          ],
+          [
+            17.515669105122967,
+            3.484083207938745,
+            18
+          ],
+          [
+            17.089826498150046,
+            5.184142191638697,
+            18
+          ],
+          [
+            16.499399519750476,
+            6.834275052092778,
+            18
+          ],
+          [
+            15.75007430448646,
+            8.418590107800433,
+            18
+          ],
+          [
+            14.849067263803825,
+            9.92182953870049,
+            18
+          ],
+          [
+            13.80505558804489,
+            11.329516327319121,
+            18
+          ],
+          [
+            12.628093680362053,
+            12.628093680362051,
+            18
+          ],
+          [
+            11.329516327319121,
+            13.805055588044889,
+            18
+          ],
+          [
+            9.921829538700491,
+            14.849067263803825,
+            18
+          ],
+          [
+            8.418590107800435,
+            15.750074304486459,
+            18
+          ],
+          [
+            6.83427505209278,
+            16.499399519750476,
+            18
+          ],
+          [
+            5.184142191638697,
+            17.08982649815005,
+            18
+          ],
+          [
+            3.4840832079387467,
+            17.515669105122967,
+            18
+          ],
+          [
+            1.7504705983527271,
+            17.77282624357484,
+            18
+          ],
+          [
+            1.0935374201218679e-15,
+            17.858821349685986,
+            18
+          ],
+          [
+            -1.750470598352725,
+            17.772826243574844,
+            18
+          ],
+          [
+            -3.484083207938744,
+            17.515669105122967,
+            18
+          ],
+          [
+            -5.184142191638695,
+            17.08982649815005,
+            18
+          ],
+          [
+            -6.834275052092777,
+            16.499399519750476,
+            18
+          ],
+          [
+            -8.418590107800433,
+            15.75007430448646,
+            18
+          ],
+          [
+            -9.921829538700486,
+            14.849067263803827,
+            18
+          ],
+          [
+            -11.32951632731912,
+            13.805055588044892,
+            18
+          ],
+          [
+            -12.628093680362051,
+            12.628093680362053,
+            18
+          ],
+          [
+            -13.80505558804489,
+            11.329516327319121,
+            18
+          ],
+          [
+            -14.849067263803827,
+            9.92182953870049,
+            18
+          ],
+          [
+            -15.750074304486459,
+            8.418590107800437,
+            18
+          ],
+          [
+            -16.499399519750476,
+            6.834275052092781,
+            18
+          ],
+          [
+            -17.089826498150046,
+            5.184142191638699,
+            18
+          ],
+          [
+            -17.515669105122967,
+            3.4840832079387516,
+            18
+          ],
+          [
+            -17.77282624357484,
+            1.7504705983527282,
+            18
+          ],
+          [
+            -17.858821349685986,
+            2.1870748402437357e-15,
+            18
+          ],
+          [
+            -17.772826243574844,
+            -1.750470598352724,
+            18
+          ],
+          [
+            -17.515669105122967,
+            -3.484083207938747,
+            18
+          ],
+          [
+            -17.08982649815005,
+            -5.184142191638694,
+            18
+          ],
+          [
+            -16.499399519750476,
+            -6.834275052092775,
+            18
+          ],
+          [
+            -15.75007430448646,
+            -8.418590107800433,
+            18
+          ],
+          [
+            -14.849067263803828,
+            -9.921829538700486,
+            18
+          ],
+          [
+            -13.805055588044892,
+            -11.329516327319116,
+            18
+          ],
+          [
+            -12.628093680362054,
+            -12.628093680362051,
+            18
+          ],
+          [
+            -11.329516327319128,
+            -13.805055588044885,
+            18
+          ],
+          [
+            -9.92182953870049,
+            -14.849067263803825,
+            18
+          ],
+          [
+            -8.418590107800437,
+            -15.750074304486459,
+            18
+          ],
+          [
+            -6.834275052092789,
+            -16.499399519750472,
+            18
+          ],
+          [
+            -5.1841421916387,
+            -17.089826498150046,
+            18
+          ],
+          [
+            -3.4840832079387525,
+            -17.515669105122967,
+            18
+          ],
+          [
+            -1.7504705983527213,
+            -17.772826243574844,
+            18
+          ],
+          [
+            -3.2806122603656034e-15,
+            -17.858821349685986,
+            18
+          ],
+          [
+            1.750470598352715,
+            -17.772826243574844,
+            18
+          ],
+          [
+            3.4840832079387463,
+            -17.515669105122967,
+            18
+          ],
+          [
+            5.184142191638693,
+            -17.08982649815005,
+            18
+          ],
+          [
+            6.834275052092782,
+            -16.499399519750472,
+            18
+          ],
+          [
+            8.418590107800432,
+            -15.75007430448646,
+            18
+          ],
+          [
+            9.921829538700484,
+            -14.849067263803828,
+            18
+          ],
+          [
+            11.329516327319123,
+            -13.805055588044889,
+            18
+          ],
+          [
+            12.62809368036205,
+            -12.628093680362054,
+            18
+          ],
+          [
+            13.805055588044883,
+            -11.329516327319128,
+            18
+          ],
+          [
+            14.849067263803825,
+            -9.92182953870049,
+            18
+          ],
+          [
+            15.750074304486457,
+            -8.418590107800437,
+            18
+          ],
+          [
+            16.499399519750472,
+            -6.8342750520927895,
+            18
+          ],
+          [
+            17.089826498150046,
+            -5.184142191638701,
+            18
+          ],
+          [
+            17.515669105122967,
+            -3.4840832079387534,
+            18
+          ],
+          [
+            17.772826243574844,
+            -1.7504705983527225,
+            18
+          ],
+          [
+            17.858821349685986,
+            -4.3741496804874714e-15,
+            18
+          ]
+        ]
+      },
+      "height": 1,
+      "position": [
+        -61,
+        145,
+        25.8
       ],
       "rotation": 0
     }
