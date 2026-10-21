@@ -72,3 +72,5 @@ Latest viewing direction: the city starts facing forward with no sideways yaw. C
 Mathematics uses an authored SVG summation symbol in the interest selector. Camera framing adapts through rotation so the complete board remains visible from overhead at every azimuth.
 
 View control is a two-way toggle: Top view changes to Landscape view while overhead; pressing again restores the front-facing landscape view. Reset and keyboard Home also reset its label, while keyboard T selects overhead.
+
+Music: the user supplied music.mp3. A header play/pause button serves /audio/music.mp3, loads only on request, resumes from the paused position, and reports load/play errors. No autoplay. The track stops naturally at its end. The control is keyboard accessible and adapts to light/dark and compact screens.

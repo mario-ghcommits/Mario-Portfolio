@@ -422,3 +422,13 @@ html[data-theme=dark] .appearance-toggle:hover { background: #292e38; }
 @media(max-width:600px) { .top-view { padding: 9px 10px; } .view-tools { gap: 8px; } }
 
 @media(max-width:600px) { .stage-footer { gap: 10px; flex-wrap: wrap; } .segmented button { min-width: 80px; padding-inline: 8px; } }
+
+/* User-started music, beside the appearance control. */
+.music-control { position: relative; }
+.music-toggle { display: inline-flex; align-items: center; justify-content: center; gap: 7px; min-height: 38px; padding: 7px 11px; border: 1px solid var(--line); border-radius: 22px; background: var(--page); color: var(--ink); font-size: .6875rem; white-space: nowrap; cursor: pointer; }
+.music-toggle:hover { background: var(--surface); }
+.music-toggle:active { transform: scale(.96); }
+.music-toggle[aria-pressed=true] { border-color: var(--blue); color: var(--blue); }
+.music-status:empty { display: none; }
+.music-status:not(:empty) { position: absolute; right: 0; top: calc(100% + 12px); width: 220px; padding: 12px 16px; border: 1px solid var(--line); border-radius: 12px; background: var(--page); color: var(--ink); font-size: .75rem; line-height: 1.5; box-shadow: 0 8px 24px #00000014; }
+@media(max-width:720px) { .music-toggle { min-width: 36px; padding-inline: 8px; } .music-toggle span { display: none; } }

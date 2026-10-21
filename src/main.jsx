@@ -11,6 +11,7 @@ const SOURCE = 'https://github.com/mario-lindev/Mario-Portfolio';
 function Icon({name='arrow', size=20, ...props}) {
   const paths = {
     sun: <><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5 19 19M5 19l1.5-1.5M17.5 6.5 19 5"/></>,
+    music: <><path d="M9 18V5l11-2v13M9 8l11-2"/><ellipse cx="6" cy="18" rx="3" ry="2.5"/><ellipse cx="17" cy="16" rx="3" ry="2.5"/></>,
     moon: <path d="M20.4 14.2A8.8 8.8 0 0 1 9.8 3.6a8.8 8.8 0 1 0 10.6 10.6Z"/>,
     arrow: <path d="M5 12h14M13 6l6 6-6 6"/>,
     external: <path d="M7 17 17 7M7 7h10v10"/>,
@@ -88,6 +89,28 @@ function Interests(){
   const current = items[active];
   return <section className="interests section-shell" aria-labelledby="interests-title"><div className="section-intro"><h2 id="interests-title">Still learning.<br/>Always building.</h2><p>Following my curiosity, from a line<br className="desktop-break"/> of code to something I can hold.</p></div><div className="interest-layout"><div className="interest-menu" role="group" aria-label="Explore interests">{Object.entries(items).map(([key,item])=><button key={key} onClick={()=>setActive(key)} aria-pressed={active===key} aria-controls="interest-panel"><Icon name={item.icon} size={22}/><span>{item.name}</span><Icon name="arrow" size={18}/></button>)}</div><div className="interest-content" id="interest-panel" aria-live="polite"><div className={'interest-symbol '+active} aria-hidden="true">{active==='robotics'?<div className="team-study"><span>604</span><p>FRC Robotics</p></div>:active==='math'?<div className="team-study"><span>22/25</span><p>AMC 8 · Sixth grade</p></div>:<div className="code-object"><span>def <b>build</b>(idea):</span><span>  learn()</span><span>  try_again()</span><span>  <i>return</i> possibility</span></div>}</div><div className="interest-text" key={active}><h3>{current.title}</h3><p>{current.description}</p><span>{current.detail}</span></div></div></div></section>;
 }
+function MusicButton(){
+  const audio=useRef(null);
+  const request=useRef(0);
+  const [playing,setPlaying]=useState(false);
+  const [loading,setLoading]=useState(false);
+  const [error,setError]=useState('');
+  const toggle=async()=>{
+    const player=audio.current;
+    const id=++request.current;
+    setError('');
+    if(!player.paused||loading){player.pause();setLoading(false);return;}
+    setLoading(true);
+    try{await player.play();}
+    catch(reason){if(id===request.current&&reason.name!=='AbortError')setError('Music could not play. Please try again.');}
+    finally{if(id===request.current)setLoading(false);}
+  };
+  return <div className="music-control">
+    <audio ref={audio} src="/audio/music.mp3" preload="none" onPlaying={()=>{setPlaying(true);setLoading(false);}} onPause={()=>setPlaying(false)} onEnded={()=>setPlaying(false)} onError={()=>{setPlaying(false);setLoading(false);setError('Music could not load. Please try again.');}}/>
+    <button className="music-toggle" onClick={toggle} aria-label={loading?'Cancel music loading':playing?'Pause music':'Play music'} aria-pressed={playing} aria-busy={loading} title={playing?'Pause music':'Play music'}><Icon name={playing?'pause':'music'} size={17}/><span>{loading?'Loading…':playing?'Pause music':'Music'}</span></button>
+    <span className="music-status" role="status">{error}</span>
+  </div>;
+}
 function useAppearance(){
   const [theme,setTheme]=useState(()=>document.documentElement.dataset.theme||'light');
   useEffect(()=>{document.documentElement.dataset.theme=theme;document.querySelector('meta[name="theme-color"]')?.setAttribute('content',theme==='dark'?'#111216':'#ffffff');try{localStorage.setItem('mario-appearance',theme);}catch{}},[theme]);
@@ -97,7 +120,7 @@ function App(){
   const [motion,setMotion] = useMotion();
   const [theme,toggleTheme]=useAppearance();
   return <><a className="skip-link" href="#main">Skip to content</a>
-    <header className="site-header"><div className="header-inner"><a href="#" className="wordmark" aria-label="Mario Lin home">Mario Lin<span className="wordmark-dot"/></a><nav aria-label="Main navigation"><a href="#work">Work</a><a href="#about">About</a><a href="#journey">Journey</a></nav><div className="header-actions"><button className="appearance-toggle" onClick={toggleTheme} aria-label={theme==='dark'?'Switch to light appearance':'Switch to dark appearance'} aria-pressed={theme==='dark'} title="Appearance"><Icon name={theme==='dark'?'moon':'sun'} size={17}/><span>{theme==='dark'?'Dark':'Light'}</span></button><a className="nav-connect" href={LINKEDIN} target="_blank" rel="noreferrer">Let’s connect <Icon name="external" size={15}/></a></div></div></header>
+    <header className="site-header"><div className="header-inner"><a href="#" className="wordmark" aria-label="Mario Lin home">Mario Lin<span className="wordmark-dot"/></a><nav aria-label="Main navigation"><a href="#work">Work</a><a href="#about">About</a><a href="#journey">Journey</a></nav><div className="header-actions"><button className="appearance-toggle" onClick={toggleTheme} aria-label={theme==='dark'?'Switch to light appearance':'Switch to dark appearance'} aria-pressed={theme==='dark'} title="Appearance"><Icon name={theme==='dark'?'moon':'sun'} size={17}/><span>{theme==='dark'?'Dark':'Light'}</span></button><MusicButton/><a className="nav-connect" href={LINKEDIN} target="_blank" rel="noreferrer">Let’s connect <Icon name="external" size={15}/></a></div></div></header>
     <main id="main">
       <section className="hero section-shell"><div className="hero-main"><div className="hero-copy"><h1>Curiosity.<br/><span>Made tangible.</span></h1><p>I’m Mario. A student exploring engineering,<br className="desktop-break"/> robotics, and the possibilities in between.</p><div className="hero-actions"><a href="#work" className="button-primary">Explore my work <Icon name="arrow" size={18}/></a><a href="#about" className="text-button">A little about me <Icon name="down" size={16}/></a></div></div><div className="hero-art"><BrainObject motion={motion}/><div className="art-caption"><span>Ideas, coming together. Drag to rotate.</span><button className="motion-control" onClick={()=>setMotion(v=>!v)} aria-label={motion?'Pause animations':'Play animations'} aria-pressed={motion}><Icon name={motion?'pause':'play'} size={14}/></button></div></div></div><div className="hero-foot"><span>Leland High School <span className="foot-dot"/> Class of 2030</span><span>San Jose, California</span></div></section>
       <Project motion={motion}/>
