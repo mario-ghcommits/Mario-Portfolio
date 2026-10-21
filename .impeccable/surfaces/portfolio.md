@@ -10,7 +10,7 @@ OWN-WORLD: White and cool porcelain, graphite text, restrained blue, platform ty
 
 STORY: Meet Mario, explore Auquara and its award, understand his robotics/coding interests and school/community journey, connect on LinkedIn.
 
-FIRST VIEWPORT: Quiet navigation, oversized left-aligned two-line thesis and personal introduction, primary work action beneath; large porcelain brain assembly on the right. School/location line closes the opening.
+FIRST VIEWPORT: Quiet navigation, oversized left-aligned two-line thesis and personal introduction, primary work action beneath; large pink enlarged, rotatable brain puzzle on the right. School/location line closes the opening.
 
 FORM: Exploded systems, fifth grounded concept, seed 7ae17a67, translated into the user's pinned Apple visual world. Other candidates: product keynote, personal notebook, gallery, material lab, learning journal, studio index. Catalog challengers cannot replace the confirmed Apple reference. Their useful disciplines: continuity, state clarity, content-led identity, truthful mapping, bounded physics, spatial coherence.
 
@@ -28,4 +28,6 @@ The project stage now uses a photo-derived geometric reconstruction from four su
 
 The finished reconstruction infers ceilings over the brown tower shells, completes the partially covered quartered satellite, and extrudes the drawn parcels on the flat satellite. Inferred components are marked in auquara-design.json. Deliberate circular openings and gray courtyard roof openings remain.
 
-Auquara uses unified warm-white architecture with muted blue accents, sage pocket parks, perimeter plantings, 21 stylized trees, and four roof gardens. Landscaping is an authored addition. The hero uses a separate procedural brain assembly with sixteen pieces; this is an expressive sculpture, not an anatomical reference.
+Auquara uses unified warm-white architecture with muted blue accents, sage pocket parks, perimeter plantings, 21 stylized trees, and four roof gardens. Landscaping is an authored addition. The hero uses a separate procedural brain assembly with 96 cortical pieces plus the cerebellum and stem; this is an expressive sculpture, not an anatomical reference.
+
+The brain sculpture follows the supplied pink brain reference with fuller winding folds, 96 small cortical pieces and three lower anatomical forms. Drag rotates it independently of the assembly loop; arrow keys rotate and Home resets. Both the outer board and the central city platform are rectangular, while circular city routes remain.

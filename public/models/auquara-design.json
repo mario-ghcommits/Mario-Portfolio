@@ -1,6 +1,6 @@
 {
   "name": "Auquara — photo reconstruction",
-  "version": 3,
+  "version": 4,
   "units": "millimeters",
   "nominalBase": {
     "width": 190,
@@ -125,12 +125,14 @@
     },
     {
       "id": "city-disc",
-      "name": "Circular central city district",
+      "name": "Rectangular central city platform",
       "layer": "network",
       "material": "paving",
       "shape": {
-        "kind": "circle",
-        "radius": 88
+        "kind": "rectangle",
+        "width": 184,
+        "depth": 190,
+        "chamfer": 0
       },
       "height": 1.2,
       "position": [

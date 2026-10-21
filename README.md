@@ -19,7 +19,7 @@ Vercel settings: Vite preset, `pnpm build`, output `dist`, production branch `ma
 
 ## Experience
 
-- A sixteen-piece procedural brain assembly in the hero, with a pausable twelve-second loop, offscreen suspension, and an assembled reduced-motion state. The previous ThreeUI shader assets remain as licensed reference material.
+- A ninety-six-piece procedural brain assembly in the hero, with a pausable twelve-second loop, offscreen suspension, and an assembled reduced-motion state. The previous ThreeUI shader assets remain as licensed reference material.
 - Authored Three.js geometric city with assembled/exploded systems views, deferred until near the viewport.
 - Inline accessible project disclosure, spring-based view selector, and robotics/code switcher.
 - Direct city manipulation with pointer capture and projected momentum, keyboard rotation, and reset. Mobile layout, keyboard focus, reduced-motion support, manual animation control, reduced-transparency and increased-contrast fallbacks.
@@ -33,4 +33,6 @@ Credits: [ThreeUI](https://threeui.com), [Emil Kowalski's motion guidance](https
 
 The finished reconstruction infers ceilings over the brown tower shells, completes the partially covered quartered satellite, and extrudes the drawn parcels on the flat satellite. Inferred components are marked in auquara-design.json. Deliberate circular openings and gray courtyard roof openings remain.
 
-Auquara uses unified warm-white architecture with muted blue accents, sage pocket parks, perimeter plantings, 21 stylized trees, and four roof gardens. Landscaping is an authored addition. The hero uses a separate procedural brain assembly with sixteen pieces; this is an expressive sculpture, not an anatomical reference.
+Auquara uses unified warm-white architecture with muted blue accents, sage pocket parks, perimeter plantings, 21 stylized trees, and four roof gardens. Landscaping is an authored addition. The hero uses a separate procedural brain assembly with 96 cortical pieces plus the cerebellum and stem; this is an expressive sculpture, not an anatomical reference.
+
+The brain sculpture follows the supplied pink brain reference with fuller winding folds, 96 small cortical pieces and three lower anatomical forms. Drag rotates it independently of the assembly loop; arrow keys rotate and Home resets. Both the outer board and the central city platform are rectangular, while circular city routes remain.

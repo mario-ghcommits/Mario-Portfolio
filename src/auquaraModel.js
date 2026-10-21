@@ -4,7 +4,7 @@ import * as THREE from 'three';
 // not a measurement. +Y points toward the three satellite modules in IMG_1315.
 export const AUQUARA_DESIGN = {
   name: 'Auquara — photo reconstruction',
-  version: 3,
+  version: 4,
   units: 'millimeters',
   nominalBase: {width:190,length:380,thickness:4,supportHeight:20},
   provenance: 'Reconstructed by visual interpretation of IMG_1345, IMG_1316, IMG_1315, and IMG_1296. Hidden geometry and dimensions are estimated. Original photos are not distributed.',
@@ -24,7 +24,7 @@ const sector=(inner,outer,start,end)=>({kind:'sector',inner,outer,start,end});
 
 add('board','Painted blue rectangular display board','base','base',rect(190,380),4,0,0,20);
 for(const [i,x,y] of [[1,-82,-177],[2,82,-177],[3,-82,177],[4,82,177]])add('support-'+i,'Blue platform support '+i,'base','blue',rect(9,11),20,x,y,0);
-add('city-disc','Circular central city district','network','paving',disk(88),1.2,0,0,24);
+add('city-disc','Rectangular central city platform','network','paving',rect(184,190),1.2,0,0,24);
 for(const radius of [27,48,85])add('ring-route-'+radius,'Concentric route marking','network','road',ring(radius-.42,radius+.42),.18,0,0,25.22);
 for(const angle of [0,45,90,135,180,225,270,315]){
   const [x,y]=polar(54,angle);
