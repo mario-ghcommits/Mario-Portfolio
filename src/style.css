@@ -329,3 +329,7 @@ a svg { flex-shrink: 0; }
   .hero h1 span { color: #55555d; }
   .timeline-date, .timeline-content>span, .visual-note, .hero-foot, .footer-bottom, .stage-header>span:last-child { color: #33333b; }
 }
+
+.model-downloads { display: flex; flex-wrap: wrap; gap: 0 24px; margin-top: 4px; }
+.model-downloads a { display: inline-flex; align-items: center; min-height: 44px; font-size: .75rem; color: var(--blue); text-decoration: underline; text-underline-offset: 3px; }
+.model-downloads a:hover { color: var(--blue-hover); }

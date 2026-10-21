@@ -21,3 +21,9 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 ## Confirmed interaction update
 
 The user supplied apple-design guidance. City rotation now tracks pointer displacement with capture, preserves presentation state on re-grab, projects release velocity with exponential decay, and settles independent yaw/pitch springs. Layers and segmented controls use critically damped springs. Touch vertical scrolling remains native; arrow keys and reset provide alternatives. Sticky navigation is a functional translucent layer with reduced-transparency and increased-contrast fallbacks. Type scales in rem with optical sizing.
+
+## Auquara reference update
+
+The project stage now uses a photo-derived geometric reconstruction from four supplied model photographs. Preserve the radial plan, blue curved towers, open brown courtyards, white spokes, five satellite modules, and elevated blue board. Nominal base dimensions are 190 × 380 mm; physical measurements and obscured geometry remain estimates. Downloads provide the same assembly as GLB and editable OpenSCAD. Original photos are not distributed.
+
+The finished reconstruction infers ceilings over the brown tower shells, completes the partially covered quartered satellite, and extrudes the drawn parcels on the flat satellite. Inferred components are marked in auquara-design.json. Deliberate circular openings and gray courtyard roof openings remain.

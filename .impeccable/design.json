@@ -291,7 +291,7 @@
       "name": "Reset view",
       "kind": "button",
       "refersTo": "reset-view",
-      "description": "Resets the conceptual city rotation.",
+      "description": "Resets the photo-derived Auquara model rotation.",
       "html": "<button class=\"ds-reset-view\" aria-label=\"Reset city view\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.55\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 10a8 8 0 1 1 1.5 7M4 4v6h6\"/></svg></button>",
       "css": ":host{font-family:-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif;color:var(--ink,#1d1d1f)}.ds-reset-view{font-optical-sizing:auto;}.ds-reset-view:focus-visible{outline:3px solid var(--blue,#0068d7);outline-offset:5px;}.ds-reset-view{min-width:36px;min-height:36px;border:0;background:#fff;border-radius:50%;display:grid;place-items:center;color:#536171;cursor:pointer}.ds-reset-view:active{background:#dce5ef;transform:scale(.96)}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}button{font-family:inherit;cursor:pointer}a{text-decoration:none}"
     },
@@ -338,7 +338,7 @@
   ],
   "narrative": {
     "northStar": "Making ideas tangible",
-    "overview": "A light, spacious personal portfolio in the confirmed Apple-inspired visual world. White and cool porcelain keep graphite typography, restrained blue actions, and authored spatial studies in focus. Platform typography is an explicit design commitment.\n\nContent sits flush in generous margins. Functional translucent navigation maintains context while scrolling; rounded controls and quiet tonal stages frame direct manipulation. WebGL and inline SVG supply imagery; the city is explicitly a conceptual illustration.",
+    "overview": "A light, spacious personal portfolio in the confirmed Apple-inspired visual world. White and cool porcelain keep graphite typography, restrained blue actions, and authored spatial studies in focus. Platform typography is an explicit design commitment.\n\nContent sits flush in generous margins. Functional translucent navigation maintains context while scrolling; rounded controls and quiet tonal stages frame direct manipulation. WebGL and inline SVG supply imagery; the city is a photo-derived reconstruction with estimated dimensions.",
     "keyCharacteristics": [
       "White and cool porcelain surfaces",
       "Platform typography with optical sizing",
@@ -359,14 +359,14 @@
     ],
     "dos": [
       "Do use blue for actions and keyboard focus.",
-      "Do keep spatial illustrations labeled as conceptual.",
+      "Do label estimated model dimensions and interpreted geometry.",
       "Do preserve reduced-motion, reduced-transparency, and increased-contrast treatments.",
       "Do use authored SVG geometry for interface icons."
     ],
     "donts": [
       "Don't restore the replaced graphite/lime identity.",
       "Don't add tickers, section numbers, neon, or fake trademarks.",
-      "Don't substitute a photograph or claim the conceptual city recreates the actual competition model."
+      "Don't claim the photo-derived model has measured dimensions or fabrication accuracy."
     ]
   }
 }

@@ -28,15 +28,17 @@ Mario Lin. User references: Apple design, Emil Kowalski's interaction craft. Rep
 
 ## Evidence on Hand
 
-LinkedIn was read in the original task and verified again in the signed-in browser on October 20, 2026. Auquara: Future City prototype, Excellence in Systems Integration award. Leland High School (August 2026–expected May 2030), FRC Robotics 604 and Hackathon Club. Stratford middle school (2023–2026), Math Club with AMC 8/10, Python, Java, limited Arduino experience, starting point guard and basketball co-captain. Breakthrough Silicon Valley tutor term listed October–December 2026. No photographs of the actual city model, portrait, testimonials, quantitative impact, or other awards were supplied.
+LinkedIn was read in the original task and verified again in the signed-in browser on October 20, 2026. Auquara: Future City prototype, Excellence in Systems Integration award. Leland High School (August 2026–expected May 2030), FRC Robotics 604 and Hackathon Club. Stratford middle school (2023–2026), Math Club with AMC 8/10, Python, Java, limited Arduino experience, starting point guard and basketball co-captain. Breakthrough Silicon Valley tutor term listed October–December 2026. Four photographs of the actual city model were supplied for a photo-derived reconstruction. Physical dimensions are unknown; the editable nominal board size is 190 × 380 mm. No portrait, testimonials, quantitative impact, or other awards were supplied.
 
 ## Product Principles
 
 - Specific achievements come before general claims.
-- Preserve factual accuracy and identify conceptual visuals.
+- Preserve factual accuracy and identify approximate photo-derived geometry.
 - Make project exploration and contact straightforward.
 - Motion supports exploration and responds to user preferences.
 
 ## Accessibility & Inclusion
 
 Responsive layout, readable contrast, visible keyboard focus, accessible disclosure controls, reduced motion, and a manual animation switch.
+
+The finished reconstruction infers ceilings over the brown tower shells, completes the partially covered quartered satellite, and extrudes the drawn parcels on the flat satellite. Inferred components are marked in auquara-design.json. Deliberate circular openings and gray courtyard roof openings remain.

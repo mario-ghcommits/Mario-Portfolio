@@ -1,0 +1,2427 @@
+{
+  "name": "Auquara — photo reconstruction",
+  "version": 2,
+  "units": "millimeters",
+  "nominalBase": {
+    "width": 190,
+    "length": 380,
+    "thickness": 4,
+    "supportHeight": 20
+  },
+  "provenance": "Reconstructed by visual interpretation of IMG_1345, IMG_1316, IMG_1315, and IMG_1296. Hidden geometry and dimensions are estimated. Original photos are not distributed.",
+  "completion": "Unfinished brown tower roofs, the quartered satellite roof, and outlined satellite volumes are inferred as a finished design. Intentional circular and courtyard openings are preserved.",
+  "palette": {
+    "base": "#7896a6",
+    "paving": "#82898d",
+    "road": "#3e474a",
+    "roadFill": "#b0b8b9",
+    "blue": "#5e9ebd",
+    "lightBlue": "#8bb8ca",
+    "white": "#e9e6da",
+    "gray": "#8b9290",
+    "brown": "#9b805e",
+    "darkBrown": "#685746",
+    "tan": "#c2a36d",
+    "green": "#6e8b5a"
+  },
+  "parts": [
+    {
+      "id": "board",
+      "name": "Painted blue rectangular display board",
+      "layer": "base",
+      "material": "base",
+      "shape": {
+        "kind": "rectangle",
+        "width": 190,
+        "depth": 380,
+        "chamfer": 0
+      },
+      "height": 4,
+      "position": [
+        0,
+        0,
+        20
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "support-1",
+      "name": "Blue platform support 1",
+      "layer": "base",
+      "material": "blue",
+      "shape": {
+        "kind": "rectangle",
+        "width": 9,
+        "depth": 11,
+        "chamfer": 0
+      },
+      "height": 20,
+      "position": [
+        -82,
+        -177,
+        0
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "support-2",
+      "name": "Blue platform support 2",
+      "layer": "base",
+      "material": "blue",
+      "shape": {
+        "kind": "rectangle",
+        "width": 9,
+        "depth": 11,
+        "chamfer": 0
+      },
+      "height": 20,
+      "position": [
+        82,
+        -177,
+        0
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "support-3",
+      "name": "Blue platform support 3",
+      "layer": "base",
+      "material": "blue",
+      "shape": {
+        "kind": "rectangle",
+        "width": 9,
+        "depth": 11,
+        "chamfer": 0
+      },
+      "height": 20,
+      "position": [
+        -82,
+        177,
+        0
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "support-4",
+      "name": "Blue platform support 4",
+      "layer": "base",
+      "material": "blue",
+      "shape": {
+        "kind": "rectangle",
+        "width": 9,
+        "depth": 11,
+        "chamfer": 0
+      },
+      "height": 20,
+      "position": [
+        82,
+        177,
+        0
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "city-disc",
+      "name": "Circular central city district",
+      "layer": "network",
+      "material": "paving",
+      "shape": {
+        "kind": "circle",
+        "radius": 88
+      },
+      "height": 1.2,
+      "position": [
+        0,
+        0,
+        24
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "ring-route-27",
+      "name": "Concentric route marking",
+      "layer": "network",
+      "material": "road",
+      "shape": {
+        "kind": "ring",
+        "inner": 26.58,
+        "outer": 27.42
+      },
+      "height": 0.18,
+      "position": [
+        0,
+        0,
+        25.22
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "ring-route-48",
+      "name": "Concentric route marking",
+      "layer": "network",
+      "material": "road",
+      "shape": {
+        "kind": "ring",
+        "inner": 47.58,
+        "outer": 48.42
+      },
+      "height": 0.18,
+      "position": [
+        0,
+        0,
+        25.22
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "ring-route-85",
+      "name": "Concentric route marking",
+      "layer": "network",
+      "material": "road",
+      "shape": {
+        "kind": "ring",
+        "inner": 84.58,
+        "outer": 85.42
+      },
+      "height": 0.18,
+      "position": [
+        0,
+        0,
+        25.22
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "radial-route-0",
+      "name": "Radial route marking",
+      "layer": "network",
+      "material": "road",
+      "shape": {
+        "kind": "rectangle",
+        "width": 57,
+        "depth": 0.7,
+        "chamfer": 0
+      },
+      "height": 0.18,
+      "position": [
+        54,
+        0,
+        25.24
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "radial-route-45",
+      "name": "Radial route marking",
+      "layer": "network",
+      "material": "road",
+      "shape": {
+        "kind": "rectangle",
+        "width": 57,
+        "depth": 0.7,
+        "chamfer": 0
+      },
+      "height": 0.18,
+      "position": [
+        38.18376618407357,
+        38.18376618407356,
+        25.24
+      ],
+      "rotation": 45
+    },
+    {
+      "id": "radial-route-90",
+      "name": "Radial route marking",
+      "layer": "network",
+      "material": "road",
+      "shape": {
+        "kind": "rectangle",
+        "width": 57,
+        "depth": 0.7,
+        "chamfer": 0
+      },
+      "height": 0.18,
+      "position": [
+        3.3065463576978537e-15,
+        54,
+        25.24
+      ],
+      "rotation": 90
+    },
+    {
+      "id": "radial-route-135",
+      "name": "Radial route marking",
+      "layer": "network",
+      "material": "road",
+      "shape": {
+        "kind": "rectangle",
+        "width": 57,
+        "depth": 0.7,
+        "chamfer": 0
+      },
+      "height": 0.18,
+      "position": [
+        -38.18376618407356,
+        38.18376618407357,
+        25.24
+      ],
+      "rotation": 135
+    },
+    {
+      "id": "radial-route-180",
+      "name": "Radial route marking",
+      "layer": "network",
+      "material": "road",
+      "shape": {
+        "kind": "rectangle",
+        "width": 57,
+        "depth": 0.7,
+        "chamfer": 0
+      },
+      "height": 0.18,
+      "position": [
+        -54,
+        6.6130927153957075e-15,
+        25.24
+      ],
+      "rotation": 180
+    },
+    {
+      "id": "radial-route-225",
+      "name": "Radial route marking",
+      "layer": "network",
+      "material": "road",
+      "shape": {
+        "kind": "rectangle",
+        "width": 57,
+        "depth": 0.7,
+        "chamfer": 0
+      },
+      "height": 0.18,
+      "position": [
+        -38.183766184073576,
+        -38.18376618407356,
+        25.24
+      ],
+      "rotation": 225
+    },
+    {
+      "id": "radial-route-270",
+      "name": "Radial route marking",
+      "layer": "network",
+      "material": "road",
+      "shape": {
+        "kind": "rectangle",
+        "width": 57,
+        "depth": 0.7,
+        "chamfer": 0
+      },
+      "height": 0.18,
+      "position": [
+        -9.91963907309356e-15,
+        -54,
+        25.24
+      ],
+      "rotation": 270
+    },
+    {
+      "id": "radial-route-315",
+      "name": "Radial route marking",
+      "layer": "network",
+      "material": "road",
+      "shape": {
+        "kind": "rectangle",
+        "width": 57,
+        "depth": 0.7,
+        "chamfer": 0
+      },
+      "height": 0.18,
+      "position": [
+        38.183766184073555,
+        -38.183766184073576,
+        25.24
+      ],
+      "rotation": 315
+    },
+    {
+      "id": "satellite-link-edge-1",
+      "name": "Satellite connecting route outline 1",
+      "layer": "network",
+      "material": "road",
+      "shape": {
+        "kind": "rectangle",
+        "width": 71.30861387730806,
+        "depth": 3.1,
+        "chamfer": 0
+      },
+      "height": 0.2,
+      "position": [
+        -47.17422994424067,
+        112.13546462155563,
+        24.03
+      ],
+      "rotation": 112.81598665473004
+    },
+    {
+      "id": "satellite-link-1",
+      "name": "Satellite connecting route 1",
+      "layer": "network",
+      "material": "roadFill",
+      "shape": {
+        "kind": "rectangle",
+        "width": 71.30861387730806,
+        "depth": 1.9,
+        "chamfer": 0
+      },
+      "height": 0.22,
+      "position": [
+        -47.17422994424067,
+        112.13546462155563,
+        24.25
+      ],
+      "rotation": 112.81598665473004
+    },
+    {
+      "id": "satellite-link-edge-2",
+      "name": "Satellite connecting route outline 2",
+      "layer": "network",
+      "material": "road",
+      "shape": {
+        "kind": "rectangle",
+        "width": 62,
+        "depth": 3.1,
+        "chamfer": 0
+      },
+      "height": 0.2,
+      "position": [
+        7.164183775012016e-15,
+        117,
+        24.03
+      ],
+      "rotation": 90
+    },
+    {
+      "id": "satellite-link-2",
+      "name": "Satellite connecting route 2",
+      "layer": "network",
+      "material": "roadFill",
+      "shape": {
+        "kind": "rectangle",
+        "width": 62,
+        "depth": 1.9,
+        "chamfer": 0
+      },
+      "height": 0.22,
+      "position": [
+        7.164183775012016e-15,
+        117,
+        24.25
+      ],
+      "rotation": 90
+    },
+    {
+      "id": "satellite-link-edge-3",
+      "name": "Satellite connecting route outline 3",
+      "layer": "network",
+      "material": "road",
+      "shape": {
+        "kind": "rectangle",
+        "width": 71.30861387730806,
+        "depth": 3.1,
+        "chamfer": 0
+      },
+      "height": 0.2,
+      "position": [
+        47.17422994424063,
+        112.13546462155564,
+        24.03
+      ],
+      "rotation": 67.18401334526999
+    },
+    {
+      "id": "satellite-link-3",
+      "name": "Satellite connecting route 3",
+      "layer": "network",
+      "material": "roadFill",
+      "shape": {
+        "kind": "rectangle",
+        "width": 71.30861387730806,
+        "depth": 1.9,
+        "chamfer": 0
+      },
+      "height": 0.22,
+      "position": [
+        47.17422994424063,
+        112.13546462155564,
+        24.25
+      ],
+      "rotation": 67.18401334526999
+    },
+    {
+      "id": "satellite-link-edge-4",
+      "name": "Satellite connecting route outline 4",
+      "layer": "network",
+      "material": "road",
+      "shape": {
+        "kind": "rectangle",
+        "width": 67.16004700965587,
+        "depth": 3.1,
+        "chamfer": 0
+      },
+      "height": 0.2,
+      "position": [
+        -33.57233894282778,
+        -114.77055406036469,
+        24.03
+      ],
+      "rotation": -106.30509562065657
+    },
+    {
+      "id": "satellite-link-4",
+      "name": "Satellite connecting route 4",
+      "layer": "network",
+      "material": "roadFill",
+      "shape": {
+        "kind": "rectangle",
+        "width": 67.16004700965587,
+        "depth": 1.9,
+        "chamfer": 0
+      },
+      "height": 0.22,
+      "position": [
+        -33.57233894282778,
+        -114.77055406036469,
+        24.25
+      ],
+      "rotation": -106.30509562065657
+    },
+    {
+      "id": "satellite-link-edge-5",
+      "name": "Satellite connecting route outline 5",
+      "layer": "network",
+      "material": "road",
+      "shape": {
+        "kind": "rectangle",
+        "width": 67.7335357038275,
+        "depth": 3.1,
+        "chamfer": 0
+      },
+      "height": 0.2,
+      "position": [
+        35.08671370004681,
+        -114.61659808681956,
+        24.03
+      ],
+      "rotation": -72.97947438848014
+    },
+    {
+      "id": "satellite-link-5",
+      "name": "Satellite connecting route 5",
+      "layer": "network",
+      "material": "roadFill",
+      "shape": {
+        "kind": "rectangle",
+        "width": 67.7335357038275,
+        "depth": 1.9,
+        "chamfer": 0
+      },
+      "height": 0.22,
+      "position": [
+        35.08671370004681,
+        -114.61659808681956,
+        24.25
+      ],
+      "rotation": -72.97947438848014
+    },
+    {
+      "id": "inner-landscape-1",
+      "name": "Small inner green arc 1",
+      "layer": "network",
+      "material": "green",
+      "shape": {
+        "kind": "sector",
+        "inner": 29,
+        "outer": 34,
+        "start": 43,
+        "end": 132
+      },
+      "height": 0.28,
+      "position": [
+        0,
+        0,
+        25.3
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "inner-landscape-2",
+      "name": "Small inner green arc 2",
+      "layer": "network",
+      "material": "green",
+      "shape": {
+        "kind": "sector",
+        "inner": 29,
+        "outer": 34,
+        "start": 205,
+        "end": 252
+      },
+      "height": 0.28,
+      "position": [
+        0,
+        0,
+        25.3
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "blue-tower-1",
+      "name": "Curved blue tower 1",
+      "layer": "buildings",
+      "material": "blue",
+      "shape": {
+        "kind": "sector",
+        "inner": 62,
+        "outer": 84,
+        "start": 112.5,
+        "end": 143.5
+      },
+      "height": 50,
+      "position": [
+        0,
+        0,
+        25.3
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "blue-roof-1",
+      "name": "Pale blue roof 1",
+      "layer": "buildings",
+      "material": "lightBlue",
+      "shape": {
+        "kind": "sector",
+        "inner": 62,
+        "outer": 84,
+        "start": 112.5,
+        "end": 143.5
+      },
+      "height": 0.8,
+      "position": [
+        0,
+        0,
+        75.3
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "blue-tower-2",
+      "name": "Curved blue tower 2",
+      "layer": "buildings",
+      "material": "blue",
+      "shape": {
+        "kind": "sector",
+        "inner": 62,
+        "outer": 84,
+        "start": 60.5,
+        "end": 93.5
+      },
+      "height": 53,
+      "position": [
+        0,
+        0,
+        25.3
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "blue-roof-2",
+      "name": "Pale blue roof 2",
+      "layer": "buildings",
+      "material": "lightBlue",
+      "shape": {
+        "kind": "sector",
+        "inner": 62,
+        "outer": 84,
+        "start": 60.5,
+        "end": 93.5
+      },
+      "height": 0.8,
+      "position": [
+        0,
+        0,
+        78.3
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "blue-tower-3",
+      "name": "Curved blue tower 3",
+      "layer": "buildings",
+      "material": "blue",
+      "shape": {
+        "kind": "sector",
+        "inner": 62,
+        "outer": 84,
+        "start": 1.5,
+        "end": 32.5
+      },
+      "height": 48,
+      "position": [
+        0,
+        0,
+        25.3
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "blue-roof-3",
+      "name": "Pale blue roof 3",
+      "layer": "buildings",
+      "material": "lightBlue",
+      "shape": {
+        "kind": "sector",
+        "inner": 62,
+        "outer": 84,
+        "start": 1.5,
+        "end": 32.5
+      },
+      "height": 0.8,
+      "position": [
+        0,
+        0,
+        73.3
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "brown-floor-1",
+      "name": "Open tower floor 1",
+      "layer": "buildings",
+      "material": "darkBrown",
+      "shape": {
+        "kind": "rectangle",
+        "width": 23,
+        "depth": 26,
+        "chamfer": 2
+      },
+      "height": 1.3,
+      "position": [
+        49.49747468305833,
+        49.49747468305832,
+        25.3
+      ],
+      "rotation": -45
+    },
+    {
+      "id": "brown-tower-1",
+      "name": "Open brown tower 1",
+      "layer": "buildings",
+      "material": "brown",
+      "shape": {
+        "kind": "courtyard",
+        "width": 23,
+        "depth": 26,
+        "wall": 1.7,
+        "chamfer": 2
+      },
+      "height": 55,
+      "position": [
+        49.49747468305833,
+        49.49747468305832,
+        26.6
+      ],
+      "rotation": -45
+    },
+    {
+      "id": "brown-roof-1",
+      "name": "Inferred finished tower roof 1",
+      "layer": "buildings",
+      "material": "brown",
+      "shape": {
+        "kind": "rectangle",
+        "width": 23,
+        "depth": 26,
+        "chamfer": 2
+      },
+      "height": 1.5,
+      "position": [
+        49.49747468305833,
+        49.49747468305832,
+        81.6
+      ],
+      "rotation": -45,
+      "inferred": true
+    },
+    {
+      "id": "brown-floor-2",
+      "name": "Open tower floor 2",
+      "layer": "buildings",
+      "material": "darkBrown",
+      "shape": {
+        "kind": "rectangle",
+        "width": 23,
+        "depth": 26,
+        "chamfer": 2
+      },
+      "height": 1.3,
+      "position": [
+        -62.370456693185766,
+        -31.779334981768237,
+        25.3
+      ],
+      "rotation": 117
+    },
+    {
+      "id": "brown-tower-2",
+      "name": "Open brown tower 2",
+      "layer": "buildings",
+      "material": "brown",
+      "shape": {
+        "kind": "courtyard",
+        "width": 23,
+        "depth": 26,
+        "wall": 1.7,
+        "chamfer": 2
+      },
+      "height": 45,
+      "position": [
+        -62.370456693185766,
+        -31.779334981768237,
+        26.6
+      ],
+      "rotation": 117
+    },
+    {
+      "id": "brown-roof-2",
+      "name": "Inferred finished tower roof 2",
+      "layer": "buildings",
+      "material": "brown",
+      "shape": {
+        "kind": "rectangle",
+        "width": 23,
+        "depth": 26,
+        "chamfer": 2
+      },
+      "height": 1.5,
+      "position": [
+        -62.370456693185766,
+        -31.779334981768237,
+        71.6
+      ],
+      "rotation": 117,
+      "inferred": true
+    },
+    {
+      "id": "brown-floor-3",
+      "name": "Open tower floor 3",
+      "layer": "buildings",
+      "material": "darkBrown",
+      "shape": {
+        "kind": "rectangle",
+        "width": 23,
+        "depth": 26,
+        "chamfer": 2
+      },
+      "height": 1.3,
+      "position": [
+        -8.530854038360301,
+        -69.47823061489255,
+        25.3
+      ],
+      "rotation": 173
+    },
+    {
+      "id": "brown-tower-3",
+      "name": "Open brown tower 3",
+      "layer": "buildings",
+      "material": "brown",
+      "shape": {
+        "kind": "courtyard",
+        "width": 23,
+        "depth": 26,
+        "wall": 1.7,
+        "chamfer": 2
+      },
+      "height": 52,
+      "position": [
+        -8.530854038360301,
+        -69.47823061489255,
+        26.6
+      ],
+      "rotation": 173
+    },
+    {
+      "id": "brown-roof-3",
+      "name": "Inferred finished tower roof 3",
+      "layer": "buildings",
+      "material": "brown",
+      "shape": {
+        "kind": "rectangle",
+        "width": 23,
+        "depth": 26,
+        "chamfer": 2
+      },
+      "height": 1.5,
+      "position": [
+        -8.530854038360301,
+        -69.47823061489255,
+        78.6
+      ],
+      "rotation": 173,
+      "inferred": true
+    },
+    {
+      "id": "brown-floor-4",
+      "name": "Open tower floor 4",
+      "layer": "buildings",
+      "material": "darkBrown",
+      "shape": {
+        "kind": "rectangle",
+        "width": 23,
+        "depth": 26,
+        "chamfer": 2
+      },
+      "height": 1.3,
+      "position": [
+        53.623111018328444,
+        -44.99513267805777,
+        25.3
+      ],
+      "rotation": 230
+    },
+    {
+      "id": "brown-tower-4",
+      "name": "Open brown tower 4",
+      "layer": "buildings",
+      "material": "brown",
+      "shape": {
+        "kind": "courtyard",
+        "width": 23,
+        "depth": 26,
+        "wall": 1.7,
+        "chamfer": 2
+      },
+      "height": 49,
+      "position": [
+        53.623111018328444,
+        -44.99513267805777,
+        26.6
+      ],
+      "rotation": 230
+    },
+    {
+      "id": "brown-roof-4",
+      "name": "Inferred finished tower roof 4",
+      "layer": "buildings",
+      "material": "brown",
+      "shape": {
+        "kind": "rectangle",
+        "width": 23,
+        "depth": 26,
+        "chamfer": 2
+      },
+      "height": 1.5,
+      "position": [
+        53.623111018328444,
+        -44.99513267805777,
+        75.6
+      ],
+      "rotation": 230,
+      "inferred": true
+    },
+    {
+      "id": "white-spoke-1",
+      "name": "White radial building 1",
+      "layer": "buildings",
+      "material": "white",
+      "shape": {
+        "kind": "rectangle",
+        "width": 46,
+        "depth": 13,
+        "chamfer": 1.5
+      },
+      "height": 36,
+      "position": [
+        -29.325929482687428,
+        31.448209169624334,
+        25.3
+      ],
+      "rotation": 133
+    },
+    {
+      "id": "white-spoke-2",
+      "name": "White radial building 2",
+      "layer": "buildings",
+      "material": "white",
+      "shape": {
+        "kind": "rectangle",
+        "width": 46,
+        "depth": 13,
+        "chamfer": 1.5
+      },
+      "height": 39,
+      "position": [
+        28.772616073430903,
+        31.955227495527954,
+        25.3
+      ],
+      "rotation": 48
+    },
+    {
+      "id": "white-spoke-3",
+      "name": "White radial building 3",
+      "layer": "buildings",
+      "material": "white",
+      "shape": {
+        "kind": "rectangle",
+        "width": 46,
+        "depth": 13,
+        "chamfer": 1.5
+      },
+      "height": 31,
+      "position": [
+        -28.772616073430914,
+        -31.955227495527943,
+        25.3
+      ],
+      "rotation": 228
+    },
+    {
+      "id": "white-spoke-4",
+      "name": "White radial building 4",
+      "layer": "buildings",
+      "material": "white",
+      "shape": {
+        "kind": "rectangle",
+        "width": 46,
+        "depth": 13,
+        "chamfer": 1.5
+      },
+      "height": 35,
+      "position": [
+        29.325929482687414,
+        -31.448209169624352,
+        25.3
+      ],
+      "rotation": 313
+    },
+    {
+      "id": "gray-court-floor-1",
+      "name": "Gray courtyard floor 1",
+      "layer": "buildings",
+      "material": "road",
+      "shape": {
+        "kind": "rectangle",
+        "width": 23,
+        "depth": 25,
+        "chamfer": 1
+      },
+      "height": 1,
+      "position": [
+        -64.99010018516543,
+        -1.1344064184234075,
+        25.3
+      ],
+      "rotation": 91
+    },
+    {
+      "id": "gray-court-wall-1",
+      "name": "Gray courtyard walls 1",
+      "layer": "buildings",
+      "material": "gray",
+      "shape": {
+        "kind": "courtyard",
+        "width": 23,
+        "depth": 25,
+        "wall": 1.5,
+        "chamfer": 1
+      },
+      "height": 20,
+      "position": [
+        -64.99010018516543,
+        -1.1344064184234075,
+        26.3
+      ],
+      "rotation": 91
+    },
+    {
+      "id": "gray-court-roof-1",
+      "name": "Gray roof with square opening 1",
+      "layer": "buildings",
+      "material": "gray",
+      "shape": {
+        "kind": "roofOpening",
+        "width": 23,
+        "depth": 25,
+        "holeWidth": 9,
+        "holeDepth": 10,
+        "chamfer": 1
+      },
+      "height": 1.5,
+      "position": [
+        -64.99010018516543,
+        -1.1344064184234075,
+        46.3
+      ],
+      "rotation": 91
+    },
+    {
+      "id": "gray-court-floor-2",
+      "name": "Gray courtyard floor 2",
+      "layer": "buildings",
+      "material": "road",
+      "shape": {
+        "kind": "rectangle",
+        "width": 23,
+        "depth": 25,
+        "chamfer": 1
+      },
+      "height": 1,
+      "position": [
+        64.75265537596346,
+        -5.6651232785977905,
+        25.3
+      ],
+      "rotation": 265
+    },
+    {
+      "id": "gray-court-wall-2",
+      "name": "Gray courtyard walls 2",
+      "layer": "buildings",
+      "material": "gray",
+      "shape": {
+        "kind": "courtyard",
+        "width": 23,
+        "depth": 25,
+        "wall": 1.5,
+        "chamfer": 1
+      },
+      "height": 20,
+      "position": [
+        64.75265537596346,
+        -5.6651232785977905,
+        26.3
+      ],
+      "rotation": 265
+    },
+    {
+      "id": "gray-court-roof-2",
+      "name": "Gray roof with square opening 2",
+      "layer": "buildings",
+      "material": "gray",
+      "shape": {
+        "kind": "roofOpening",
+        "width": 23,
+        "depth": 25,
+        "holeWidth": 9,
+        "holeDepth": 10,
+        "chamfer": 1
+      },
+      "height": 1.5,
+      "position": [
+        64.75265537596346,
+        -5.6651232785977905,
+        46.3
+      ],
+      "rotation": 265
+    },
+    {
+      "id": "gray-court-floor-3",
+      "name": "Gray courtyard floor 3",
+      "layer": "buildings",
+      "material": "road",
+      "shape": {
+        "kind": "rectangle",
+        "width": 23,
+        "depth": 25,
+        "chamfer": 1
+      },
+      "height": 1,
+      "position": [
+        10.168240227614994,
+        -64.19974213868396,
+        25.3
+      ],
+      "rotation": 189
+    },
+    {
+      "id": "gray-court-wall-3",
+      "name": "Gray courtyard walls 3",
+      "layer": "buildings",
+      "material": "gray",
+      "shape": {
+        "kind": "courtyard",
+        "width": 23,
+        "depth": 25,
+        "wall": 1.5,
+        "chamfer": 1
+      },
+      "height": 20,
+      "position": [
+        10.168240227614994,
+        -64.19974213868396,
+        26.3
+      ],
+      "rotation": 189
+    },
+    {
+      "id": "gray-court-roof-3",
+      "name": "Gray roof with square opening 3",
+      "layer": "buildings",
+      "material": "gray",
+      "shape": {
+        "kind": "roofOpening",
+        "width": 23,
+        "depth": 25,
+        "holeWidth": 9,
+        "holeDepth": 10,
+        "chamfer": 1
+      },
+      "height": 1.5,
+      "position": [
+        10.168240227614994,
+        -64.19974213868396,
+        46.3
+      ],
+      "rotation": 189
+    },
+    {
+      "id": "perimeter-wall-1",
+      "name": "Curved white perimeter building 1",
+      "layer": "buildings",
+      "material": "white",
+      "shape": {
+        "kind": "sector",
+        "inner": 87,
+        "outer": 91,
+        "start": 157,
+        "end": 182
+      },
+      "height": 9,
+      "position": [
+        0,
+        0,
+        25.3
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "perimeter-wall-2",
+      "name": "Curved white perimeter building 2",
+      "layer": "buildings",
+      "material": "white",
+      "shape": {
+        "kind": "sector",
+        "inner": 87,
+        "outer": 91,
+        "start": 345,
+        "end": 370
+      },
+      "height": 9,
+      "position": [
+        0,
+        0,
+        25.3
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "perimeter-wall-3",
+      "name": "Curved white perimeter building 3",
+      "layer": "buildings",
+      "material": "white",
+      "shape": {
+        "kind": "sector",
+        "inner": 87,
+        "outer": 91,
+        "start": 248,
+        "end": 268
+      },
+      "height": 9,
+      "position": [
+        0,
+        0,
+        25.3
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "perimeter-wall-4",
+      "name": "Curved white perimeter building 4",
+      "layer": "buildings",
+      "material": "white",
+      "shape": {
+        "kind": "sector",
+        "inner": 87,
+        "outer": 91,
+        "start": 95,
+        "end": 109
+      },
+      "height": 9,
+      "position": [
+        0,
+        0,
+        25.3
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "central-petal-1",
+      "name": "Rounded central building 1",
+      "layer": "buildings",
+      "material": "white",
+      "shape": {
+        "kind": "sector",
+        "inner": 0,
+        "outer": 16,
+        "start": -18,
+        "end": 66
+      },
+      "height": 24,
+      "position": [
+        4.567727288213004,
+        2.0336832153790008,
+        25.3
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "central-petal-2",
+      "name": "Rounded central building 2",
+      "layer": "buildings",
+      "material": "white",
+      "shape": {
+        "kind": "sector",
+        "inner": 0,
+        "outer": 16,
+        "start": 103,
+        "end": 187
+      },
+      "height": 30,
+      "position": [
+        -4.095760221444958,
+        2.867882181755232,
+        25.3
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "central-petal-3",
+      "name": "Rounded central building 3",
+      "layer": "buildings",
+      "material": "white",
+      "shape": {
+        "kind": "sector",
+        "inner": 0,
+        "outer": 16,
+        "start": 225,
+        "end": 309
+      },
+      "height": 21,
+      "position": [
+        -0.2616797812147215,
+        -4.993147673772869,
+        25.3
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "central-tan-infill",
+      "name": "Small tan central infill",
+      "layer": "buildings",
+      "material": "tan",
+      "shape": {
+        "kind": "sector",
+        "inner": 0,
+        "outer": 7,
+        "start": 272,
+        "end": 338
+      },
+      "height": 13,
+      "position": [
+        0,
+        0,
+        25.3
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "blue-triangle",
+      "name": "Blue triangular infill",
+      "layer": "buildings",
+      "material": "blue",
+      "shape": {
+        "kind": "polygon",
+        "points": [
+          [
+            -9,
+            -8
+          ],
+          [
+            10,
+            -8
+          ],
+          [
+            0,
+            11
+          ]
+        ]
+      },
+      "height": 20,
+      "position": [
+        -35,
+        17,
+        25.3
+      ],
+      "rotation": 12
+    },
+    {
+      "id": "inner-white-block",
+      "name": "Offset white inner building",
+      "layer": "buildings",
+      "material": "white",
+      "shape": {
+        "kind": "polygon",
+        "points": [
+          [
+            -10,
+            -10
+          ],
+          [
+            9,
+            -10
+          ],
+          [
+            12,
+            4
+          ],
+          [
+            3,
+            13
+          ],
+          [
+            -10,
+            9
+          ]
+        ]
+      },
+      "height": 31,
+      "position": [
+        12,
+        34,
+        25.3
+      ],
+      "rotation": -12
+    },
+    {
+      "id": "satellite-d",
+      "name": "D-shaped gray satellite with round opening",
+      "layer": "buildings",
+      "material": "gray",
+      "shape": {
+        "kind": "dShape",
+        "radius": 24,
+        "back": 12,
+        "holeRadius": 7,
+        "holeX": 7
+      },
+      "height": 28,
+      "position": [
+        -61,
+        145,
+        24
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "satellite-d-rail-white",
+      "name": "White rail beside D-shaped module",
+      "layer": "buildings",
+      "material": "white",
+      "shape": {
+        "kind": "rectangle",
+        "width": 6,
+        "depth": 47,
+        "chamfer": 0
+      },
+      "height": 29,
+      "position": [
+        -83,
+        145,
+        24
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "satellite-d-rail-blue",
+      "name": "Blue rail beside D-shaped module",
+      "layer": "buildings",
+      "material": "lightBlue",
+      "shape": {
+        "kind": "rectangle",
+        "width": 5,
+        "depth": 44,
+        "chamfer": 0
+      },
+      "height": 25,
+      "position": [
+        -91,
+        145,
+        24
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "satellite-u",
+      "name": "White slotted cylindrical satellite",
+      "layer": "buildings",
+      "material": "white",
+      "shape": {
+        "kind": "uShape",
+        "radius": 18,
+        "slot": 7,
+        "notchBottom": -4
+      },
+      "height": 25,
+      "position": [
+        0,
+        148,
+        24
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "satellite-quarter-1",
+      "name": "Two-tone quartered circular satellite 1",
+      "layer": "buildings",
+      "material": "gray",
+      "shape": {
+        "kind": "sector",
+        "inner": 1.2,
+        "outer": 30,
+        "start": 1.6,
+        "end": 88.4
+      },
+      "height": 16,
+      "position": [
+        61,
+        145,
+        24
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "satellite-quarter-2",
+      "name": "Two-tone quartered circular satellite 2",
+      "layer": "buildings",
+      "material": "tan",
+      "shape": {
+        "kind": "sector",
+        "inner": 1.2,
+        "outer": 30,
+        "start": 91.6,
+        "end": 178.4
+      },
+      "height": 16,
+      "position": [
+        61,
+        145,
+        24
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "satellite-quarter-3",
+      "name": "Two-tone quartered circular satellite 3",
+      "layer": "buildings",
+      "material": "gray",
+      "shape": {
+        "kind": "sector",
+        "inner": 1.2,
+        "outer": 30,
+        "start": 181.6,
+        "end": 268.4
+      },
+      "height": 16,
+      "position": [
+        61,
+        145,
+        24
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "satellite-quarter-4",
+      "name": "Two-tone quartered circular satellite 4",
+      "layer": "buildings",
+      "material": "tan",
+      "shape": {
+        "kind": "sector",
+        "inner": 1.2,
+        "outer": 30,
+        "start": 271.6,
+        "end": 358.4
+      },
+      "height": 16,
+      "position": [
+        61,
+        145,
+        24
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "open-satellite-floor",
+      "name": "Open quartered satellite floor",
+      "layer": "buildings",
+      "material": "darkBrown",
+      "shape": {
+        "kind": "circle",
+        "radius": 33
+      },
+      "height": 1,
+      "position": [
+        -43,
+        -147,
+        24
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "open-satellite-ring",
+      "name": "Open quartered satellite outer wall",
+      "layer": "buildings",
+      "material": "brown",
+      "shape": {
+        "kind": "ring",
+        "inner": 31,
+        "outer": 33
+      },
+      "height": 22,
+      "position": [
+        -43,
+        -147,
+        25
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "open-satellite-divider-x",
+      "name": "Quartered satellite partition",
+      "layer": "buildings",
+      "material": "brown",
+      "shape": {
+        "kind": "rectangle",
+        "width": 64,
+        "depth": 1.8,
+        "chamfer": 0
+      },
+      "height": 22,
+      "position": [
+        -43,
+        -147,
+        25
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "open-satellite-divider-y",
+      "name": "Quartered satellite partition",
+      "layer": "buildings",
+      "material": "brown",
+      "shape": {
+        "kind": "rectangle",
+        "width": 1.8,
+        "depth": 64,
+        "chamfer": 0
+      },
+      "height": 22,
+      "position": [
+        -43,
+        -147,
+        25
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "open-satellite-blue-floor",
+      "name": "Blue lower quadrant",
+      "layer": "buildings",
+      "material": "blue",
+      "shape": {
+        "kind": "sector",
+        "inner": 1.6,
+        "outer": 30,
+        "start": 185,
+        "end": 265
+      },
+      "height": 0.5,
+      "position": [
+        -43,
+        -147,
+        25.1
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "open-satellite-white-roof",
+      "name": "Pale roof over one quadrant",
+      "layer": "buildings",
+      "material": "white",
+      "shape": {
+        "kind": "sector",
+        "inner": 1.4,
+        "outer": 33,
+        "start": 94,
+        "end": 176
+      },
+      "height": 1.4,
+      "position": [
+        -43,
+        -147,
+        47
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "completed-quarter-roof-1",
+      "name": "Inferred quartered satellite ceiling 1",
+      "layer": "buildings",
+      "material": "brown",
+      "shape": {
+        "kind": "sector",
+        "inner": 1.4,
+        "outer": 33,
+        "start": 4,
+        "end": 86
+      },
+      "height": 1.4,
+      "position": [
+        -43,
+        -147,
+        47
+      ],
+      "rotation": 0,
+      "inferred": true
+    },
+    {
+      "id": "completed-quarter-roof-2",
+      "name": "Inferred quartered satellite ceiling 2",
+      "layer": "buildings",
+      "material": "white",
+      "shape": {
+        "kind": "sector",
+        "inner": 1.4,
+        "outer": 33,
+        "start": 184,
+        "end": 266
+      },
+      "height": 1.4,
+      "position": [
+        -43,
+        -147,
+        47
+      ],
+      "rotation": 0,
+      "inferred": true
+    },
+    {
+      "id": "completed-quarter-roof-3",
+      "name": "Inferred quartered satellite ceiling 3",
+      "layer": "buildings",
+      "material": "brown",
+      "shape": {
+        "kind": "sector",
+        "inner": 1.4,
+        "outer": 33,
+        "start": 274,
+        "end": 356
+      },
+      "height": 1.4,
+      "position": [
+        -43,
+        -147,
+        47
+      ],
+      "rotation": 0,
+      "inferred": true
+    },
+    {
+      "id": "flat-satellite",
+      "name": "Low segmented circular satellite",
+      "layer": "network",
+      "material": "gray",
+      "shape": {
+        "kind": "circle",
+        "radius": 32
+      },
+      "height": 2.2,
+      "position": [
+        45,
+        -147,
+        24
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "flat-satellite-edge",
+      "name": "Circular satellite rim marking",
+      "layer": "network",
+      "material": "road",
+      "shape": {
+        "kind": "ring",
+        "inner": 31,
+        "outer": 31.4
+      },
+      "height": 0.15,
+      "position": [
+        45,
+        -147,
+        26.21
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "flat-satellite-line-y",
+      "name": "Circular pad longitudinal marking",
+      "layer": "network",
+      "material": "road",
+      "shape": {
+        "kind": "rectangle",
+        "width": 0.6,
+        "depth": 63,
+        "chamfer": 0
+      },
+      "height": 0.15,
+      "position": [
+        49,
+        -147,
+        26.23
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "flat-satellite-line-x",
+      "name": "Circular pad cross marking",
+      "layer": "network",
+      "material": "road",
+      "shape": {
+        "kind": "rectangle",
+        "width": 60,
+        "depth": 0.6,
+        "chamfer": 0
+      },
+      "height": 0.15,
+      "position": [
+        45,
+        -145,
+        26.24
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "flat-satellite-line-y2",
+      "name": "Circular pad parallel marking",
+      "layer": "network",
+      "material": "road",
+      "shape": {
+        "kind": "rectangle",
+        "width": 0.6,
+        "depth": 56,
+        "chamfer": 0
+      },
+      "height": 0.15,
+      "position": [
+        61,
+        -147,
+        26.25
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "inferred-parcel-1",
+      "name": "Inferred outlined satellite building 1",
+      "layer": "buildings",
+      "material": "gray",
+      "shape": {
+        "kind": "polygon",
+        "points": [
+          [
+            -29.960716067504432,
+            1.2
+          ],
+          [
+            -30,
+            3.67394039744206e-15
+          ],
+          [
+            -29.935767697158106,
+            -1.962093876904286
+          ],
+          [
+            -29.743345841214314,
+            -3.9157857666015397
+          ],
+          [
+            -29.423558412096916,
+            -5.852709660483837
+          ],
+          [
+            -28.977774788672054,
+            -7.764571353075611
+          ],
+          [
+            -28.407903884853173,
+            -9.643183959094833
+          ],
+          [
+            -27.71638597533861,
+            -11.480502970952676
+          ],
+          [
+            -26.90618224598065,
+            -13.268660706570044
+          ],
+          [
+            -25.980762113533157,
+            -15.000000000000004
+          ],
+          [
+            -24.944088369076358,
+            -16.667106990588067
+          ],
+          [
+            -23.800600208737055,
+            -18.26284287026162
+          ],
+          [
+            -22.555194224369323,
+            -19.780374453002064
+          ],
+          [
+            -21.21320343559643,
+            -21.213203435596423
+          ],
+          [
+            -19.78037445300207,
+            -22.55519422436932
+          ],
+          [
+            -18.262842870261625,
+            -23.80060020873705
+          ],
+          [
+            -16.66710699058809,
+            -24.944088369076344
+          ],
+          [
+            -15.000000000000014,
+            -25.980762113533153
+          ],
+          [
+            -13.26866070657004,
+            -26.90618224598065
+          ],
+          [
+            -11.480502970952685,
+            -27.716385975338607
+          ],
+          [
+            -9.643183959094854,
+            -28.407903884853166
+          ],
+          [
+            -7.764571353075619,
+            -28.97777478867205
+          ],
+          [
+            -5.8527096604838595,
+            -29.42355841209691
+          ],
+          [
+            -3.915785766601549,
+            -29.74334584121431
+          ],
+          [
+            -1.9620938769043086,
+            -29.935767697158106
+          ],
+          [
+            -5.510910596163089e-15,
+            -30
+          ],
+          [
+            1.962093876904271,
+            -29.93576769715811
+          ],
+          [
+            3.2,
+            -29.813844585869983
+          ],
+          [
+            3.2,
+            1.1999999999999957
+          ]
+        ]
+      },
+      "height": 11,
+      "position": [
+        45,
+        -147,
+        26.4
+      ],
+      "rotation": 0,
+      "inferred": true
+    },
+    {
+      "id": "inferred-parcel-2",
+      "name": "Inferred outlined satellite building 2",
+      "layer": "buildings",
+      "material": "gray",
+      "shape": {
+        "kind": "polygon",
+        "points": [
+          [
+            3.2,
+            29.813844585869983
+          ],
+          [
+            1.9620938769042915,
+            29.935767697158106
+          ],
+          [
+            1.83697019872103e-15,
+            30
+          ],
+          [
+            -1.9620938769042877,
+            29.935767697158106
+          ],
+          [
+            -3.9157857666015414,
+            29.743345841214314
+          ],
+          [
+            -5.852709660483839,
+            29.423558412096916
+          ],
+          [
+            -7.764571353075626,
+            28.97777478867205
+          ],
+          [
+            -9.643183959094848,
+            28.40790388485317
+          ],
+          [
+            -11.480502970952692,
+            27.716385975338603
+          ],
+          [
+            -13.268660706570033,
+            26.906182245980652
+          ],
+          [
+            -14.999999999999993,
+            25.98076211353316
+          ],
+          [
+            -16.667106990588067,
+            24.944088369076354
+          ],
+          [
+            -18.26284287026162,
+            23.800600208737055
+          ],
+          [
+            -19.780374453002064,
+            22.555194224369323
+          ],
+          [
+            -21.213203435596423,
+            21.213203435596427
+          ],
+          [
+            -22.555194224369327,
+            19.780374453002057
+          ],
+          [
+            -23.80060020873706,
+            18.262842870261615
+          ],
+          [
+            -24.94408836907636,
+            16.667106990588067
+          ],
+          [
+            -25.98076211353316,
+            14.999999999999998
+          ],
+          [
+            -26.90618224598065,
+            13.268660706570039
+          ],
+          [
+            -27.716385975338603,
+            11.480502970952697
+          ],
+          [
+            -28.407903884853166,
+            9.643183959094852
+          ],
+          [
+            -28.977774788672047,
+            7.76457135307563
+          ],
+          [
+            -29.423558412096913,
+            5.852709660483845
+          ],
+          [
+            -29.74334584121431,
+            3.915785766601547
+          ],
+          [
+            -29.85324114721285,
+            2.8
+          ],
+          [
+            3.2,
+            2.8000000000000007
+          ]
+        ]
+      },
+      "height": 14,
+      "position": [
+        45,
+        -147,
+        26.4
+      ],
+      "rotation": 0,
+      "inferred": true
+    },
+    {
+      "id": "inferred-parcel-3",
+      "name": "Inferred outlined satellite building 3",
+      "layer": "buildings",
+      "material": "white",
+      "shape": {
+        "kind": "polygon",
+        "points": [
+          [
+            4.8,
+            1.1999999999999993
+          ],
+          [
+            4.8,
+            -29.597361480455177
+          ],
+          [
+            5.852709660483849,
+            -29.423558412096913
+          ],
+          [
+            7.764571353075634,
+            -28.977774788672047
+          ],
+          [
+            9.643183959094845,
+            -28.40790388485317
+          ],
+          [
+            11.480502970952701,
+            -27.7163859753386
+          ],
+          [
+            13.268660706570031,
+            -26.906182245980656
+          ],
+          [
+            15.000000000000004,
+            -25.980762113533157
+          ],
+          [
+            15.2,
+            -25.856394121519507
+          ],
+          [
+            15.2,
+            1.1999999999999993
+          ]
+        ]
+      },
+      "height": 18,
+      "position": [
+        45,
+        -147,
+        26.4
+      ],
+      "rotation": 0,
+      "inferred": true
+    },
+    {
+      "id": "inferred-parcel-4",
+      "name": "Inferred outlined satellite building 4",
+      "layer": "buildings",
+      "material": "gray",
+      "shape": {
+        "kind": "polygon",
+        "points": [
+          [
+            15.2,
+            25.856394121519507
+          ],
+          [
+            15.000000000000004,
+            25.980762113533157
+          ],
+          [
+            13.268660706570037,
+            26.906182245980652
+          ],
+          [
+            11.480502970952696,
+            27.716385975338603
+          ],
+          [
+            9.643183959094845,
+            28.40790388485317
+          ],
+          [
+            7.764571353075622,
+            28.97777478867205
+          ],
+          [
+            5.85270966048385,
+            29.423558412096913
+          ],
+          [
+            4.8,
+            29.597361480455177
+          ],
+          [
+            4.8,
+            2.8000000000000007
+          ],
+          [
+            15.2,
+            2.8000000000000043
+          ]
+        ]
+      },
+      "height": 13,
+      "position": [
+        45,
+        -147,
+        26.4
+      ],
+      "rotation": 0,
+      "inferred": true
+    },
+    {
+      "id": "inferred-parcel-5",
+      "name": "Inferred outlined satellite building 5",
+      "layer": "buildings",
+      "material": "gray",
+      "shape": {
+        "kind": "polygon",
+        "points": [
+          [
+            16.8,
+            -10.8
+          ],
+          [
+            16.8,
+            -24.84885858525681
+          ],
+          [
+            18.262842870261615,
+            -23.800600208737055
+          ],
+          [
+            19.780374453002054,
+            -22.55519422436933
+          ],
+          [
+            21.21320343559642,
+            -21.21320343559643
+          ],
+          [
+            22.555194224369323,
+            -19.78037445300206
+          ],
+          [
+            23.80060020873705,
+            -18.262842870261625
+          ],
+          [
+            24.944088369076358,
+            -16.667106990588067
+          ],
+          [
+            25.980762113533153,
+            -15.000000000000014
+          ],
+          [
+            26.90618224598065,
+            -13.268660706570042
+          ],
+          [
+            27.716385975338607,
+            -11.480502970952687
+          ],
+          [
+            27.972509157461353,
+            -10.8
+          ]
+        ]
+      },
+      "height": 12,
+      "position": [
+        45,
+        -147,
+        26.4
+      ],
+      "rotation": 0,
+      "inferred": true
+    },
+    {
+      "id": "inferred-parcel-6",
+      "name": "Inferred outlined satellite building 6",
+      "layer": "buildings",
+      "material": "white",
+      "shape": {
+        "kind": "polygon",
+        "points": [
+          [
+            30,
+            0
+          ],
+          [
+            29.935767697158106,
+            1.962093876904292
+          ],
+          [
+            29.74334584121431,
+            3.915785766601547
+          ],
+          [
+            29.423558412096913,
+            5.852709660483847
+          ],
+          [
+            28.97777478867205,
+            7.764571353075622
+          ],
+          [
+            28.40790388485317,
+            9.643183959094848
+          ],
+          [
+            28.19833316680919,
+            10.2
+          ],
+          [
+            16.8,
+            10.2
+          ],
+          [
+            16.8,
+            -9.2
+          ],
+          [
+            28.542342269072563,
+            -9.2
+          ],
+          [
+            28.97777478867205,
+            -7.76457135307562
+          ],
+          [
+            29.42355841209691,
+            -5.852709660483861
+          ],
+          [
+            29.74334584121431,
+            -3.9157857666015508
+          ],
+          [
+            29.935767697158106,
+            -1.9620938769043101
+          ]
+        ]
+      },
+      "height": 16,
+      "position": [
+        45,
+        -147,
+        26.4
+      ],
+      "rotation": 0,
+      "inferred": true
+    },
+    {
+      "id": "inferred-parcel-7",
+      "name": "Inferred outlined satellite building 7",
+      "layer": "buildings",
+      "material": "gray",
+      "shape": {
+        "kind": "polygon",
+        "points": [
+          [
+            27.571623754815846,
+            11.8
+          ],
+          [
+            26.90618224598065,
+            13.268660706570039
+          ],
+          [
+            25.98076211353316,
+            14.999999999999998
+          ],
+          [
+            24.944088369076358,
+            16.667106990588067
+          ],
+          [
+            23.800600208737055,
+            18.26284287026162
+          ],
+          [
+            22.555194224369323,
+            19.780374453002064
+          ],
+          [
+            21.213203435596427,
+            21.213203435596423
+          ],
+          [
+            19.780374453002068,
+            22.55519422436932
+          ],
+          [
+            18.26284287026162,
+            23.800600208737055
+          ],
+          [
+            16.8,
+            24.84885858525681
+          ],
+          [
+            16.8,
+            11.8
+          ]
+        ]
+      },
+      "height": 10,
+      "position": [
+        45,
+        -147,
+        26.4
+      ],
+      "rotation": 0,
+      "inferred": true
+    }
+  ]
+}

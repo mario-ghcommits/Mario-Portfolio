@@ -92,7 +92,7 @@ components:
 
 A light, spacious personal portfolio in the confirmed Apple-inspired visual world. White and cool porcelain keep graphite typography, restrained blue actions, and authored spatial studies in focus. Platform typography is an explicit design commitment.
 
-Content sits flush in generous margins. Functional translucent navigation maintains context while scrolling; rounded controls and quiet tonal stages frame direct manipulation. WebGL and inline SVG supply imagery; the city is explicitly a conceptual illustration.
+Content sits flush in generous margins. Functional translucent navigation maintains context while scrolling; rounded controls and quiet tonal stages frame direct manipulation. WebGL and inline SVG supply imagery; the city is a photo-derived reconstruction with estimated dimensions.
 
 **Key Characteristics:**
 - White and cool porcelain surfaces
@@ -162,11 +162,11 @@ The city has Together and Exploded view buttons in a segmented group, a spring-d
 
 ### Do:
 - **Do** use blue for actions and keyboard focus.
-- **Do** keep spatial illustrations labeled as conceptual.
+- **Do** label estimated model dimensions and interpreted geometry.
 - **Do** preserve reduced-motion, reduced-transparency, and increased-contrast treatments.
 - **Do** use authored SVG geometry for interface icons.
 
 ### Don't:
 - **Don't** restore the replaced graphite/lime identity.
 - **Don't** add tickers, section numbers, neon, or fake trademarks.
-- **Don't** substitute a photograph or claim the conceptual city recreates the actual competition model.
+- **Don't** claim the photo-derived model has measured dimensions or fabrication accuracy.
