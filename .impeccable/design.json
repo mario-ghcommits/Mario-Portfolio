@@ -1,0 +1,372 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-21T03:07:35.354745+00:00",
+  "title": "Design System: Mario Lin Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "blue": {
+        "displayName": "Action Blue",
+        "role": "primary",
+        "tonalRamp": [
+          "oklch(15% 0.19 255)",
+          "oklch(26% 0.19 255)",
+          "oklch(38% 0.19 255)",
+          "oklch(49% 0.19 255)",
+          "oklch(61% 0.19 255)",
+          "oklch(72% 0.19 255)",
+          "oklch(84% 0.19 255)",
+          "oklch(95% 0.19 255)"
+        ]
+      },
+      "blue-hover": {
+        "displayName": "Action Blue Hover",
+        "role": "primary",
+        "tonalRamp": [
+          "oklch(15% 0.19 255)",
+          "oklch(26% 0.19 255)",
+          "oklch(38% 0.19 255)",
+          "oklch(49% 0.19 255)",
+          "oklch(61% 0.19 255)",
+          "oklch(72% 0.19 255)",
+          "oklch(84% 0.19 255)",
+          "oklch(95% 0.19 255)"
+        ]
+      },
+      "ink": {
+        "displayName": "Graphite",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.003 286)",
+          "oklch(26% 0.003 286)",
+          "oklch(38% 0.003 286)",
+          "oklch(49% 0.003 286)",
+          "oklch(61% 0.003 286)",
+          "oklch(72% 0.003 286)",
+          "oklch(84% 0.003 286)",
+          "oklch(95% 0.003 286)"
+        ]
+      },
+      "secondary": {
+        "displayName": "Secondary Gray",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.008 286)",
+          "oklch(26% 0.008 286)",
+          "oklch(38% 0.008 286)",
+          "oklch(49% 0.008 286)",
+          "oklch(61% 0.008 286)",
+          "oklch(72% 0.008 286)",
+          "oklch(84% 0.008 286)",
+          "oklch(95% 0.008 286)"
+        ]
+      },
+      "white": {
+        "displayName": "White",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0 0)",
+          "oklch(38% 0 0)",
+          "oklch(49% 0 0)",
+          "oklch(61% 0 0)",
+          "oklch(72% 0 0)",
+          "oklch(84% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "surface": {
+        "displayName": "Porcelain",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.004 286)",
+          "oklch(26% 0.004 286)",
+          "oklch(38% 0.004 286)",
+          "oklch(49% 0.004 286)",
+          "oklch(61% 0.004 286)",
+          "oklch(72% 0.004 286)",
+          "oklch(84% 0.004 286)",
+          "oklch(95% 0.004 286)"
+        ]
+      },
+      "line": {
+        "displayName": "Divider Gray",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.005 286)",
+          "oklch(26% 0.005 286)",
+          "oklch(38% 0.005 286)",
+          "oklch(49% 0.005 286)",
+          "oklch(61% 0.005 286)",
+          "oklch(72% 0.005 286)",
+          "oklch(84% 0.005 286)",
+          "oklch(95% 0.005 286)"
+        ]
+      },
+      "project-stage": {
+        "displayName": "Project Stage",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.006 235)",
+          "oklch(26% 0.006 235)",
+          "oklch(38% 0.006 235)",
+          "oklch(49% 0.006 235)",
+          "oklch(61% 0.006 235)",
+          "oklch(72% 0.006 235)",
+          "oklch(84% 0.006 235)",
+          "oklch(95% 0.006 235)"
+        ]
+      },
+      "interest-stage": {
+        "displayName": "Interest Stage",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.004 286)",
+          "oklch(26% 0.004 286)",
+          "oklch(38% 0.004 286)",
+          "oklch(49% 0.004 286)",
+          "oklch(61% 0.004 286)",
+          "oklch(72% 0.004 286)",
+          "oklch(84% 0.004 286)",
+          "oklch(95% 0.004 286)"
+        ]
+      },
+      "segmented-track": {
+        "displayName": "Segment Track",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.008 245)",
+          "oklch(26% 0.008 245)",
+          "oklch(38% 0.008 245)",
+          "oklch(49% 0.008 245)",
+          "oklch(61% 0.008 245)",
+          "oklch(72% 0.008 245)",
+          "oklch(84% 0.008 245)",
+          "oklch(95% 0.008 245)"
+        ]
+      },
+      "round-control": {
+        "displayName": "Round Control",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.004 286)",
+          "oklch(26% 0.004 286)",
+          "oklch(38% 0.004 286)",
+          "oklch(49% 0.004 286)",
+          "oklch(61% 0.004 286)",
+          "oklch(72% 0.004 286)",
+          "oklch(84% 0.004 286)",
+          "oklch(95% 0.004 286)"
+        ]
+      },
+      "current-background": {
+        "displayName": "Current Status Background",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.03 255)",
+          "oklch(26% 0.03 255)",
+          "oklch(38% 0.03 255)",
+          "oklch(49% 0.03 255)",
+          "oklch(61% 0.03 255)",
+          "oklch(72% 0.03 255)",
+          "oklch(84% 0.03 255)",
+          "oklch(95% 0.03 255)"
+        ]
+      },
+      "current-text": {
+        "displayName": "Current Status Text",
+        "role": "primary",
+        "tonalRamp": [
+          "oklch(15% 0.19 255)",
+          "oklch(26% 0.19 255)",
+          "oklch(38% 0.19 255)",
+          "oklch(49% 0.19 255)",
+          "oklch(61% 0.19 255)",
+          "oklch(72% 0.19 255)",
+          "oklch(84% 0.19 255)",
+          "oklch(95% 0.19 255)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "purpose": "Hero thesis."
+      },
+      "headline": {
+        "purpose": "Section headings."
+      },
+      "title": {
+        "purpose": "Story and project titles."
+      },
+      "body": {
+        "purpose": "Story prose; local variants remain in source."
+      },
+      "code": {
+        "purpose": "Authored code study."
+      }
+    },
+    "shadows": [
+      {
+        "name": "action-hover",
+        "value": "0 5px 14px #0068d71c",
+        "purpose": "Primary action hover."
+      },
+      {
+        "name": "segment-selected",
+        "value": "0 2px 5px #2434440a",
+        "purpose": "Selected segment indicator."
+      },
+      {
+        "name": "code-sheet",
+        "value": "0 12px 36px #2335490c",
+        "purpose": "Tilted code study."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(.16,1,.3,1)",
+        "purpose": "CSS interaction easing."
+      },
+      {
+        "name": "layer-spring",
+        "value": "response .4; damping 1",
+        "purpose": "Interruptible city layer changes."
+      },
+      {
+        "name": "segment-spring",
+        "value": "response .3; damping 1",
+        "purpose": "Interruptible selection indicator."
+      },
+      {
+        "name": "rotation-release",
+        "value": "response .4; damping .8 when release velocity exceeds .1; otherwise 1",
+        "purpose": "Projected city rotation settling."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "wide",
+        "value": "min-width:1600px"
+      },
+      {
+        "name": "compact",
+        "value": "max-width:1050px"
+      },
+      {
+        "name": "mobile",
+        "value": "max-width:720px"
+      },
+      {
+        "name": "small",
+        "value": "max-width:360px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Work and contact action.",
+      "html": "<a class=\"ds-button-primary\" href=\"#work\">Explore my work <svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.55\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></a>",
+      "css": ":host{font-family:-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif;color:var(--ink,#1d1d1f)}.ds-button-primary{ display: inline-flex; align-items: center; justify-content: center; gap: 21px; min-height: 46px; border-radius: 30px; padding: 13px 21px; background: var(--blue,#0068d7); color: white; font-size: 0.8125rem; font-weight: 500; transition: background 150ms,transform 180ms var(--ease,cubic-bezier(.16,1,.3,1)),box-shadow 180ms; }.ds-button-primary:hover{ background: #005fc5; box-shadow: 0 5px 14px #0068d71c; }.ds-button-primary:active{ transform: scale(.97); }.ds-button-primary svg{ transition: transform 180ms var(--ease,cubic-bezier(.16,1,.3,1)); }.ds-button-primary:hover svg{ transform: translateX(2px); }.contact-inner>.ds-button-primary{ margin-top: 30px; }.ds-button-primary{font-optical-sizing:auto;}.ds-button-primary:focus-visible{outline:3px solid var(--blue,#0068d7);outline-offset:5px;}@media(max-width:1050px){.ds-button-primary{font-size:.75rem;padding:12px 17px;gap:12px}}@media(max-width:720px){.ds-button-primary{padding:12px 18px;min-height:44px}}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}button{font-family:inherit;cursor:pointer}a{text-decoration:none}"
+    },
+    {
+      "name": "Text action",
+      "kind": "button",
+      "refersTo": "button-text",
+      "description": "Secondary in-page action.",
+      "html": "<a class=\"ds-text-button\" href=\"#about\">A little about me <svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.55\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 4v16M6 14l6 6 6-6\"/></svg></a>",
+      "css": ":host{font-family:-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif;color:var(--ink,#1d1d1f)}.ds-text-button{ display: flex; align-items: center; gap: 10px; font-size: 0.75rem; color: var(--secondary,#65656b); min-height: 44px; }.ds-text-button:hover{ color: var(--ink,#1d1d1f); }.ds-text-button{font-optical-sizing:auto;}.ds-text-button:focus-visible{outline:3px solid var(--blue,#0068d7);outline-offset:5px;}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}button{font-family:inherit;cursor:pointer}a{text-decoration:none}"
+    },
+    {
+      "name": "Project disclosure",
+      "kind": "button",
+      "refersTo": "button-round",
+      "description": "Circular project disclosure in its closed state.",
+      "html": "<button class=\"ds-round-button\" aria-label=\"Explore Auquara project details\" aria-expanded=\"false\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.55\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 5v14M5 12h14\"/></svg></button>",
+      "css": ":host{font-family:-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif;color:var(--ink,#1d1d1f)}.ds-round-button{ display: grid; place-items: center; width: 38px; height: 38px; border: 0; background: #f1f1f3; border-radius: 50%; transition: background 150ms,transform 200ms var(--ease,cubic-bezier(.16,1,.3,1)); }.ds-round-button:hover{ background: #e6e6ec; }.ds-round-button:active{ transform: scale(.94); }.ds-round-button svg.rotated{ transform: rotate(45deg); }.ds-round-button{font-optical-sizing:auto;}.ds-round-button:focus-visible{outline:3px solid var(--blue,#0068d7);outline-offset:5px;}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}button{font-family:inherit;cursor:pointer}a{text-decoration:none}"
+    },
+    {
+      "name": "Reset view",
+      "kind": "button",
+      "refersTo": "reset-view",
+      "description": "Resets the conceptual city rotation.",
+      "html": "<button class=\"ds-reset-view\" aria-label=\"Reset city view\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.55\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 10a8 8 0 1 1 1.5 7M4 4v6h6\"/></svg></button>",
+      "css": ":host{font-family:-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif;color:var(--ink,#1d1d1f)}.ds-reset-view{font-optical-sizing:auto;}.ds-reset-view:focus-visible{outline:3px solid var(--blue,#0068d7);outline-offset:5px;}.ds-reset-view{min-width:36px;min-height:36px;border:0;background:#fff;border-radius:50%;display:grid;place-items:center;color:#536171;cursor:pointer}.ds-reset-view:active{background:#dce5ef;transform:scale(.96)}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}button{font-family:inherit;cursor:pointer}a{text-decoration:none}"
+    },
+    {
+      "name": "City segmented selector",
+      "kind": "custom",
+      "refersTo": "segmented",
+      "description": "Together and exploded view states; spring behavior is implemented in SpringIndicator.jsx.",
+      "html": "<div class=\"ds-segmented\" role=\"group\" aria-label=\"City visualization\"><button aria-pressed=\"true\">Together</button><button aria-pressed=\"false\">Exploded view</button><span class=\"ds-segment-indicator\" aria-hidden=\"true\"></span></div>",
+      "css": ":host{font-family:-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif;color:var(--ink,#1d1d1f)}.ds-segmented{ display: flex; padding: 4px; background: #e4e7ea; border-radius: 30px; position: relative; flex-shrink: 0; isolation: isolate; }.ds-segmented button{ background: none; border: 0; border-radius: 25px; padding: 10px 17px; min-width: 116px; font-size: 0.6875rem; color: #59616b; z-index: 1; transition: color 180ms; }.ds-segmented button[aria-pressed=true]{ color: #1d1d1f; }.ds-segment-indicator{ position: absolute; top: 4px; bottom: 4px; left: 4px; width: calc((100% - 8px)/2); background: #fff; border-radius: 25px; box-shadow: 0 2px 5px #2434440a; z-index: 0; }.ds-segmented,.ds-segment-indicator{font-optical-sizing:auto;}.ds-segmented:focus-visible,.ds-segment-indicator:focus-visible{outline:3px solid var(--blue,#0068d7);outline-offset:5px;}.ds-segmented button{font-family:inherit;cursor:pointer}.ds-segmented button:focus-visible{outline:3px solid var(--blue,#0068d7);outline-offset:5px;}.ds-segmented button:active{background:#cbd4df55}@media(max-width:720px){.ds-segmented button{min-width:98px;padding-inline:12px}}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}"
+    },
+    {
+      "name": "Current status",
+      "kind": "chip",
+      "refersTo": "current-chip",
+      "description": "Existing timeline status marker; not a universal label scale.",
+      "html": "<span class=\"ds-current-label\">Now</span>",
+      "css": ":host{font-family:-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif;color:var(--ink,#1d1d1f)}.ds-current-label{ background: #edf5ff; color: #0063c7; padding: 5px 9px; border-radius: 20px; font-size: 0.5625rem; font-weight: 500; letter-spacing: 0; }.ds-current-label{font-optical-sizing:auto;}.ds-current-label:focus-visible{outline:3px solid var(--blue,#0068d7);outline-offset:5px;}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}"
+    },
+    {
+      "name": "Interest stage",
+      "kind": "card",
+      "refersTo": "interest-stage",
+      "description": "Rounded stage with the actual FRC team typographic study.",
+      "html": "<div class=\"ds-interest-symbol\"><div class=\"ds-team-study\"><span>604</span><p>FRC Robotics</p></div></div>",
+      "css": ":host{font-family:-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif;color:var(--ink,#1d1d1f)}.ds-interest-symbol{ height: 290px; background: #f7f7f9; display: grid; place-items: center; overflow: hidden; border-radius: 16px; }.ds-team-study{ text-align: center; color: #3f5367; }.ds-team-study>span{ display: block; font-size: clamp(6.25rem,12vw,9.625rem); font-weight: 650; line-height: 1; letter-spacing: -.04em; font-variant-numeric: tabular-nums; }.ds-team-study>p{ font-size: 0.8125rem; letter-spacing: .04em; margin-top: 14px; color: #5d6d7e; }.ds-interest-symbol,.ds-team-study{font-optical-sizing:auto;}.ds-interest-symbol:focus-visible,.ds-team-study:focus-visible{outline:3px solid var(--blue,#0068d7);outline-offset:5px;}@media(max-width:720px){.ds-interest-symbol{height:255px;border-radius:14px}}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}"
+    },
+    {
+      "name": "Code study",
+      "kind": "card",
+      "refersTo": "code-study",
+      "description": "Authored code illustration shown in the Code interest state.",
+      "html": "<div class=\"ds-code-object\"><span>def <b>build</b>(idea):</span><span>  learn()</span><span>  try_again()</span><span>  <i>return</i> possibility</span></div>",
+      "css": ":host{font-family:-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif;color:var(--ink,#1d1d1f)}.ds-code-object{ font: .875rem/1.85 ui-monospace,SFMono-Regular,Menlo,monospace; color: #5c6874; background: white; padding: 30px 40px; border-radius: 12px; box-shadow: 0 12px 36px #2335490c; transform: rotate(-4deg); }.ds-code-object span{ display: block; white-space: pre; }.ds-code-object b{ font-weight: 500; color: #252b34; }.ds-code-object i{ font-style: normal; color: #0068d7; }.ds-code-object{font-optical-sizing:auto;}.ds-code-object:focus-visible{outline:3px solid var(--blue,#0068d7);outline-offset:5px;}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}"
+    },
+    {
+      "name": "In-page navigation",
+      "kind": "nav",
+      "refersTo": "navigation",
+      "description": "Actual header link group.",
+      "html": "<div class=\"ds-header-inner\"><nav aria-label=\"Main navigation\"><a href=\"#work\">Work</a><a href=\"#about\">About</a><a href=\"#journey\">Journey</a></nav></div>",
+      "css": ":host{font-family:-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif;color:var(--ink,#1d1d1f)}.ds-header-inner{ width: min(1120px,calc(100% - var(--space,clamp(1.5rem,5vw,5rem))*2)); height: 100%; margin: auto; display: flex; align-items: center; justify-content: space-between; }.ds-header-inner nav{ display: flex; align-items: center; gap: 34px; margin-left: 60px; font-size: 0.75rem; }.ds-header-inner nav a{ color: #57575d; padding: 12px 0; transition: color 150ms; }.ds-header-inner nav a:hover{ color: var(--blue,#0068d7); }.ds-header-inner{font-optical-sizing:auto;}.ds-header-inner:focus-visible{outline:3px solid var(--blue,#0068d7);outline-offset:5px;}.ds-header-inner a{text-decoration:none}.ds-header-inner nav a{font-weight:500;letter-spacing:.015em}.ds-header-inner a:focus-visible{outline:3px solid var(--blue,#0068d7);outline-offset:5px;}@media(max-width:720px){.ds-header-inner nav{gap:20px;margin-left:0;font-size:.6875rem}.ds-header-inner nav a:last-child{display:none}}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Making ideas tangible",
+    "overview": "A light, spacious personal portfolio in the confirmed Apple-inspired visual world. White and cool porcelain keep graphite typography, restrained blue actions, and authored spatial studies in focus. Platform typography is an explicit design commitment.\n\nContent sits flush in generous margins. Functional translucent navigation maintains context while scrolling; rounded controls and quiet tonal stages frame direct manipulation. WebGL and inline SVG supply imagery; the city is explicitly a conceptual illustration.",
+    "keyCharacteristics": [
+      "White and cool porcelain surfaces",
+      "Platform typography with optical sizing",
+      "Blue actions and visible focus",
+      "Direct, interruptible spatial interaction"
+    ],
+    "rules": [
+      {
+        "name": "The Context Rule",
+        "body": "Translucency belongs to the sticky navigation chrome and yields to the user's transparency and contrast preferences.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Motion Preference Rule",
+        "body": "Reduced motion and the manual animation switch remove decorative movement and settle state changes directly. The ThreeUI clock pauses while disabled, offscreen, or in a hidden document; city rendering runs only while needed. The snippets below represent source HTML/CSS states; JavaScript spring and WebGL behavior remains in the source components.",
+        "section": "components"
+      }
+    ],
+    "dos": [
+      "Do use blue for actions and keyboard focus.",
+      "Do keep spatial illustrations labeled as conceptual.",
+      "Do preserve reduced-motion, reduced-transparency, and increased-contrast treatments.",
+      "Do use authored SVG geometry for interface icons."
+    ],
+    "donts": [
+      "Don't restore the replaced graphite/lime identity.",
+      "Don't add tickers, section numbers, neon, or fake trademarks.",
+      "Don't substitute a photograph or claim the conceptual city recreates the actual competition model."
+    ]
+  }
+}
